@@ -2,17 +2,17 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "classes": [
     {
-      "id": "ClassBasic",
+      "id": "PathogensClan",
       "titles": {
-        "english": "Basic",
-        "chinese": "示例"
+        "english": "Pathogens",
+        "chinese": ""
       },
       "descriptions": {
-        "english": "A basic minimal clan example as primary.",
-        "chinese": "示例氏族介绍。"
+        "english": "Unleash the deadly Pathogens created by the maddest minds of Hell. Watch as Heaven succumbs to sickness brought by the folly of their invasion.",
+        "chinese": ""
       },
       "subclass_descriptions": {
-        "english": "A basic minimal clan example as secondary.",
+        "english": "Ally yourself with the insane minds that unleashed the deadly Hellborne Pathogens.",
         "chinese": "示例氏族介绍。"
       },
       "event_titles": {
