@@ -69,7 +69,7 @@
               "@ChampionAUpgradePathIII"
             ]
           ],
-          "icon": "@ChampionAIcon",
+          "icon": "@CarrierChampionCharacter",
           "locked_icon": "@ChampionALockedIcon",
           "portrait": "@ChampionAPortrait"
         }
