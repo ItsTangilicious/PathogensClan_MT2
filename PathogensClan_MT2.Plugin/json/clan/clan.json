@@ -13,20 +13,20 @@
       },
       "subclass_descriptions": {
         "english": "Ally yourself with the insane minds that unleashed the deadly Hellborne Pathogens.",
-        "chinese": "示例氏族介绍。"
+        "chinese": ""
       },
       "event_titles": {
-        "english": "<wonderous>Basic citizen</wonderous>"
+        "english": "<wonderous>Pathogen</wonderous>"
       },
       "icons": {
-        "small": "@BasicClanSmallIcon",
-        "medium": "@BasicClanMediumIcon",
-        "large": "@BasicClanLargeIcon",
-        "silhouette": "@BasicClanSilhouetteIcon"
+        "small": "@PathogensSmall_MT2",
+        "medium": "@PathogensMedium_MT2",
+        "large": "@PathogensLarge",
+        "silhouette": "@PathogensSilhouette"
       },
-      "card_draft_icon": "@CardDraftIcon",
+      "card_draft_icon": "@PathogensCardBack",
       "class_select_character_displays": [
-        "@ChampionAClassDisplayCharacterArt"
+        "@CarrierChampionCharacter"
       ],
       "card_style": "@BasicClanCardStyle",
       "ui_color": {
@@ -78,24 +78,24 @@
   ],
   "sprites": [
     {
-      "id": "BasicClanSmallIcon",
-      "path": "textures/icons/BasicClanSmallIcon.png"
+      "id": "PathogensSmall_MT2",
+      "path": "textures/icons/PathogensSmall_MT2.png"
     },
     {
-      "id": "BasicClanMediumIcon",
-      "path": "textures/icons/BasicClanMediumIcon.png"
+      "id": "PathogensMedium_MT2",
+      "path": "textures/icons/PathogensMedium_MT2.png"
     },
     {
-      "id": "BasicClanLargeIcon",
-      "path": "textures/icons/BasicClanLargeIcon.png"
+      "id": "PathogensLarge",
+      "path": "textures/icons/PathogensLarge.png"
     },
     {
-      "id": "BasicClanSilhouetteIcon",
-      "path": "textures/icons/BasicClanSilhouetteIcon.png"
+      "id": "PathogensSilhouette",
+      "path": "textures/icons/PathogensSilhouette.png"
     },
     {
-      "id": "CardDraftIcon",
-      "path": "textures/icons/BasicClanCardDraft.png"
+      "id": "PathogensCardBack",
+      "path": "textures/icons/PathogensCardBack.png"
     }
   ]
 }
