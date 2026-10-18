@@ -2,10 +2,24 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "subtypes": [
     {
-      "id": "BasicSubtype",
+      "id": "PathogenSub_Host",
       "names": {
-        "english": "Basic",
-        "chinese": "示例"
+        "english": "Host",
+        "chinese": ""
+      }
+    },
+    {
+      "id": "PathogenSub_Instrument",
+      "names": {
+        "english": "Instrument",
+        "chinese": ""
+      }
+    },
+    {
+      "id": "PathogenSub_Pathogen",
+      "names": {
+        "english": "Pathogen",
+        "chinese": ""
       }
     }
   ]
