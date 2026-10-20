@@ -16,7 +16,7 @@
       "rarity": "common",
       "targets_room": true,
       "targetless": false,
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "card_art": "@BasicCommonSpellCardArt",
       "effects": [
         "@BasicCommonSpellApplyDazed",
