@@ -17,7 +17,7 @@
       "extensions": [
         {
           "enhancer": {
-            "class": "@ClassBasic",
+            "class": "@ClassPathogens",
             "pools": ["UnitUpgradePoolCommon"],
             "rarity": "common"
           }
