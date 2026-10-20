@@ -2,7 +2,7 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "cards": [
     {
-      "id": "AntigenMimicUnit",
+      "id": "SpawnAntigenMimic",
       "names": {
         "english": "Antigen Mimic",
         "chinese": ""
@@ -52,10 +52,10 @@
   ],
   "effects": [
     {
-      "id": "SpawnAntigenMimicBannerUnit",
+      "id": "SpawnAntigenMimic",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "param_character": "@AntigenMimicBannerUnitCharacter"
+      "param_character": "@AntigenMimic"
     },
     {
       "id": "AntigenMimicRallyRegen",
