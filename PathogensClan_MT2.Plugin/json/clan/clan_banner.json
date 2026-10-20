@@ -34,13 +34,13 @@
   ],
   "rewards": [
     {
-      "id": "BasicBannerReward",
+      "id": "PathogensBannerReward",
       "type": "draft",
       "costs": [ 100 ],
       "extensions": [
         {
           "draft": {
-            "draft_pool": "@UnitsBasicClanBanner",
+            "draft_pool": "@UnitsPathogensClanBanner",
             "class_type": "main|subclass|nonclass",
             "draft_options_count": 2,
             "rarity_floor": "uncommon",
@@ -53,7 +53,7 @@
   ],
   "card_pools": [
     {
-      "id": "UnitsBasicClanBanner"
+      "id": "UnitsPathogensClanBanner"
     }
   ],
   "game_objects": [
