@@ -11,7 +11,7 @@
       "cost": 1,
       "card_type": "monster",
       "rarity": "uncommon",
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "targets_room": true,
       "targetless": false,
       "pools": [ "MegaPool" ],
