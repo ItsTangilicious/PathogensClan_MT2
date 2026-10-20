@@ -52,10 +52,10 @@
   ],
   "effects": [
     {
-      "id": "SpawnAntigenMimic",
+      "id": "SpawnAntigenMimicBannerUnit",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "param_character": "@AntigenMimic"
+      "param_character": "@AntigenMimicUnitCharacter"
     },
     {
       "id": "AntigenMimicRallyRegen",
