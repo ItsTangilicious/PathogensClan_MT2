@@ -32,6 +32,11 @@
       ]
     }
   ],
+  "card_pools": [
+    {
+      "id": "UnitsPathogensClanBanner"
+    }
+  ],
   "rewards": [
     {
       "id": "PathogensBannerReward",
@@ -49,11 +54,6 @@
           }
         }
       ]
-    }
-  ],
-  "card_pools": [
-    {
-      "id": "UnitsPathogensClanBanner"
     }
   ],
   "game_objects": [
