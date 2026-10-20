@@ -36,9 +36,6 @@
   "card_pools": [
     {
       "id": "UnitsPathogensClanBanner",
-      "cards": [
-        "@SpawnAntigenMimic"
-      ]
     }
   ],
   "rewards": [
