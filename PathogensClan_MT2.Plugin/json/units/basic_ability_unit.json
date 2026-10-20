@@ -14,7 +14,7 @@
       "class": "@ClassPathogens",
       "targets_room": true,
       "targetless": false,
-      "pools": [ "UnitsAllBanner", "@UnitsBasicClanBanner" ],
+      "pools": [ "UnitsAllBanner", "@UnitsPathogensClanBanner" ],
       "effects": [ "@SpawnBasicAbilityUnit" ],
       "lore_tooltips": [
         {
