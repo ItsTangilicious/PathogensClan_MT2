@@ -38,6 +38,7 @@ namespace PathogensClan_MT2.Plugin
                         // Starter (required).
                         "json/spells/basic_starter.json",
                         "json/spells/basic_common.json",
+                        "json/spells/Basic_common_2.json",
                         // Units
                         "json/units/basic_ability_unit.json",
                         "json/units/basic_banner_unit.json",
