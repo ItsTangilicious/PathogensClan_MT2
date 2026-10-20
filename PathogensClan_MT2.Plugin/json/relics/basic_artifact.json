@@ -25,7 +25,7 @@
       "extensions": [
         {
           "collectable": {
-            "class": "@ClassBasic",
+            "class": "@ClassPathogens",
             "pools": [ "MegaRelicPool" ],
             "rarity": "uncommon"
           }
