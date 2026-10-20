@@ -16,7 +16,7 @@
       "rarity": "uncommon",
       "targets_room": true,
       "targetless": false,
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "card_art": "@BasicEquipmentCardArt",
       "effects": [
         "@BasicEquipmentEquip"
