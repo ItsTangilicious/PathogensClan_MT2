@@ -35,7 +35,10 @@
   ],
   "card_pools": [
     {
-      "id": "UnitsPathogensClanBanner"
+      "id": "UnitsPathogensClanBanner",
+      "cards": [
+        "@SpawnAntigenMimic"
+      ]
     }
   ],
   "rewards": [
