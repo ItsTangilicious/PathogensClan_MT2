@@ -2,7 +2,7 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "map_nodes": [
     {
-      "id": "RewardNodeUnitPackBasicClan",
+      "id": "RewardNodeUnitPackPathogensClan",
       "type": "reward",
       "map_icon": "@BasicBannerMapIcon",
       "minimap_icon": "@ClanBannerMinimapIcon",
@@ -23,9 +23,9 @@
       "extensions": [
         {
           "reward": {
-            "class": "@ClassBasic",
+            "class": "@ClassPathogens",
             "rewards": [
-              "@BasicBannerReward"
+              "@PathogensBannerReward"
             ]
           }
         }
