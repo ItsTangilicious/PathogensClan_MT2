@@ -16,7 +16,7 @@
       "rarity": "uncommon",
       "targets_room": true,
       "targetless": true,
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "card_art": "@BasicRoomCardArt",
       "effects": [ "@BasicRoomAttach" ],
       "pools": [
