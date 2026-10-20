@@ -11,7 +11,7 @@
       "cost": 2,
       "card_type": "monster",
       "rarity": "rare",
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "targets_room": true,
       "targetless": false,
       "pools": [ "UnitsAllBanner", "@UnitsBasicClanBanner" ],
