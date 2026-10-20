@@ -25,7 +25,8 @@
           "reward": {
             "class": "@ClassPathogens",
             "rewards": [
-              "@PathogensBannerReward"
+            { "id": "@PathogensBannerReward"
+            }
             ]
           }
         }
