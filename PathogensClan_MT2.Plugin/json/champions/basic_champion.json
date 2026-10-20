@@ -11,7 +11,7 @@
       "cost": 0,
       "card_type": "monster",
       "rarity": "champion",
-      "class": "@ClassBasic",
+      "class": "@ClassPathogens",
       "targets_room": true,
       "targetless": false,
       "effects": [ "@SpawnChampionA" ],
