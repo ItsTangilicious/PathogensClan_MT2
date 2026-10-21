@@ -35,7 +35,7 @@
       "name": "CardEffectSpawnMonsterOrAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_character": "@MonsterFunguy",
+      "param_character": "@AntigenMimicUnitCharacter",
       "param_status_effects": [
         {
           "status": "horde",
@@ -46,7 +46,7 @@
   ],
   "characters": [
     {
-      "id": "MonsterFunguy",
+      "id": "AntigenMimicUnitCharacter",
       "names": 
        { "english": "Funguy"        
       },
