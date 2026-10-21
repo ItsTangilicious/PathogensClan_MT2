@@ -17,7 +17,6 @@
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@ChampionAStarterCardArt",
-      "effects": [ "@ChampionAStarterDealTwentyDamage" ],
       "pools": [ "StarterCardsOnly" ],
       "effects": [
         "@VirionStarter"
