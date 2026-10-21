@@ -10,12 +10,12 @@
         "chinese": "示例初始卡牌"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage to an enemy unit.",
+        "english": "[spawn] [effect0.power].",
         "chinese": "对一个敌方单位造成 [effect0.power] 点伤害。"
       },
       "rarity": "common",
-      "targets_room": true,
-      "targetless": false,
+     
+      "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@ChampionAStarterCardArt",
       "effects": [ "@ChampionAStarterDealTwentyDamage" ],
@@ -30,13 +30,29 @@
   ],
   "effects": [
     {
-      "id": "ChampionAStarterDealTwentyDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "drop_target_character",
-      "target_team": "heroes",
-      "param_int": 20
-    }
-  ],
+      "id": "VirionStarter",
+      "name": "CardEffectSpawnMonsterOrAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_character": "@MonsterFunguy",
+      "param_status_effects": [
+        {
+          "status": "horde",
+          "count": 1
+        }
+      ],
+        "characters": [
+    {
+      "id": "MonsterFunguy",
+      "names": 
+        "english": "Funguy",        
+      },
+           "size": 1,
+      "health": 4,
+      "attack_damage": 3,
+          "subtypes": [
+        "@PathogenSub_Pathogen"
+      ],
   "game_objects": [
     {
       "id": "ChampionAStarterCardArt",
