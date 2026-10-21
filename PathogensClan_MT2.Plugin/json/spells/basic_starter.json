@@ -51,11 +51,11 @@
       "names": 
         "english": "Funguy",        
       },
-           "size": 1,
+      "size": 1,
       "health": 4,
       "attack_damage": 3,
           "subtypes": [
-        "@PathogenSub_Pathogen"
+        "@PathogenSub_Pathogen" ]
       ],
   "game_objects": [
     {
