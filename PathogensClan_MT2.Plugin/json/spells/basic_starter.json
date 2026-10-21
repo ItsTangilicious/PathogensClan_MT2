@@ -14,12 +14,14 @@
         "chinese": "对一个敌方单位造成 [effect0.power] 点伤害。"
       },
       "rarity": "common",
-     
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@ChampionAStarterCardArt",
       "effects": [ "@ChampionAStarterDealTwentyDamage" ],
       "pools": [ "StarterCardsOnly" ],
+      "effects": [
+        "@VirionStarter"
+      ],
       "lore_tooltips": [
         {
           "english": "Starter card for Champion A",
@@ -40,9 +42,10 @@
           "status": "horde",
           "count": 1
         }
-        }
       ],
-        "characters": [
+    }
+  ],
+  "characters": [
     {
       "id": "MonsterFunguy",
       "names": 
