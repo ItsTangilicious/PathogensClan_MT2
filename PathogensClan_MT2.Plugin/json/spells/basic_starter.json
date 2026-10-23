@@ -14,6 +14,7 @@
         "chinese": ""
       },
       "rarity": "common",
+      "targets_room": true,
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@VirionSpell",
@@ -58,15 +59,15 @@
       "type": "character_art",
       "extensions": {
         "card_art": {
-          "sprite": "@VibrionCharacter"
+          "sprite": "@VirionCharacter"
         }
       }
     }
   ],
   "sprites": [
     {
-      "id": "VibrionCardSprite",
-      "path": "textures/card_art/VibrionSpell.png"
+      "id": "VirionCardSprite",
+      "path": "textures/card_art/VirionSpell.png"
     }
   ]
 }
