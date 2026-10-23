@@ -61,7 +61,7 @@
         {
           "id": "BasicChampionA",
           "card_data": "@ChampionACard",
-          "starter_card": "@ChampionAStarterCard",
+          "starter_card": "@VirionStarterCard",
           "upgrade_tree": [
             [
               "@ChampionAUpgradePathI",
