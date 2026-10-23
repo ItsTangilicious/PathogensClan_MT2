@@ -2,21 +2,21 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "cards": [
     {
-      "id": "ChampionAStarterCard",
+      "id": "VirionStarterCard",
       "cost": 1,
       "card_type": "spell",
       "names": {
-        "english": "Starter Card",
-        "chinese": "示例初始卡牌"
+        "english": "Recombinant Virus",
+        "chinese": ""
       },
       "descriptions": {
-        "english": "[spawn] [effect0.power].",
-        "chinese": "对一个敌方单位造成 [effect0.power] 点伤害。"
+        "english": "Summon 1 Recombinant Virus to the front of this floor.",
+        "chinese": ""
       },
       "rarity": "common",
       "targetless": true,
       "class": "@ClassPathogens",
-      "card_art": "@ChampionAStarterCardArt",
+      "card_art": "@VirionSpell",
       "pools": [ "StarterCardsOnly" ],
       "effects": [
         "@VirionStarter"
@@ -32,46 +32,41 @@
   "effects": [
     {
       "id": "VirionStarter",
-      "name": "CardEffectSpawnMonsterOrAddStatusEffect",
+      "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_character": "@VirionCharacter",
-      "param_status_effects": [
-        {
-          "status": "horde",
-          "count": 1
-        }
-      ]
+      "param_character": "@VirionCharacter"
     }
   ],
   "characters": [
     {
       "id": "VirionCharacter",
       "names": 
-       { "english": "Funguy"        
+       { "english": "Recombinant Virus"        
       },
       "size": 1,
-      "health": 4,
-      "attack_damage": 3,
+      "health": 1,
+      "attack_damage": 0,
           "subtypes": [
         "@PathogenSub_Pathogen" ]
     }
       ],
+
   "game_objects": [
     {
-      "id": "ChampionAStarterCardArt",
-      "type": "card_art",
+      "id": "VirionStarterCardArt",
+      "type": "character_art",
       "extensions": {
         "card_art": {
-          "sprite": "@ChampionAStarterCardSprite"
+          "sprite": "@VibrionCharacter"
         }
       }
     }
   ],
   "sprites": [
     {
-      "id": "ChampionAStarterCardSprite",
-      "path": "textures/card_art/ChampionAStarter.png"
+      "id": "VibrionCardSprite",
+      "path": "textures/card_art/VibrionSpell.png"
     }
   ]
 }
