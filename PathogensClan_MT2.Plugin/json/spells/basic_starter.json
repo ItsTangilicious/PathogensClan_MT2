@@ -33,7 +33,7 @@
   "effects": [
     {
       "id": "VirionStarter",
-      "name": "CardEffectSpawnMonster",
+      "name": "CardEffectSpawnMonsterOrAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
       "param_character": "@VirionCharacter"
@@ -49,17 +49,18 @@
       "health": 1,
       "attack_damage": 0,
           "subtypes": [
-        "@PathogenSub_Pathogen" ]
+        "@PathogenSub_Pathogen" ],
+        "character_art": "@VirionCharcterSprite"
     }
       ],
 
   "game_objects": [
     {
       "id": "VirionStarterCardArt",
-      "type": "character_art",
+      "type": "card_art",
       "extensions": {
         "card_art": {
-          "sprite": "@VirionCharacter"
+          "sprite": "@VirionCardSprite"
         }
       }
     }
@@ -68,6 +69,10 @@
     {
       "id": "VirionCardSprite",
       "path": "textures/card_art/VirionSpell.png"
+    },
+    {
+      "id": "VirionCharacterSprite",
+      "path": "textures/character_art/VirionCharacter.png"
     }
   ]
 }
