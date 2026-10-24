@@ -33,26 +33,15 @@
   "effects": [
     {
       "id": "VirionStarter",
-      "name": "CardEffectSpawnMonsterOrAddStatusEffect",
+      "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_character": "@VirionCharacter"
+      "param_character": "@VirionCharacter",
+      "param_character_pool": [
+        "@AntigenMimicUnitCharacter"
+      ]
     }
   ],
-  "characters": [
-    {
-      "id": "VirionCharacter",
-      "names": 
-       { "english": "Recombinant Virus"        
-      },
-      "size": 1,
-      "health": 1,
-      "attack_damage": 0,
-          "subtypes": [
-        "@PathogenSub_Pathogen" ],
-        "character_art": "@VirionCharcterSprite"
-    }
-      ],
 
   "game_objects": [
     {
@@ -69,10 +58,6 @@
     {
       "id": "VirionCardSprite",
       "path": "textures/card_art/VirionSpell.png"
-    },
-    {
-      "id": "VirionCharacterSprite",
-      "path": "textures/character_art/VirionCharacter.png"
     }
   ]
 }
