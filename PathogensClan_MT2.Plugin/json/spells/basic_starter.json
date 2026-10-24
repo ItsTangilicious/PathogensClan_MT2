@@ -6,7 +6,7 @@
       "cost": 1,
       "card_type": "spell",
       "names": {
-        "english": "Recombinant Virus",
+        "english": "Virion",
         "chinese": ""
       },
       "descriptions": {
@@ -15,6 +15,7 @@
       },
       "rarity": "common",
       "targets_room": true,
+      "initial_keyboard_target": "front_friendly",
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@VirionSpell",
@@ -38,7 +39,7 @@
       "target_team": "monsters",
       "param_character": "@VirionCharacter",
       "param_character_pool": [
-        "@AntigenMimicUnitCharacter"
+        "@RecombinantVirusUnitCharacter"
       ]
     }
   ],

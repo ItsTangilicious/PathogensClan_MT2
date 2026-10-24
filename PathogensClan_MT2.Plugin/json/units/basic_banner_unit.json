@@ -93,11 +93,11 @@
   "sprites": [
     {
       "id": "BasicBannerUnitCardSprite",
-      "path": "textures/card_art/BasicBannerUnit.png"
+      "path": "textures/card_art/AntigenMimicCard.png"
     },
     {
       "id": "BasicBannerUnitCharacterSprite",
-      "path": "textures/character_art/BasicBannerUnit.png"
+      "path": "textures/character_art/AntigenMimicCharacter.png"
     }
   ]
 }
