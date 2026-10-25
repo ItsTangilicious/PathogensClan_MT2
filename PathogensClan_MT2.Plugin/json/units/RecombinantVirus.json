@@ -36,7 +36,7 @@
       "health": 1,
       "attack_damage": 0,
       "subtypes": [ "@PathogenSub_Pathogen" ],
-      "triggers": [ "@RecombinantVirusExtinguish" ],
+      "triggers": [ "@RecombinantVirusExtinguish", "@RecombinantVirusSummon" ],
       "starting_status_effects": [
         {
           "status": "cardless",
@@ -47,6 +47,15 @@
   ],
     "character_triggers": [
     {
+      "id": "RecombinantVirusSummon",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "[advance].]",
+        "chinese": ""
+      },
+      "effects": ["@RecombinantVirusSummonAdvance"]
+    },
+      {
       "id": "RecombinantVirusExtinguish",
       "trigger": "on_death",
       "descriptions": {
@@ -62,6 +71,12 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "param_character": "@RecombinantVirusUnitCharacter"
+    },
+    {
+      "id": "RecombinantVirusSummonAdvance",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "self",
+      "param_int": 0
     },
     {
       "id": "RecombinantVirusExtinguishContagion",

@@ -21,7 +21,7 @@
       "card_art": "@VirionSpell",
       "pools": [ "StarterCardsOnly" ],
       "effects": [
-        "@VirionStarter"
+        "@VirionStarter", "@VirionRally"
       ],
       "lore_tooltips": [
         {
@@ -41,7 +41,14 @@
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
-    }
+    },
+    {
+    "id": "VirionRally",
+    "name": "CardEffectPlayUnitTrigger",
+    "target_mode": "room",
+    "target_team": "both",
+    "param_trigger": "card_monster_played"
+}
   ],
 
   "game_objects": [
