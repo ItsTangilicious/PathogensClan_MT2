@@ -36,7 +36,13 @@
       "health": 1,
       "attack_damage": 0,
       "subtypes": [ "@PathogenSub_Pathogen" ],
-      "triggers": [ "@RecombinantVirusExtinguish" ]
+      "triggers": [ "@RecombinantVirusExtinguish" ],
+      "starting_status_effects": [
+        {
+          "status": "cardless",
+          "count": 1
+        }
+      ]
     }
   ],
     "character_triggers": [
