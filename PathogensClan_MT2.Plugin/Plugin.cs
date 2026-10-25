@@ -41,6 +41,7 @@ namespace PathogensClan_MT2.Plugin
                         // Units
                         "json/units/basic_ability_unit.json",
                         "json/units/basic_banner_unit.json",
+                        "json/units/SimplexvirusDiabolicus.json",
                         // Non Banner Unit, that is draftable as a Battle Reward.
                         "json/units/basic_draft_unit.json",
                         "json/units/RecombinantVirus.json",

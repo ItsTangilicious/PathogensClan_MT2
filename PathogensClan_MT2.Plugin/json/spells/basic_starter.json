@@ -36,8 +36,7 @@
       "id": "VirionStarter",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "target_team": "monsters",
-      "param_character": "@VirionCharacter",
+      "target_team": "monsters",      
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
