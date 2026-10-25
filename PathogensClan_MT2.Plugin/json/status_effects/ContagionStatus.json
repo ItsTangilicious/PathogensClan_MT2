@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "status_effects": [
+    {
+      "id": "contagion",
+      "class_name": "@StatusEffectContagionState",
+      "names": {
+        "english": "Contagion"
+      },
+      "stackable_names": {
+        "english": "Contagion {0}"
+      },
+      "card_tooltips": {
+        "english": "At the end of turn, each unit with Contagion applies Contagion 1 to all enemy units.<br>If a unit has Contagion stacks at least equal to its health, it then takes damage equal its number of Contagion stacks."
+      },
+      "character_tooltips": {
+        "english": "At the end of turn, each unit with Contagion applies Contagion 1 to all enemy units.<br>If a unit has Contagion stacks at least equal to its health, it then takes damage equal its number of Contagion stacks."
+      },
+      "replacement_texts": {
+        "english": "<b>Contagion</b>"
+      },
+      "trigger_stage": "on_post_combat_poison",
+      "remove_when_triggered": false,
+      "param_int": 1,
+      "is_propagatable": true,
+      "display_category": "negative",
+      "exclude_monster_propagation": true,
+      "is_stackable": true,
+      "icon": "@Contagion"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Contagion",
+      "path": "textures/status_contagion.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "Contagion",
+      "path": "textures/status_contagion_tooltip.png"
+    }
+  ]
+}
