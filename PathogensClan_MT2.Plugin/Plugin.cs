@@ -52,7 +52,9 @@ namespace PathogensClan_MT2.Plugin
                         // Shop Upgrades (Enhancer)
                         "json/enhancers/basic_enhancer.json",
                         // Artifacts
-                        "json/relics/basic_artifact.json"
+                        "json/relics/basic_artifact.json",
+                        // StatusEffects
+                        "json/statuseffects/contagionstatus.json"
                     );
                 }
             );

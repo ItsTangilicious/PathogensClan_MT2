@@ -59,7 +59,7 @@
       "id": "RecombinantVirusExtinguish",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Apply [corruption] [effect0.status0.power] to the back enemy unit.",
+        "english": "Apply [pathogensclan_mt2.plugin_contagionstatus] [effect0.status0.power] to the back enemy unit.",
         "chinese": ""
       },
       "effects": [ "@RecombinantVirusExtinguishContagion" ]
@@ -85,7 +85,7 @@
       "target_team": "heroes",
       "param_status_effects": [
         {
-          "status": "corruption",
+          "status": "@contagion",
           "count": 4
         }
       ]
