@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace PathogensClan_MT2.Plugin
 {
-/* class StatusEffectContagionState : StatusEffectState
+class StatusEffectContagionState : StatusEffectState
     {
         public override bool TestTrigger(StatusEffectState.InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
@@ -44,19 +44,19 @@ namespace PathogensClan_MT2.Plugin
        
             }
 
-        if (numStacks > 0)
+       if (numStacks > 0)
         {
-            List<CharacterState> list = new List<CharacterState>();
+            var list = new List<CharacterState>();
             RoomState? roomState = associatedCharacter.GetSpawnPoint()?.GetRoomOwner();
             if (roomState != null)
             {                    
                 roomState.AddCharactersToList(list, Team.Type.Heroes);
                 foreach (CharacterState characterState in list)
                 {                        
-                    characterState.AddStatusEffect(StatusEffectContagionState.statusID, 1);
+                    characterState.AddStatusEffect("PathogensClan_MT2.Plugin_contagion", 1);
                 }
             };
-        }
+        } 
     }
 
         public override int GetEffectMagnitude(int stacks = 1)
@@ -71,5 +71,5 @@ namespace PathogensClan_MT2.Plugin
         public const string statusID = "status_contagion";
         private CharacterState? associatedCharacter;
         int stacks;
-    } */
+    } 
 }

@@ -54,7 +54,8 @@ namespace PathogensClan_MT2.Plugin
                         // Artifacts
                         "json/relics/basic_artifact.json",
                         // StatusEffects
-                        "json/statuseffects/contagionstatus.json"
+                        "json/status_effects/contagionstatus.json",
+                        "json/status_effects/recoilstatus.json"
                     );
                 }
             );
