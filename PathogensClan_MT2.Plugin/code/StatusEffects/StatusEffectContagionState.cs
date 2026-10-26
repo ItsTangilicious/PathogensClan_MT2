@@ -1,6 +1,8 @@
 using ShinyShoe;
 using System.Collections;
 
+namespace PathogensClan_MT2.Plugin
+{
 /* class StatusEffectContagionState : StatusEffectState
     {
         public override bool TestTrigger(StatusEffectState.InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
@@ -70,3 +72,4 @@ using System.Collections;
         private CharacterState? associatedCharacter;
         int stacks;
     } */
+}
