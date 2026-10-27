@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "status_effects": [
+    {
+      "id": "replicate",
+      "class_name": "@StatusEffectReplicateState",
+      "names": {
+        "english": "Replicate"
+      },
+      "stackable_names": {
+        "english": "Replicate {0}"
+      },
+      "card_tooltips": {
+        "english": "On death, summon a copy of this unit for each stack of Replicate it has.<br>Replicate stacks are removed when the unit is summoned."
+      },
+      "character_tooltips": {
+        "english": "On death, summon a copy of this unit for each stack of Replicate it has.<br>Replicate stacks are removed when the unit is summoned."
+      },
+      "replacement_texts": {
+        "english": "<b>Replicate</b>"
+      },
+      "trigger_stage": "on_post_combat_poison",
+      "remove_when_triggered": true,
+      "param_int": 1,
+      "is_propagatable": false,
+      "display_category": "persistent",
+      "exclude_monster_propagation": true,
+      "is_stackable": true,
+      "icon": "@Replicate"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Replicate",
+      "path": "textures/status_replicate.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "Replicate",
+      "path": "textures/status_replicate_tooltip.png"
+    }
+  ]
+}

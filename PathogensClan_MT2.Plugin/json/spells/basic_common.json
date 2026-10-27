@@ -37,7 +37,7 @@
       "id": "BasicCommonSpellApplyDazed",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "target_team": "heroes",
+      "target_team": "monsters",
       "param_status_effects": [
         {
           "status": "dazed",
@@ -49,10 +49,10 @@
       "id": "BasicCommonSpellApplyMuted",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_targeted_characters",
-      "target_team": "heroes",
+      "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "muted",
+          "status": "@replicate",
           "count": 1
         }
       ]
