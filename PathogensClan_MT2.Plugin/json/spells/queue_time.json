@@ -1,0 +1,84 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "QueueTimeCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Queue Time",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [rooted] <b><nobr>[effect0.status0.power]</nobr></b> to an enemy unit.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@QueueTimeCardArt",
+      "pools": [ "MegaPool" ],
+      "effects": [
+        "@QueueTimeRooted", "@QueueTimeDescend"
+      ],
+      "triggers": ["@QueueTimeReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "QueueTimeRooted",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "heroes",      
+      "param_status_effects": [
+        {
+          "status": "rooted",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "QueueTimeDescend",
+      "name": "CardEffectBump",
+      "target_mode": "room",
+      "target_team": "both",      
+      "param_int": -1
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "QueueTimeReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "[dsecend] all units on this floor."
+        },
+        "effects": [
+            "@QueueDescend"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "QueueTimeCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@QueueTimeCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "QueueTimeCardSprite",
+      "path": "textures/card_art/QueueTimeSpell.png"
+    }
+  ]
+}

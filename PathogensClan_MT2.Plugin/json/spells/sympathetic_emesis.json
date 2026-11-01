@@ -1,0 +1,84 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "SympatheticEmesisCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Sympathetic Emesis",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [sap] <b><nobr>[effect0.status0.power]</nobr></b>.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@SympatheticEmesisCardArt",
+      "pools": [ "MegaPool" ],
+      "traits": ["@Consume"],
+      "effects": [
+        "@SympatheticEmesisSap", "@SympatheticEmesisAOESap"
+      ],
+      "triggers": ["@SympatheticEmesisReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SympatheticEmesisSap",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "both",      
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "SympatheticEmesisAOESap",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes"      
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "SympatheticEmesisReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [sap] <b><nobr>[effect0.status0.power]</nobr></b> to enemy units on the floor where your turn ended."
+        },
+        "effects": [
+            "@SympatheticEmesisAOESap"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "SympatheticEmesisCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SympatheticEmesisCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SympatheticEmesisCardSprite",
+      "path": "textures/card_art/SympatheticEmesisSpell.png"
+    }
+  ]
+}

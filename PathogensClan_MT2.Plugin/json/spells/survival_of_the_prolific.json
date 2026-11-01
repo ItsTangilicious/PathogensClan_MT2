@@ -1,0 +1,114 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "SurvivalOfTheProlificSpellCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Survival of the Prolific",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Give a friendly unit +<nobr>{[trait1.power]}[attack]</nobr>, +<nobr>{[trait2.power]}[health]</nobr>, and [lifesteal] <b><nobr>{[trait3.power]}</nobr></b> for each friendly unit spawned during this battle.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@SurvivalOfTheProlificSpellCardArt",
+      "effects": [
+        "@SurvivalOfTheProlificScaledHealth", "@SurvivalOfTheProlificScaledAttack", "@SurvivalOfTheProlificScaledLifesteal"
+      ],
+      "traits": ["@SurvivalOfTheProlificScalingHealth", "@SurvivalOfTheProlificScalingAttack","@SurvivalOfTheProlificScalingLifesteal", "@Consume"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SurvivalOfTheProlificScaledAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@SurvivalOfTheProlificOne"
+    },
+{
+      "id": "SurvivalOfTheProlificScaledHealth",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@SurvivalOfTheProlificTwo"
+    },
+    {
+      "id": "SurvivalOfTheProlificScaledLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters"
+    }
+  ],
+  "traits": [
+    {
+        "id": "SurvivalOfTheProlificScalingAttack",
+        "name": "CardTraitScalingUpgradeUnitAttack",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 1
+    },
+     {
+        "id": "SurvivalOfTheProlificScalingHealth",
+        "name": "CardTraitScalingUpgradeUnitHealth",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 1
+    },
+    {
+        "id": "SurvivalOfTheProlificScalingLifesteal",
+        "name": "CardTraitScalingAddStatusEffect",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_status_effects": [
+            {
+                "status": "@lifesteal",
+                "count": 1
+            }
+        ]
+    }
+
+  ],
+  "upgrades": [
+    {
+      "id": "SurvivalOfTheProlificOne",
+      "bonus_damage": 0,
+      "upgrade_will_be_scaled_by_non_magic_power_trait": true
+    },
+    {
+      "id": "SurvivalOfTheProlificTwo",
+      "bonus_damage": 0,
+      "upgrade_will_be_scaled_by_non_magic_power_trait": true
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SurvivalOfTheProlificSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SurvivalOfTheProlificSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SurvivalOfTheProlificSpellCardSprite",
+      "path": "textures/card_art/SurvivalOfTheProlificSpell.png"
+    }
+  ]
+}

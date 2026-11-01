@@ -1,0 +1,90 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "SpelleogenesisSpellCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Spelleogenesis",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [dazed] [effect0.status0.power] and [pathogensclan_mt2.plugin_contagionstatus] [effect1.status0.power] to enemy units.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@SpelleogenesisSpellCardArt",
+      "effects": [
+        "@SpelleogenesisSpellApplyExplosive",
+        "@SpelleogenesisSpellApplyDamage"
+      ],
+      "traits": ["@Consume" , 
+      {
+        "id": "@ApplyExplosive",
+        "name": "CardTraitDamageOverflow",
+        "param_int": 2
+      }],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpelleogenesisSpellApplyExplosive",
+      "name": "CardEffectAddTempCardUpgradeToCardsInHand",
+      "target_mode": "room",
+      "target_team": "none",
+      "param_upgrade": "@SpelleogenesisSpellUpgradeExplosive"
+    },
+    {
+      "id": "SpelleogenesisSpellApplyDamage",
+      "name": "CardEffectAddTempCardUpgradeToCardsInHand",
+      "target_mode": "room",
+      "target_team": "none",
+      "param_upgrade": "@SpelleogenesisSpellUpgradeDamage"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SpelleogenesisSpellUpgradeExplosive",
+      "filters": ["ExcludedSpellsFromMagicPower",
+        "MagicPowerSpells"],
+      "trait_upgrades": [
+       "@ApplyExplosive"
+        ]
+    }, 
+    {
+      "id": "SpelleogenesisSpellUpgradeDamage",
+      "filters": ["ExcludedSpellsFromMagicPower",
+        "MagicPowerSpells"],
+        "bonus_damage": 3,
+        "bonus_heal": 3
+      }
+  ],
+  "game_objects": [
+    {
+      "id": "SpelleogenesisSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SpelleogenesisSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SpelleogenesisSpellCardSprite",
+      "path": "textures/card_art/SpelleogenesisSpell.png"
+    }
+  ]
+}

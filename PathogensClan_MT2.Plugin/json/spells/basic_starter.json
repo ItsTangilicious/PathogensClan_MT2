@@ -18,7 +18,7 @@
       "initial_keyboard_target": "front_friendly",
       "targetless": true,
       "class": "@ClassPathogens",
-      "card_art": "@VirionSpell",
+      "card_art": "@VirionStarterCardArt",
       "pools": [ "StarterCardsOnly" ],
       "effects": [
         "@VirionStarter", "@VirionRally"

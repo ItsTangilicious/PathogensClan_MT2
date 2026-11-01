@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "RampantInfectionSpellCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Rampant Infection",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal 3 damage to enemy units for each friendly unit spawned this battle.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@RampantInfectionSpellCardArt",
+      "effects": [
+        "@RampantInfectionSpellDealDamage"
+      ],
+      "traits": ["@RampantInfectionScaling"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RampantInfectionSpellDealDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes"
+    }
+  ],
+  "traits": [
+    {
+        "id": "RampantInfectionScaling",
+        "name": "CardTraitScalingAddDamage",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 3
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "RampantInfectionSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@RampantInfectionSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RampantInfectionSpellCardSprite",
+      "path": "textures/card_art/RampantInfectionSpell.png"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "NauseaSpellCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Nausea",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [dazed] [effect0.status0.power] and [pathogensclan_mt2.plugin_contagionstatus] [effect1.status0.power] to enemy units.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@NauseaSpellCardArt",
+      "effects": [
+        "@NauseaSpellApplyDazed",
+        "@NauseaSpellApplyContagion"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "NauseaSpellApplyDazed",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "dazed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NauseaSpellApplyContagion",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 6
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "NauseaSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@NauseaSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "NauseaSpellCardSprite",
+      "path": "textures/card_art/NauseaSpell.png"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "ViralOutcroppingCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Viral Outcropping",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Summon 2 Recombinant Virus.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "initial_keyboard_target": "front_friendly",
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@ViralOutcroppingCardArt",
+      "pools": [ "MegaPool" ],
+      "effects": [
+        "@ViralOutcropping1", "@ViralOutcropping2"
+      ],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ViralOutcropping1",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    },
+   {
+      "id": "ViralOutcropping2",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    }
+  ],
+
+  "game_objects": [
+    {
+      "id": "ViralOutcroppingStarterCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ViralOutcroppingCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ViralOutcroppingCardSprite",
+      "path": "textures/card_art/ViralOutcroppingSpell.png"
+    }
+  ]
+}
