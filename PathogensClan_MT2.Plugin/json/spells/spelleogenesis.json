@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [explosive] and +3 <b>Magic Power</b> to spells in hand.",
+        "english": "Apply [explosive] and +[effect0.upgrade.bonusdamage] <b>Magic Power</b> to spells in hand.",
         "chinese": ""
       },
       "rarity": "rare",
@@ -22,12 +22,8 @@
         "@SpelleogenesisSpellApplyExplosive",
         "@SpelleogenesisSpellApplyDamage"
       ],
-      "traits": ["@Consume" , 
-      {
-        "id": "@ApplyExplosive",
-        "name": "CardTraitDamageOverflow",
-        "param_int": 2
-      }],
+      "traits": ["@Consume" , "@ApplyExplosive"
+      ],
       "pools": ["MegaPool"],
       "lore_tooltips": [
         {
@@ -52,6 +48,13 @@
       "target_team": "none",
       "param_upgrade": "@SpelleogenesisSpellUpgradeDamage"
     }
+  ],
+  "traits": [
+  {
+  "id": "ApplyExplosive",
+  "name": "CardTraitDamageOverflow",
+  "param_int": 2
+  }
   ],
   "upgrades": [
     {

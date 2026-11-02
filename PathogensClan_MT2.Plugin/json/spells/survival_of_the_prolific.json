@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Give a friendly unit +<nobr>{[trait1.power]}[attack]</nobr>, +<nobr>{[trait2.power]}[health]</nobr>, and [lifesteal] <b><nobr>{[trait3.power]}</nobr></b> for each friendly unit spawned during this battle.",
+        "english": "Give a friendly unit +<nobr>[trait1.power][attack]</nobr>, +<nobr>[trait0.power][health]</nobr>, and [lifesteal] <b><nobr>[trait2.power]</nobr></b> for each friendly unit spawned during this battle.",
         "chinese": ""
       },
       "rarity": "rare",
