@@ -35,6 +35,13 @@ namespace PathogensClan_MT2.Plugin
                         // Required: A Clan Champion with one Upgrade Path.
                         "json/champions/basic_champion.json",
                         // Spell Cards
+                        "json/spells/nausea.json",
+                        "json/spells/queue_time.json",
+                        "json/spells/rampant_infection.json",
+                        "json/spells/spelleogenesis.json",
+                        "json/spells/survival_of_the_prolific.json",
+                        "json/spells/sympathetic_emesis.json",
+                        "json/spells/viral_outcropping.json",
                         // Starter (required).
                         "json/spells/basic_starter.json",
                         "json/spells/basic_common.json",

@@ -45,7 +45,7 @@
       ]
     },
     {
-      "id": "QueueTimeDescend",
+      "id": "QueueDescend",
       "name": "CardEffectBump",
       "target_mode": "room",
       "target_team": "both",      
@@ -57,7 +57,7 @@
         "id": "QueueTimeReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "[dsecend] all units on this floor."
+            "english": "[descend] all units on this floor."
         },
         "effects": [
             "@QueueDescend"
@@ -78,7 +78,7 @@
   "sprites": [
     {
       "id": "QueueTimeCardSprite",
-      "path": "textures/card_art/QueueTimeSpell.png"
+      "path": "textures/card_art/QueueSpell.png"
     }
   ]
 }

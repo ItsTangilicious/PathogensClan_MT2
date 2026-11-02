@@ -19,7 +19,7 @@
       "class": "@ClassPathogens",
       "card_art": "@SurvivalOfTheProlificSpellCardArt",
       "effects": [
-        "@SurvivalOfTheProlificScaledHealth", "@SurvivalOfTheProlificScaledAttack", "@SurvivalOfTheProlificScaledLifesteal"
+        "@SurvivalOfTheProlificScaledHealth", "@SurvivalOfTheProlificScaledAttack", "@SurvivalOfTheProlificScaledLifesteal", "@SurvivalLifesteal"
       ],
       "traits": ["@SurvivalOfTheProlificScalingHealth", "@SurvivalOfTheProlificScalingAttack","@SurvivalOfTheProlificScalingLifesteal", "@Consume"],
       "pools": ["MegaPool"],
@@ -42,15 +42,26 @@
 {
       "id": "SurvivalOfTheProlificScaledHealth",
       "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "drop_target_character",
+      "target_mode": "last_targeted_characters",
       "target_team": "monsters",
       "param_upgrade": "@SurvivalOfTheProlificTwo"
     },
     {
       "id": "SurvivalOfTheProlificScaledLifesteal",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "drop_target_character",
+      "target_mode": "last_targeted_characters",
       "target_team": "monsters"
+    },
+    {
+      "id": "SurvivalLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 0}
+        ]
     }
   ],
   "traits": [
@@ -66,16 +77,18 @@
         "name": "CardTraitScalingUpgradeUnitHealth",
         "param_tracked_value": "any_monster_spawned",
         "param_entry_duration": "this_battle",
-        "param_int": 1
+        "param_int": 2
     },
     {
         "id": "SurvivalOfTheProlificScalingLifesteal",
         "name": "CardTraitScalingAddStatusEffect",
         "param_tracked_value": "any_monster_spawned",
         "param_entry_duration": "this_battle",
+        "param_int": 1,
+        "param_bool": true,
         "param_status_effects": [
             {
-                "status": "@lifesteal",
+                "status": "lifesteal",
                 "count": 1
             }
         ]
@@ -108,7 +121,7 @@
   "sprites": [
     {
       "id": "SurvivalOfTheProlificSpellCardSprite",
-      "path": "textures/card_art/SurvivalOfTheProlificSpell.png"
+      "path": "textures/card_art/ProlificSpell.png"
     }
   ]
 }

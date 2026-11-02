@@ -3,14 +3,14 @@
   "cards": [
     {
       "id": "SpelleogenesisSpellCard",
-      "cost": 3,
+      "cost": 0,
       "card_type": "spell",
       "names": {
         "english": "Spelleogenesis",
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [dazed] [effect0.status0.power] and [pathogensclan_mt2.plugin_contagionstatus] [effect1.status0.power] to enemy units.",
+        "english": "Apply [explosive] and +3 <b>Magic Power</b> to spells in hand.",
         "chinese": ""
       },
       "rarity": "rare",
@@ -56,8 +56,7 @@
   "upgrades": [
     {
       "id": "SpelleogenesisSpellUpgradeExplosive",
-      "filters": ["ExcludedSpellsFromMagicPower",
-        "MagicPowerSpells"],
+      "filters": ["OnlyDamageCard"],
       "trait_upgrades": [
        "@ApplyExplosive"
         ]

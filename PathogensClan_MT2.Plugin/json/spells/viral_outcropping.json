@@ -56,7 +56,7 @@
 
   "game_objects": [
     {
-      "id": "ViralOutcroppingStarterCardArt",
+      "id": "ViralOutcroppingCardArt",
       "type": "card_art",
       "extensions": {
         "card_art": {

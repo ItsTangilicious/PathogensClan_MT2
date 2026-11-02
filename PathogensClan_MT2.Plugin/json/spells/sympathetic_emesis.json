@@ -21,7 +21,7 @@
       "pools": [ "MegaPool" ],
       "traits": ["@Consume"],
       "effects": [
-        "@SympatheticEmesisSap", "@SympatheticEmesisAOESap"
+        "@SympatheticEmesisSap"
       ],
       "triggers": ["@SympatheticEmesisReserve"],
       "lore_tooltips": [
@@ -49,7 +49,13 @@
       "id": "SympatheticEmesisAOESap",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
-      "target_team": "heroes"      
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 1
+        }     
+      ] 
     }
   ],
 "card_triggers": [
@@ -78,7 +84,7 @@
   "sprites": [
     {
       "id": "SympatheticEmesisCardSprite",
-      "path": "textures/card_art/SympatheticEmesisSpell.png"
+      "path": "textures/card_art/EmesisSpell.png"
     }
   ]
 }

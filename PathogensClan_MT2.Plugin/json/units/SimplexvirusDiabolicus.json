@@ -70,7 +70,7 @@
   ],
   "game_objects": [
     {
-      "id": "SimplexVirusCardArt",
+      "id": "SimplexVirusUnitCardArt",
       "type": "card_art",
       "extensions": {
         "card_art": {
