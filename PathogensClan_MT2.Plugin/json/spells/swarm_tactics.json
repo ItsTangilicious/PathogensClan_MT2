@@ -1,0 +1,76 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "SwarmTacticsSpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Swarm Tactics",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Give a friendly unit +<nobr>[trait0.power][attack]</nobr> for each friendly unit spawned during this battle.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@SwarmTacticsSpellCardArt",
+      "effects": [
+        "@SwarmTacticsScaledAttack"
+      ],
+      "traits": ["@SwarmTacticsScalingAttack"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SwarmTacticsScaledAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@SwarmTacticsOne"
+    }
+  ],
+  "traits": [
+    {
+        "id": "SwarmTacticsScalingAttack",
+        "name": "CardTraitScalingUpgradeUnitAttack",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 1
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SwarmTacticsOne",
+      "bonus_damage": 0,
+      "upgrade_will_be_scaled_by_non_magic_power_trait": true
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SwarmTacticsSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SwarmTacticsSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SwarmTacticsSpellCardSprite",
+      "path": "textures/card_art/SwarmTacticsSpell.png"
+    }
+  ]
+}

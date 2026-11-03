@@ -3,7 +3,7 @@
   "cards": [
     {
       "id": "SpelleogenesisSpellCard",
-      "cost": 0,
+      "cost": 3,
       "card_type": "spell",
       "names": {
         "english": "Spelleogenesis",

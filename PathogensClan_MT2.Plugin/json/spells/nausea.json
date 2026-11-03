@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [dazed] [effect0.status0.power] and [pathogensclan_mt2.plugin_contagionstatus] [effect1.status0.power] to enemy units.",
+        "english": "Apply [dazed] [effect0.status0.power] and [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to enemy units.",
         "chinese": ""
       },
       "rarity": "uncommon",

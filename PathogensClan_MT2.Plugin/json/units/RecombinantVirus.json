@@ -59,7 +59,7 @@
       "id": "RecombinantVirusExtinguish",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Apply [pathogensclan_mt2.plugin_contagionstatus] [effect0.status0.power] to the back enemy unit.",
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the back enemy unit.",
         "chinese": ""
       },
       "effects": [ "@RecombinantVirusExtinguishContagion" ]

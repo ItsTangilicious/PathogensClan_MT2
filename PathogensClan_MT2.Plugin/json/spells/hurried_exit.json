@@ -1,0 +1,72 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "HurriedExitSpellCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Hurried Exit",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "[ascend] a unit and apply [sap] <b><nobr>[effect1.status0.power]</nobr></b>.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@HurriedExitSpellCardArt",
+      "effects": [
+        "@HurriedExitSpellMove",
+        "@HurriedExitSpellSap"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "HurriedExitSpellMove",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 1
+    },
+    {
+      "id": "HurriedExitSpellSap",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "HurriedExitSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@HurriedExitSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HurriedExitSpellCardSprite",
+      "path": "textures/card_art/HurriedExitSpell.png"
+    }
+  ]
+}

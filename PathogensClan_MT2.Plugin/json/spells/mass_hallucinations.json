@@ -1,0 +1,70 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "MassHallucinationsCard",
+      "card_type": "spell",
+      "names": {
+        "english": "Mass Hallucinations",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "class": "@ClassPathogens",
+      "card_art": "@MassHallucinationsCardArt",
+      "pools": [ "MegaPool" ],
+      "effects": [
+        "@MassHallucinationsDaze"
+      ],
+      "triggers": ["@MassHallucinationsReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "MassHallucinationsDaze",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "both",      
+      "param_status_effects": [
+        {
+          "status": "dazed",
+          "count": 1
+        }
+      ]
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "MassHallucinationsReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [dazed] <b><nobr>[effect0.status0.power]</nobr></b> to all units on the floor where your turn ended."
+        },
+        "effects": [
+            "@MassHallucinationsDaze"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "MassHallucinationsCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@MassHallucinationsCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "MassHallucinationsCardSprite",
+      "path": "textures/card_art/MassHallucSpell.png"
+    }
+  ]
+}

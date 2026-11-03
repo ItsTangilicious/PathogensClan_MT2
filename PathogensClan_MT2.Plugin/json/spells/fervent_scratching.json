@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "FerventScratchingSpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Fervent Scratching",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal <nobr>[effect0.power]</nobr> damage to a random enemy unit 3 times.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@FerventScratchingSpellCardArt",
+      "effects": [
+        "@FerventScratchingSpellDealDamage",
+        "@FerventScratchingSpellDealDamage",
+        "@FerventScratchingSpellDealDamage"
+      ],
+      "traits": ["@FerventScratchingPiercing"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+        "id": "FerventScratchingPiercing",
+        "name": "CardTraitIgnoreArmor"
+    }
+  ],
+  "effects": [
+    {
+      "id": "FerventScratchingSpellDealDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "random_in_room",
+      "target_team": "heroes",
+      "param_int": 3
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FerventScratchingSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FerventScratchingSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FerventScratchingSpellCardSprite",
+      "path": "textures/card_art/FerventScratchingSpell.png"
+    }
+  ]
+}
