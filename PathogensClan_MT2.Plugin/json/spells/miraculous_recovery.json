@@ -1,0 +1,67 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "MiraculousRecoverySpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Miraculous Recovery",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal <nobr>[effect0.power]</nobr> damage and apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to an enemy unit.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@MiraculousRecoverySpellCardArt",
+      "effects": [
+        "@MiraculousRecoveryHeal",
+        "@MiraculousRecoveryRemoveDebuff"
+      ],
+      "pools": ["MegaPool", "SpellsNotAllowedSpellPowerPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "MiraculousRecoveryHeal",
+      "name": "CardEffectHeal",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 9999
+    },
+    {
+      "id": "MiraculousRecoveryRemoveDebuff",
+      "name": "CardEffectRemoveAllStatusEffects",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "param_int": 1
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "MiraculousRecoverySpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@MiraculousRecoverySpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "MiraculousRecoverySpellCardSprite",
+      "path": "textures/card_art/MiraculousSpell.png"
+    }
+  ]
+}

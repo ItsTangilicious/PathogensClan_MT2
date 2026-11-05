@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "FeverishResponseSpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Feverish Response",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal <nobr>[effect0.power]</nobr> damage to the front enemy unit. Then deal <nobr>[effect0.power]</nobr> damage to the front friendly unit.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@FeverishResponseSpellCardArt",
+      "effects": [
+        "@FeverishResponseSpellDealDamageHeroes",
+        "@FeverishResponseSpellDealDamageMonsters"
+      ],
+      "traits": ["@FeverishTraitAttuned"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "FeverishTraitAttuned",
+      "name": "CardTraitStrongerMagicPower"
+    }
+],
+  "effects": [
+    {
+      "id": "FeverishResponseSpellDealDamageHeroes",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "heroes",
+      "param_int": 80
+    },
+    {
+      "id": "FeverishResponseSpellDealDamageMonsters",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_int": 80
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FeverishResponseSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FeverishResponseSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FeverishResponseSpellCardSprite",
+      "path": "textures/card_art/FeverishSpell.png"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "IntestinalRuptureSpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Intestinal Rupture",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal <nobr>[effect0.power]</nobr> damage and apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to an enemy unit.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@IntestinalRuptureSpellCardArt",
+      "effects": [
+        "@IntestinalRuptureSpellDealDamage",
+        "@IntestinalRuptureSpellApplyContagion"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "IntestinalRuptureSpellDealDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "drop_target_character",
+      "target_team": "heroes",
+      "param_int": 4
+    },
+    {
+      "id": "IntestinalRuptureSpellApplyContagion",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 12        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "IntestinalRuptureSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@IntestinalRuptureSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "IntestinalRuptureSpellCardSprite",
+      "path": "textures/card_art/IntestinalSpell.png"
+    }
+  ]
+}
