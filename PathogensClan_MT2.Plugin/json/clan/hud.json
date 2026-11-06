@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Conductor/refs/heads/main/schemas/hud.json",
+  "huds": [
+    {
+      "id": "PathogensToxicityUI",
+      "name": "@ToxicityHud",
+      "type": "small",
+      "background": "@hud_background",
+      "icons": [ "@hud_icon" ],
+      "class": "@Pathogens",
+      "display": "battle_only",
+      "tooltip_titles": {
+        "english": "Toxicity"
+      },
+      "tooltip_texts": {
+        "english": "Explanation of the class mechanic."
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "hud_background",
+      "path": "textures/ToxicityHUDBackground.png"
+    },
+    {
+      "id": "hud_icon",
+      "path": "textures/ToxicityHUDIcon.png"
+    }
+  ]
+}

@@ -1,8 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using TrainworksReloaded.Base;
 using TrainworksReloaded.Core;
+using TrainworksReloaded.Core.Interfaces;
 using TrainworksReloaded.Core.Extensions;
+using TrainworksReloaded.Base.Extensions;
+using Conductor.UI;
 
 namespace PathogensClan_MT2.Plugin
 {
@@ -10,7 +14,7 @@ namespace PathogensClan_MT2.Plugin
     public class Plugin : BaseUnityPlugin
     {
         internal static new ManualLogSource Logger = new(MyPluginInfo.PLUGIN_GUID);
-        
+        internal static Lazy<ToxicityManager> Client = new(() => new ToxicityManager());
         // Plugin startup logic. This function is automatically called when your plugin initializes
         public void Awake()
         {
@@ -32,6 +36,8 @@ namespace PathogensClan_MT2.Plugin
                         "json/clan/clan_card_frame.json",
                         // Optional: Custom Clan Subtypes used by units.
                         "json/clan/clan_subtypes.json",
+                        // HUD
+                        "json/clan/hud.json",
                         // Required: A Clan Champion with one Upgrade Path.
                         "json/champions/basic_champion.json",
                         // Spell Cards
@@ -60,6 +66,8 @@ namespace PathogensClan_MT2.Plugin
                         "json/enhancers/basic_enhancer.json",
                         // Artifacts
                         "json/relics/basic_artifact.json",
+                        // TrackedValues
+                        "json/tracked_values/toxicity.json",
                         // StatusEffects
                         "json/status_effects/contagionstatus.json",
                         "json/status_effects/recoilstatus.json",
@@ -67,6 +75,30 @@ namespace PathogensClan_MT2.Plugin
                     );
                 }
             );
+
+            Railend.ConfigurePostAction(
+                c =>
+                {
+                    var trackedValueRegister = c.GetInstance<IRegister<CardStatistics.TrackedValueType>>();
+                    var statusEffectTriggerStageManager = c.GetInstance<IRegister<StatusEffectData.TriggerStage>>();
+                    CardStatistics.TrackedValueType GetTrackedValueType(string id)
+                    {
+                        return trackedValueRegister.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.TrackedValueTypeEnum, id));
+                    }
+                    TrackedValues.Toxicity = GetTrackedValueType("Toxicity");
+
+                     StatusEffectData.TriggerStage GetStatusEffectTriggerStage(string id)
+                    {
+                        return statusEffectTriggerStageManager.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.StatusEffectTriggerStageEnum, id));
+                    }
+                    StatusEffectTriggers.OnFullToxicity = GetStatusEffectTriggerStage("OnFullToxicity");
+                    StatusEffectTriggers.OnFullToxicityLost = GetStatusEffectTriggerStage("OnFullToxicityLost");
+
+                    
+                    var hud = HudManager.GetHUD(MyPluginInfo.PLUGIN_GUID, "PathogensToxicityUI");
+                    hud?.SetTrackedValueHandler(Client.Value);
+                    
+                });
 
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
             
