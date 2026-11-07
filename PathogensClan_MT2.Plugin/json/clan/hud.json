@@ -7,7 +7,7 @@
       "type": "small",
       "background": "@hud_background",
       "icons": [ "@hud_icon" ],
-      "class": "@Pathogens",
+      "class": "@ClassPathogens",
       "display": "battle_only",
       "tooltip_titles": {
         "english": "Toxicity"

@@ -20,6 +20,10 @@ namespace PathogensClan_MT2.Plugin
         {
             Logger = base.Logger;
 
+            // Setup Game Client
+            var client = Client.Value;
+            DepInjector.AddProvider(client);
+
             var builder = Railhead.GetBuilder();
             builder.Configure(
                 MyPluginInfo.PLUGIN_GUID,
@@ -75,12 +79,16 @@ namespace PathogensClan_MT2.Plugin
                     );
                 }
             );
-
+            Railend.ConfigurePreAction(builder =>
+            {
+                builder.RegisterInstance(client);
+            });
             Railend.ConfigurePostAction(
                 c =>
                 {
                     var trackedValueRegister = c.GetInstance<IRegister<CardStatistics.TrackedValueType>>();
                     var statusEffectTriggerStageManager = c.GetInstance<IRegister<StatusEffectData.TriggerStage>>();
+                   
                     CardStatistics.TrackedValueType GetTrackedValueType(string id)
                     {
                         return trackedValueRegister.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.TrackedValueTypeEnum, id));
