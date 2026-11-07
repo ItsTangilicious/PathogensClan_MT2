@@ -47,15 +47,11 @@
     },
     {
       "id": "BasicCommonSpellApplyMuted",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters",
-      "param_status_effects": [
-        {
-          "status": "@replicate",
-          "count": 1
-        }
-      ]
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": 1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true
     }
   ],
   "game_objects": [
