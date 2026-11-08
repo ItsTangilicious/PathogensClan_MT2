@@ -1,5 +1,10 @@
 using ShinyShoe;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using TrainworksReloaded.Core.Interfaces;
+using TrainworksReloaded.Core;
 
 namespace PathogensClan_MT2.Plugin
 {
@@ -38,10 +43,21 @@ class StatusEffectContagionState : StatusEffectState
             StatusEffectData sourceStatusEffectData = base.GetSourceStatusEffectData();
             parameters.affectedVfx = ((sourceStatusEffectData != null) ? sourceStatusEffectData.GetOnAffectedVFX() : null);
             parameters.relicState = inputTriggerParams.suppressingRelic;
+            
+            //Pray for me, trying to get this to also increase Toxicity
+            //Holy crap, got it to work on try one :') 
+            var container = Railend.GetContainer();
+            var toxicityManager = container.GetInstance<ToxicityManager>();
+            if (this.IsPreviewModeCopy())
+            {
+                yield break;
+            }
+
+
             if (damageAmount >= associatedCharacter.GetHP() && combatManager != null)
             {
                 yield return combatManager.ApplyDamageToTarget(damageAmount, target, parameters);
-       
+                yield return toxicityManager.RewardToxicity(1);
             }
 
        if (numStacks > 0)

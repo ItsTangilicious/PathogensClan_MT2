@@ -13,7 +13,7 @@
         "english": "Toxicity"
       },
       "tooltip_texts": {
-        "english": "Explanation of the class mechanic."
+        "english": "[PathogensClan_MT2.Plugin_Toxicity] is a resource that can be used to cast spells or abilities. Gain [PathogensClan_MT2.Plugin_Toxicity] when a unit takes damage from Contagion."
       }
     }
   ],

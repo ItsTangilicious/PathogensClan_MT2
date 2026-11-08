@@ -76,6 +76,8 @@ namespace PathogensClan_MT2.Plugin
                         "json/status_effects/contagionstatus.json",
                         "json/status_effects/recoilstatus.json",
                         "json/status_effects/replicatestatus.json"
+                        // Text
+                       // "json.text/toxicity.json"
                     );
                 }
             );
