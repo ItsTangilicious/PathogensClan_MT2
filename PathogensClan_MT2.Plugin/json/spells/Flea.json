@@ -1,0 +1,71 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "FleaSpellCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Flea",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health]<br>Gain [effect1.power] [PathogensClan_MT2.Plugin_Toxicity]",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@FleaSpellCardArt",
+      "effects": [        
+        "@FleaSpellApplyContagion",
+        "@FleaGainToxicity"
+      ],
+      "pools": ["StarterCardsOnly"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "FleaSpellApplyContagion",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "weakest",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 6
+        }
+      ]
+    },
+    {
+    "id": "FleaGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FleaSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FleaSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FleaSpellCardSprite",
+      "path": "textures/card_art/FleaSpell.png"
+    }
+  ]
+}
