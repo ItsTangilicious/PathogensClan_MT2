@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [sap] <b><nobr>[effect0.status0.power]</nobr></b>.",
+        "english": "Apply [sap] [effect0.status0.power].",
         "chinese": ""
       },
       "rarity": "uncommon",

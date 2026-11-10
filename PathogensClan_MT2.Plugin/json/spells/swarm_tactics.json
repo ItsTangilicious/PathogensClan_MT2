@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Give a friendly unit +<nobr>[trait0.power][attack]</nobr> for each friendly unit spawned during this battle.",
+        "english": "Give a friendly unit [trait0.power][attack] for each friendly unit spawned during this battle.",
         "chinese": ""
       },
       "rarity": "common",

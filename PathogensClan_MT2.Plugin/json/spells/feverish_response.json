@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Deal <nobr>[effect0.power]</nobr> damage to the front enemy unit. Then deal <nobr>[effect0.power]</nobr> damage to the front friendly unit.",
+        "english": "Deal [effect0.power] damage to the front enemy unit. Then deal [effect0.power] damage to the front friendly unit.",
         "chinese": ""
       },
       "rarity": "common",

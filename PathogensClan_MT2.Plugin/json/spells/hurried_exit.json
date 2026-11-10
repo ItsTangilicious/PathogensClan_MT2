@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "[ascend] a unit and apply [sap] <b><nobr>[effect1.status0.power]</nobr></b>.",
+        "english": "[ascend] a unit and apply [sap] [effect1.status0.power].",
         "chinese": ""
       },
       "rarity": "common",

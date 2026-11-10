@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [explosive] and +[effect0.upgrade.bonusdamage] <b>Magic Power</b> to spells in hand.",
+        "english": "Apply [explosive] and +[effect1.upgrade.bonusdamage] [magicpower] to spells in hand.",
         "chinese": ""
       },
       "rarity": "rare",

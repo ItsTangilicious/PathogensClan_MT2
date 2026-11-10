@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Give a friendly unit +<nobr>[trait1.power][attack]</nobr>, +<nobr>[trait0.power][health]</nobr>, and [lifesteal] <b><nobr>[trait2.statusmultiplier]</nobr></b> for each friendly unit spawned during this battle.",
+        "english": "Give a friendly unit +[trait1.power][attack], +[trait0.power][health], and [lifesteal] [trait2.statusmultiplier] for each friendly unit spawned during this battle.",
         "chinese": ""
       },
       "rarity": "rare",
@@ -34,17 +34,19 @@
   "effects": [
     {
       "id": "SurvivalOfTheProlificScaledAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "drop_target_character",
       "target_team": "monsters",
-      "param_upgrade": "@SurvivalOfTheProlificOne"
+      "param_upgrade": "@SurvivalOfTheProlificOne",
+      "param_int_3": 0
     },
 {
       "id": "SurvivalOfTheProlificScaledHealth",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "last_targeted_characters",
       "target_team": "monsters",
-      "param_upgrade": "@SurvivalOfTheProlificTwo"
+      "param_upgrade": "@SurvivalOfTheProlificTwo",
+      "param_int_3": 0
     },
     {
       "id": "SurvivalOfTheProlificScaledLifesteal",

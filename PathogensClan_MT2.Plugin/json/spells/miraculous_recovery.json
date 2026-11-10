@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Deal <nobr>[effect0.power]</nobr> damage and apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to an enemy unit.",
+        "english": "Restore a friendly unit to full health and remove all [debuff] effects.",
         "chinese": ""
       },
       "rarity": "rare",

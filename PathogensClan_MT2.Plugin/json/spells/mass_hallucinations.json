@@ -43,7 +43,7 @@
         "id": "MassHallucinationsReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "Apply [dazed] <b><nobr>[effect0.status0.power]</nobr></b> to all units on the floor where your turn ended."
+            "english": "Apply [dazed] [effect0.status0.power] to all units on the floor where your turn ended."
         },
         "effects": [
             "@MassHallucinationsDaze"

@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Deal <nobr>[effect0.power]</nobr> damage to a random enemy unit 3 times.",
+        "english": "Deal [effect0.power] damage to a random enemy unit 3 times.",
         "chinese": ""
       },
       "rarity": "uncommon",

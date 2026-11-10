@@ -20,7 +20,7 @@
       "card_art": "@QueueTimeCardArt",
       "pools": [ "MegaPool" ],
       "effects": [
-        "@QueueTimeRooted", "@QueueTimeDescend"
+        "@QueueTimeRooted"
       ],
       "triggers": ["@QueueTimeReserve"],
       "lore_tooltips": [
