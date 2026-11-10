@@ -48,15 +48,17 @@ class StatusEffectContagionState : StatusEffectState
             //Holy crap, got it to work on try one :') 
             var container = Railend.GetContainer();
             var toxicityManager = container.GetInstance<ToxicityManager>();
-            if (this.IsPreviewModeCopy())
-            {
-                yield break;
-            }
-
-
             if (damageAmount >= associatedCharacter.GetHP() && combatManager != null)
             {
                 yield return combatManager.ApplyDamageToTarget(damageAmount, target, parameters);
+            }
+            //Had to separate out the two effects. Otherwise either Contagion wouldn't show proper combat math or Toxicity would trigger in preview.
+            if (damageAmount >= associatedCharacter.GetHP() && combatManager != null)
+            {
+                if (this.IsPreviewModeCopy())
+            {
+                yield break;
+            }
                 yield return toxicityManager.RewardToxicity(1);
             }
 

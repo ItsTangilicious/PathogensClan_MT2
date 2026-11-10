@@ -29,15 +29,15 @@
         "english": "Phagocytosis"
     },
     "descriptions": {
-      "english": "Apply +[trait0.power][health] to friendly units for each Pathogen unit in your deck."
+      "english": "Apply +[trait0.power][health] to friendly units for each Pathogen unit in your deck.<br>Gain [effect2.powerabs][PathogensClan_MT2.Plugin_Toxicity]."
     },
     "is_an_ability": true,
-    "cooldown": 1,
+    "cooldown": 2,
     "initial_cooldown": 0,
     "targetless": false,
     "targets_room": true,
     "card_type": "spell",
-    "effects": [ "@AntigenMimicAbilityEat", "@AntigenMimicGainHealth"],
+    "effects": [ "@AntigenMimicAbilityEat", "@AntigenMimicGainHealth", "@AntigenMimicGainToxicity"],
     "traits": ["@AntigenMimicScalingHealth"]
   }
   ],
@@ -101,6 +101,14 @@
       "target_team":"monsters",
       "param_upgrade": "@MimicFiveScaling",
       "param_int_3": 0
+    },
+     {
+      "id": "AntigenMimicGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": 1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true
     }
   ],
   "traits": [
