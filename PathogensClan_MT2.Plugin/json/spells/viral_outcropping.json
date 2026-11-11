@@ -13,7 +13,7 @@
         "english": "Summon 2 Recombinant Virus.",
         "chinese": ""
       },
-      "rarity": "uncommon",
+      "rarity": "common",
       "targets_room": true,
       "initial_keyboard_target": "front_friendly",
       "targetless": true,

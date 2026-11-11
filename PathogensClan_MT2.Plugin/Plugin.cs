@@ -53,12 +53,13 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/sympathetic_emesis.json",
                         "json/spells/viral_outcropping.json",
                         // Starter (required).
-                        "json/spells/basic_starter.json",
+                        "json/spells/virion_starter.json",
                         "json/spells/basic_common.json",
                         // Units
                         "json/units/basic_ability_unit.json",
                         "json/units/basic_banner_unit.json",
                         "json/units/SimplexvirusDiabolicus.json",
+                        "json/units/RoamingMacrophage.json",
                         "json/units/SplicedMonstrosity.json",
                         // Non Banner Unit, that is draftable as a Battle Reward.
                         "json/units/basic_draft_unit.json",
