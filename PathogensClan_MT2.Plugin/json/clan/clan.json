@@ -73,6 +73,11 @@
           "locked_icon": "@ChampionALockedIcon",
           "portrait": "@ChampionAPortrait"
         }
+      ],
+      "starter_relics": [
+        {
+          "id": "@BasicArtifact"
+        }
       ]
     }
   ],
