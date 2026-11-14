@@ -36,29 +36,10 @@
   "relic_effects": [
     {
       "id": "AddMultistrikeToBasicUnits",
-      "name": "RelicEffectAddTempUpgrade",
-      "source_team": "monsters",
-      "param_upgrade": "@MultistrikeForBasicUnits"
-    }
-  ],
-  "upgrades": [
-    {
-      "id": "MultistrikeForBasicUnits",
-      "is_unique": true,
-      "status_effect_upgrades": [
-        {
-          "status": "multistrike",
-          "count": 1
-        }
-      ],
-      "filters": [ "@OnlyBasicUnits" ]
-    }
-  ],
-  "upgrade_masks": [
-    {
-      "id": "OnlyBasicUnits",
-      "card_type": "monster",
-      "required_subtypes": ["@BasicSubtype"]
+      "name": "@RelicEffectAdjustAttackByToxicity",
+      "param_card_type": "monster",
+      "param_int": 10,
+      "param_float": 1.0
     }
   ],
   "sprites": [
