@@ -1,0 +1,84 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "BacterialGrowthCard",
+      "cost": 1,
+      "card_type": "spell",
+      "names": {
+        "english": "Bacterial Growth",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Deal [effect0.power] damage.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@BacterialGrowthCardArt",
+      "pools": [ "MegaPool" ],
+      "effects": [
+        "@BacterialGrowthDamage"
+      ],
+      "triggers": ["@BacterialGrowthReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "BacterialGrowthDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "drop_target_character",
+      "target_team": "both",      
+      "param_int": 5
+    },
+    {
+      "id": "BacterialScaling",
+      "name": "CardEffectAddUpgradeToCurrentCard",
+      "param_upgrade": "@BacterialUpgrade"
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "BacterialGrowthReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Permanately gain +[effect0.upgrade.donusdamage] [magicpower]."
+        },
+        "effects": [
+            "@BacterialScaling"
+        ],
+        "trigger_keyword_card_text_suppressed": false
+    }
+],
+"upgrades":[
+   {
+     "id": "BacterialUpgrade",
+    "bonus_damage": 4
+   }
+],
+  "game_objects": [
+    {
+      "id": "BacterialGrowthCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@BacterialGrowthCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BacterialGrowthCardSprite",
+      "path": "textures/card_art/BacterialGrowthSpell.png"
+    }
+  ]
+}

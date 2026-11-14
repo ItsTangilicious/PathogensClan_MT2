@@ -59,7 +59,7 @@
     },
     {
       "id": "AsymptomaticCarrierRallyContagion",
-      "name": "CardEffectSpawnMonster",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
       "target_team": "heroes",
       "param_status_effects": [

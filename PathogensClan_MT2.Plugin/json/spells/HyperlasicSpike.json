@@ -1,0 +1,81 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "HyperlasicSpikeSpellCard",
+      "cost_type": "x",
+      "card_type": "spell",
+      "names": {
+        "english": "Hyperlasic Spike",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Trigger [rally] on all friendly units [trait0.power][x] times.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@HyperlasicSpikeSpellCardArt",
+      "effects": [
+        "@HyperlasicSpikeScaledHealth"
+      ],
+      "traits": ["@HyperlasicSpikeScaler", "@Consume"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+{
+      "id": "HyperlasicSpikeScaledHealth",
+      "name": "CardEffectPlayUnitTrigger",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_trigger": "card_monster_played"
+    }
+  ],
+  "traits": [
+    {
+        "id": "HyperlasicSpikeScaler",
+        "name": "CardTraitScalingAddEffectApplications",
+        "param_tracked_value": "played_cost",
+        "param_entry_duration": "this_turn",
+        "param_int": 2
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "HyperlasicSpikeOne",
+      "bonus_damage": 0,
+      "upgrade_will_be_scaled_by_non_magic_power_trait": true
+    },
+    {
+      "id": "HyperlasicSpikeTwo",
+      "bonus_damage": 0,
+      "upgrade_will_be_scaled_by_non_magic_power_trait": true
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "HyperlasicSpikeSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@HyperlasicSpikeSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HyperlasicSpikeSpellCardSprite",
+      "path": "textures/card_art/ReplicatorSpikeSpell.png"
+    }
+  ]
+}
