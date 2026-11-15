@@ -7,7 +7,8 @@ using UnityEngine;
 
 namespace PathogensClan_MT2.Plugin
 {
-   /* public class CardEffectPlayUnitTriggerScaling : CardEffectBase
+    /*
+   public class CardEffectPlayUnitTriggerScaling : CardEffectBase
     {
         public override PropDescriptions CreateEditorInspectorDescriptions()
         {
@@ -18,24 +19,24 @@ namespace PathogensClan_MT2.Plugin
         }
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
         {
-            CombatManager combatManager = cardEffectParams.combatManager;
+            //CombatManager combatManager = cardEffectParams.combatManager;
             CharacterTriggerData.Trigger trigger = cardEffectState.GetParamTrigger();
             int numTimesToTrigger = 1;
-            CardState parentCardState = cardEffectState.GetParentCardState();
+            CardState? parentCardState = cardEffectState.GetParentCardState();
             if (parentCardState != null)
             {
                 foreach (CardTraitState item in (IEnumerable<CardTraitState>)parentCardState.GetTraitStates())
                 {
-                    if (item is CardTraitScalingFeederRules)
+                    if (item is CardTraitScalingFeederRules scalingFeederRules)
                     {
-                        numTimesToTrigger = (item as CardTraitScalingFeederRules).GetAdditionalTriggers(cardEffectParams.cardManager.GetCardStatistics());
+                        numTimesToTrigger = scalingFeederRules.GetAdditionalTriggers(coreGameManagers.GetCardStatistics());
                         break;
                     }
                 }
             }
             foreach (CharacterState target in cardEffectParams.targets)
             {
-                combatManager.QueueTrigger(target, trigger, null, true, true, numTimesToTrigger);
+                coreGameManagers.GetCombatManager().QueueAndRunTrigger(target, trigger, null, true, true, new CharacterState.FireTriggersData(numTimesToTrigger));
                 CardTriggerType? associatedCardTrigger = CardTriggerTypeMethods.GetAssociatedCardTrigger(trigger);
                 if (target.GetSpawnerCard() == null || !associatedCardTrigger.HasValue || !target.GetSpawnerCard().HasTriggerType(associatedCardTrigger.Value))
                 {
