@@ -1,0 +1,91 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "IntroToBiologySpellCard",
+      "cost": 0,
+      "card_type": "spell",
+      "names": {
+        "english": "Intro To Biology",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Spend [effect0.power][PathogensClan_MT2.Plugin_Toxicity]. If you do, draw a unit and reduce its cost by 1[ember].",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@IntroToBiologySpellCardArt",
+      "effects": [ "@IntroToBiologyGainToxicity", "@IntroToBiologyApplyUpgrade", "@IntroToBiologyDraw" ],
+      "traits": ["@IntroToBiologyShowCardTargets", "@IntroDeployable", "@Consume"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "IntroToBiologyGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "room",
+      "param_int": -1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true
+    },
+    {
+        "id": "IntroToBiologyApplyUpgrade",
+        "name": "CardEffectAddTempCardUpgradeToNextDrawnCard",
+        "Param_upgrade": "@IntroEnhance",
+        "should_test": false
+    },
+    {
+        "id": "IntroToBiologyDraw",
+        "name": "CardEffectDrawType",
+        "target_card_type": "monster",
+        "param_int": 1
+    }
+  ],
+  "traits": [
+    {
+        "id": "IntroToBiologyShowCardTargets",
+        "name": "CardTraitShowCardTargets"
+    },
+    {
+        "id": "IntroDeployable",
+        "name": "CardTraitDrawInDeploymentPhase"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "IntroEnhance",
+      "filters": [
+        "OnlyUnit"
+      ],
+      "cost_reduction": 1
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "IntroToBiologySpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@IntroToBiologySpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "IntroToBiologySpellCardSprite",
+      "path": "textures/card_art/IntroToBioSpell.png"
+    }
+  ]
+}

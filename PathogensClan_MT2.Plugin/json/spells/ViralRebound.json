@@ -1,0 +1,66 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "ViralReboundSpellCard",
+      "cost": 2,
+      "card_type": "spell",
+      "names": {
+        "english": "Viral Rebound",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Gain [effect0.power][PathogensClan_MT2.Plugin_Toxicity] then gain [trait0.power][PathogensClan_MT2.Plugin_Toxicity] for each time you drawn this card this combat.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@ViralReboundSpellCardArt",
+      "effects": [ "@ViralReboundGainToxicity" ],
+      "traits": ["@ViralReboundScalingToxicity"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ViralReboundGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "traits": [
+    {
+        "id": "ViralReboundScalingToxicity",
+        "name": "@CardEffectRewardToxicity",
+        "param_tracked_value": "times_drawn",
+        "param_entry_duration": "this_battle",
+        "param_int": 1
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ViralReboundSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ViralReboundSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ViralReboundSpellCardSprite",
+      "path": "textures/card_art/ProlificSpell.png"
+    }
+  ]
+}

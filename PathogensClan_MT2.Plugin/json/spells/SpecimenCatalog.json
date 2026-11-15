@@ -1,0 +1,69 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "SpecimenCatalogSpellCard",
+      "cost": 0,
+      "card_type": "spell",
+      "names": {
+        "english": "Specimen Catalog",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Spend [effect0.power][PathogensClan_MT2.Plugin_Toxicity]. If you do, gain [trait0.power][ember] for each unit summoned this battle.",
+        "chinese": ""
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@SpecimenCatalogSpellCardArt",
+      "effects": [ "@SpecimenCatalogGainToxicity" ],
+      "traits": ["@SpecimenCatalogScalingEmber", "@Consume"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpecimenCatalogGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "room",
+      "param_int": -1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true
+    }
+  ],
+  "traits": [
+    {
+        "id": "SpecimenCatalogScalingEmber",
+        "name": "CardTraitScalingAddEnergy",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 1
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SpecimenCatalogSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SpecimenCatalogSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SpecimenCatalogSpellCardSprite",
+      "path": "textures/card_art/SpecimenSpell.png"
+    }
+  ]
+}

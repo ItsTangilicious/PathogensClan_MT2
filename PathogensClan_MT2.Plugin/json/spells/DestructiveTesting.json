@@ -1,0 +1,80 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "DestructiveTestingSpellCard",
+      "cost": 0,
+      "card_type": "spell",
+      "names": {
+        "english": "Destructive Testing",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [effect1.status0.power][endless] to a friendly unit. Then destroy it and draw a card.",
+        "chinese": ""
+      },
+      "rarity": "common",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@DestructiveTestingSpellCardArt",
+      "effects": [
+        "@DestructiveTestingSpellApplyEffect",
+        "@DestructiveTestingSpellDestroy",
+        "@DestructiveTestingSpellDraw"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "DestructiveTestingSpellApplyEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+        "status": "endless",
+        "count": 1
+        }
+      ]
+    },
+    {
+      "id": "DestructiveTestingSpellDestroy",
+      "name": "CardEffectKill",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters"
+    },
+    {
+      "id": "DestructiveTestingSpellDraw",
+      "name": "CardEffectDraw",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "param_int": 1,
+      "should_test": false
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "DestructiveTestingSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DestructiveTestingSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "DestructiveTestingSpellCardSprite",
+      "path": "textures/card_art/DestructiveTestingSpell.png"
+    }
+  ]
+}

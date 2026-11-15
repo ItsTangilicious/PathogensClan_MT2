@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "LifeElixirSpellCard",
+      "cost": 0,
+      "card_type": "spell",
+      "names": {
+        "english": "Life Elixir",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [effect1.status0.power][endless] to a friendly unit. Then destroy it and draw a card.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@LifeElixirSpellCardArt",
+      "effects": [
+        "@LifeElixirSpellApplyEffect"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "LifeElixirSpellApplyEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+        "status": "endless",
+        "count": 1
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "LifeElixirSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@LifeElixirSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "LifeElixirSpellCardSprite",
+      "path": "textures/card_art/LifeElixirSpell.png"
+    }
+  ]
+}
