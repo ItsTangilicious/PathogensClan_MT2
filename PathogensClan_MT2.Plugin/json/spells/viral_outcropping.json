@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Summon 2 Recombinant Virus.",
+        "english": "Summon 2 Recombinant Virus. Then, if you have [effect2.powerabs][PathogensClan_MT2.Plugin_Toxicity], spend it to Summon 2 Recombinant Virus.",
         "chinese": ""
       },
       "rarity": "common",
@@ -21,7 +21,7 @@
       "card_art": "@ViralOutcroppingCardArt",
       "pools": [ "MegaPool" ],
       "effects": [
-        "@ViralOutcropping1", "@ViralOutcropping2"
+        "@ViralOutcropping1", "@ViralOutcropping2", "@ViralSpend", "@ViralOutcropping3", "@ViralOutcropping4"
       ],
       "lore_tooltips": [
         {
@@ -44,6 +44,34 @@
     },
    {
       "id": "ViralOutcropping2",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    },
+
+  {
+      "id": "ViralSpend",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": -1,
+      "should_cancel_subsequent_effects_if_test_fails": true
+    },
+    {
+      "id": "ViralOutcropping3",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    },
+    {
+      "id": "ViralOutcropping4",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "target_team": "monsters",      

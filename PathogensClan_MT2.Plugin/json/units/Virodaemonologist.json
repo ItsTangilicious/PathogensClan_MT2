@@ -86,7 +86,7 @@
       "id": "VirodaemonologistSpendToxicity",
       "name": "@CardEffectRewardToxicity",
       "target_mode": "self",
-      "param_int": -5,
+      "param_int": -3,
       "should_test": true,
       "should_fail_to_cast_if_test_fails": true
     },
@@ -102,8 +102,8 @@
   "upgrades": [
     {
         "id": "ViroUpgrade",
-        "bonus_damage": 10,
-        "bonus_hp": 5,
+        "bonus_damage": 8,
+        "bonus_hp": 4,
         "upgrade_will_be_scaled_by_non_magic_power_trait": true
     }
   ],

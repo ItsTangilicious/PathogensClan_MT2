@@ -61,7 +61,7 @@
       "id": "VibrioInfernumUnitRally",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Gain [stygianblessing] [effect0.status0.power].",
+        "english": "Gain [effect0.status0.power] [rage].",
         "chinese": ""
       },
       "effects": [ "@VibrioInfernumRallyShard" ]
@@ -81,8 +81,8 @@
       "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "stygian_blessing",
-          "count": 1
+          "status": "buff",
+          "count": 3
         }
       ]
     },

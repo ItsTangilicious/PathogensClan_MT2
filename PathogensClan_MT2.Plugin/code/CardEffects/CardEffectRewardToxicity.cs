@@ -14,7 +14,9 @@ namespace PathogensClan_MT2.Plugin
         {
             PropDescriptions propDescriptions = new PropDescriptions();
             string fieldName = CardEffectFieldNames.ParamInt.GetFieldName();
+            //string fieldName2 = CardEffectFieldNames.ParamBool.GetFieldName();
             propDescriptions[fieldName] = new PropDescription("Toxicity Amount", "", typeof(int), false);
+            //propDescriptions[fieldName2] = new PropDescription("Toxicity is a Requirement");
             return propDescriptions;
         }
         public override bool TestEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers)
