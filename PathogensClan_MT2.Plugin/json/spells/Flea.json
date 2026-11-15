@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health]<br>Gain [effect1.power] [PathogensClan_MT2.Plugin_Toxicity]",
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health].<br>Gain [effect1.power][PathogensClan_MT2.Plugin_Toxicity].",
         "chinese": ""
       },
       "rarity": "common",
@@ -47,7 +47,7 @@
     {
     "id": "FleaGainToxicity",
       "name": "@CardEffectRewardToxicity",
-      "target_mode": "self",
+      "target_mode": "room",
       "param_int": 1
     }
   ],

@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [effect1.status0.power][endless] to a friendly unit. Then destroy it and draw a card.",
+        "english": "Apply [endless] [effect0.status0.power] to a friendly unit. Then destroy it and draw a card.",
         "chinese": ""
       },
       "rarity": "common",

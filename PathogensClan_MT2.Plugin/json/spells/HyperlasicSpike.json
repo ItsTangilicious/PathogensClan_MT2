@@ -49,18 +49,6 @@
         "param_int": 2
     }
   ],
-  "upgrades": [
-    {
-      "id": "HyperlasicSpikeOne",
-      "bonus_damage": 0,
-      "upgrade_will_be_scaled_by_non_magic_power_trait": true
-    },
-    {
-      "id": "HyperlasicSpikeTwo",
-      "bonus_damage": 0,
-      "upgrade_will_be_scaled_by_non_magic_power_trait": true
-    }
-  ],
   "game_objects": [
     {
       "id": "HyperlasicSpikeSpellCardArt",

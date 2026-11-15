@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Gain [effect0.power][PathogensClan_MT2.Plugin_Toxicity] then gain [trait0.power][PathogensClan_MT2.Plugin_Toxicity] for each time you drawn this card this combat.",
+        "english": "Gain [effect0.power][PathogensClan_MT2.Plugin_Toxicity] then gain an additional [PathogensClan_MT2.Plugin_Toxicity] for each time you have drawn this card this combat.",
         "chinese": ""
       },
       "rarity": "common",
@@ -33,7 +33,7 @@
     {
       "id": "ViralReboundGainToxicity",
       "name": "@CardEffectRewardToxicity",
-      "target_mode": "self",
+      "target_mode": "room",
       "param_int": 1
     }
   ],

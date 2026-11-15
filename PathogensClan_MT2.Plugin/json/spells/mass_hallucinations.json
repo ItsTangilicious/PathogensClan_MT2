@@ -16,12 +16,19 @@
         "@MassHallucinationsDaze"
       ],
       "triggers": ["@MassHallucinationsReserve"],
+      "traits": ["@MassUnplayable"],
       "lore_tooltips": [
         {
           "english": ".",
           "chinese": ""
         }
       ]
+    }
+  ],
+  "traits": [
+    {
+      "id":"MassUnplayable",
+      "name":"CardTraitUnplayable"
     }
   ],
   "effects": [

@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Spend [effect0.power][PathogensClan_MT2.Plugin_Toxicity]. If you do, draw a unit and reduce its cost by 1[ember].",
+        "english": "Spend [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]. If you do, draw a unit and reduce its cost by 1[ember].",
         "chinese": ""
       },
       "rarity": "uncommon",

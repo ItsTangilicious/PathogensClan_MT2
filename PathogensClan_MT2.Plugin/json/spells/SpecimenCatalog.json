@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Spend [effect0.power][PathogensClan_MT2.Plugin_Toxicity]. If you do, gain [trait0.power][ember] for each unit summoned this battle.",
+        "english": "Spend [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]. If you do, gain [trait0.power][ember] for each unit summoned this battle.",
         "chinese": ""
       },
       "rarity": "uncommon",
