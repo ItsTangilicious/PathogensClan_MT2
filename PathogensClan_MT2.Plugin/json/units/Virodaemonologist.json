@@ -35,7 +35,7 @@
     "cooldown": 1,
     "initial_cooldown": 0,
     "targetless": true,
-    "targets_room": false,
+    
     "card_type": "spell",
     "effects": [ "@VirodaemonologistSpendToxicity", "@VirodaemonologistPermaStats"]    
   }
@@ -85,15 +85,17 @@
     {
       "id": "VirodaemonologistSpendToxicity",
       "name": "@CardEffectRewardToxicity",
-      "target_mode": "self",
+      "target_mode": "room",
       "param_int": -3,
       "should_test": true,
-      "should_fail_to_cast_if_test_fails": true
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true
     },
     {
       "id": "VirodaemonologistPermaStats",
       "name": "CardEffectAddCardUpgradeToUnits",
-      "target_mode": "self",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
       "param_int_3": 2,
       "param_bool": true,
       "param_upgrade": "@ViroUpgrade"

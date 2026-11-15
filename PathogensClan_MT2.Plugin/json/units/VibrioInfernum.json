@@ -99,9 +99,6 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_int": 100,
-      "use_status_effect_multiplier": true,
-      "status_effect_multiplier": "stygian_blessing",
       "param_status_effects": [
         {
         "status": "multistrike",
@@ -132,12 +129,12 @@
   ],
   "sprites": [
     {
-      "id": "VibrioInfernumUnitCardSprite",
-      "path": "textures/card_art/VibrioInfernumCard.png"
+      "id": "VibrioUnitCardSprite",
+      "path": "textures/card_art/VibrioCard.png"
     },
     {
-      "id": "VibrioInfernumUnitCharacterSprite",
-      "path": "textures/character_art/VibrioInfernumCharacter.png"
+      "id": "VibrioUnitCharacterSprite",
+      "path": "textures/character_art/VibrioCharacter.png"
     }
   ]
 }

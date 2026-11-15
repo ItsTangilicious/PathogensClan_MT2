@@ -73,7 +73,7 @@
       "param_character": "@PlaguebringerUnitCharacter"
     },
     {
-      "id": "PlaguebringerResolveContagion",
+      "id": "PlaguebringerStrikeContagion",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_attacked_character",
       "target_team": "heroes",
@@ -85,7 +85,7 @@
       ]
     },
     {
-        "id": "PlaguebringerStrikeContagion",
+        "id": "PlaguebringerResolveContagion",
         "name": "CardEffectMultiplyStatusEffect",
         "target_mode": "room",
         "target_team": "heroes",

@@ -103,11 +103,11 @@
   "sprites": [
     {
       "id": "BorreliaDaemoniumUnitCardSprite",
-      "path": "textures/card_art/AsymptomaticCard.png"
+      "path": "textures/card_art/BorreliaCard.png"
     },
     {
       "id": "BorreliaDaemoniumUnitCharacterSprite",
-      "path": "textures/character_art/AsymptomaticCharacter.png"
+      "path": "textures/character_art/BorreliaCharacter.png"
     }
   ]
 }

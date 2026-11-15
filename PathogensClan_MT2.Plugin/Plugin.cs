@@ -56,11 +56,16 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/virion_starter.json",
                         "json/spells/basic_common.json",
                         // Units
+                        "json/units/AsymptomaticCarrier.json",
                         "json/units/basic_ability_unit.json",
                         "json/units/basic_banner_unit.json",
+                        "json/units/BorreliaDaemonium.json",
+                        "json/units/PlagueBringer.json",
                         "json/units/SimplexvirusDiabolicus.json",
                         "json/units/RoamingMacrophage.json",
                         "json/units/SplicedMonstrosity.json",
+                        "json/units/VibrioInfernum.json",
+                        "json/units/Virodaemonologist.json",
                         // Non Banner Unit, that is draftable as a Battle Reward.
                         "json/units/basic_draft_unit.json",
                         "json/units/RecombinantVirus.json",
