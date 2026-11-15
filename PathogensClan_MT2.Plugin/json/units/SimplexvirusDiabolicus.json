@@ -44,10 +44,10 @@
       "id": "SimplexVirusResolve",
       "trigger": "post_combat",
       "descriptions": {
-        "english": "Summon 1 Recombinant Virus.",
+        "english": "Summon 1 Recombinant Virus and gain [effect1.powerabs][PathogensClan_MT2.Plugin_Toxicity].",
         "chinese": ""
       },
-      "effects": [ "@SimplexVirusResolveSpawn" ]
+      "effects": [ "@SimplexVirusResolveSpawn", "@SimplexVirusGainToxicity" ]
     }
   ],
   "effects": [
@@ -66,6 +66,14 @@
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
+    },
+    {
+      "id": "SimplexVirusGainToxicity",
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "self",
+      "param_int": 1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false
     }
   ],
   "game_objects": [
