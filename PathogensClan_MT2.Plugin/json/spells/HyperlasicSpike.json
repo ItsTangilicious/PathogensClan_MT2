@@ -31,25 +31,22 @@
       ]
     }
   ],
-  "effects": [
+  "traits": [
+    {
+        "id": "HyperlasicSpikeScaler",
+        "name": "CardTraitScalingFeederRules",
+        "param_tracked_value": "played_cost",
+        "param_entry_duration": "previous_turn",
+        "param_int": 2
+    }
+  ],
+   "effects": [
 {
       "id": "HyperlasicSpikeScaledRally",
       "name": "@CardEffectPlayUnitTriggerScaling",
       "target_mode": "room",
       "target_team": "monsters",
       "param_trigger": "card_monster_played"
-    }
-  ],
-  "traits": [
-    {
-        "id": "HyperlasicSpikeScaler",
-        "name": "CardTraitScalingFeederRules",
-        "param_tracked_value": "played_cost",
-        "param_entry_duration": "this_turn",
-        "param_int": 2,
-        "param_float": 1.0,
-        "param_use_scaling_params": true,
-        "param_team": "monsters"
     }
   ],
   "game_objects": [

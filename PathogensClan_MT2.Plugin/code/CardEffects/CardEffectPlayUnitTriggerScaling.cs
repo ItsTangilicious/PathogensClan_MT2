@@ -38,7 +38,7 @@ namespace PathogensClan_MT2.Plugin
 
              foreach (CharacterState target in cardEffectParams.targets)
              {
-                combatManager.QueueTrigger(target, trigger);
+                combatManager.QueueTrigger(target, trigger, null, true, true, null, numTimesToTrigger);
 			    CardTriggerType? associatedCardTrigger = CardTriggerTypeMethods.GetAssociatedCardTrigger(trigger);
 			    if (target.GetSpawnerCard() == null || !associatedCardTrigger.HasValue || !target.GetSpawnerCard().HasTriggerType(associatedCardTrigger.Value))
 			    {
