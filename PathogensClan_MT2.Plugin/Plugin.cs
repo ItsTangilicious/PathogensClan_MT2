@@ -56,6 +56,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/Life_Elixir.json",
                         "json/spells/mass_hallucinations.json",
                         "json/spells/miraculous_recovery.json",
+                        "json/spells/multistrand_dna.json",
                         "json/spells/nausea.json",
                         "json/spells/queue_time.json",
                         "json/spells/rampant_infection.json",
