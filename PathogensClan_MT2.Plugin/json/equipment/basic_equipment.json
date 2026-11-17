@@ -2,29 +2,31 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "cards": [
     {
-      "id": "BasicEquipmentCard",
-      "cost": 2,
+      "id": "BoosterShotCard",
+      "cost": 1,
       "card_type": "equipment",
       "names": {
-        "english": "Basic Equipment",
+        "english": "Booster Shot",
         "chinese": "示例装备"
       },
       "descriptions": {
-        "english": "[effect0.upgrade.bonussize][capacity]. Cannot reduce [capacity] below 1.",
-        "chinese": "[effect0.upgrade.bonussize][capacity]。无法将[capacity]降到低于1。"
+        "english": "Draw +1 each turn.",
+        "chinese": "."
       },
-      "rarity": "uncommon",
+      "rarity": "common",
       "targets_room": true,
       "targetless": false,
       "class": "@ClassPathogens",
-      "card_art": "@BasicEquipmentCardArt",
+      "card_art": "@BoosterShotCardArt",
       "effects": [
-        "@BasicEquipmentEquip"
+        "@BoosterShotEquip"
       ],
       "pools": [
         "MegaPool",
+        "EquipmentPool",
         "RoomAndEquipmentDraftPool",
         "RoomAndEquipmentMerchant_EquipmentPool",
+        "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
         "EquipmentPoolNonEnemy",
         "FreeEquipmentMutatorPool",
         "RedCrownEquipmentPool",
@@ -40,41 +42,73 @@
   ],
   "effects": [
     {
-      "id": "BasicEquipmentEquip",
+      "id": "BoosterShotEquip",
       "name": "CardEffectAttachEquipment",
       "target_mode": "drop_target_character",
       "target_team": "monsters",
-      "param_upgrade": "@BasicEquipmentUpgrade"
+      "param_upgrade": "@BoosterShotUpgrade"
+    },
+    {
+      "id": "BoosterShotResolveEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@BoosterShotResolve"
     }
   ],
   "upgrades": [
     {
-      "id": "BasicEquipmentUpgrade",
-      "bonus_damage": 25,
-      "bonus_hp": 15,
-      "bonus_size": -1,
-      "icon": "@BasicEquipmentIcon"
+      "id": "BoosterShotUpgrade",
+      "bonus_damage": 0,
+      "bonus_hp": 10,
+      "trigger_upgrades": ["@BoosterShotResolveTrigger"],
+      "room_modifier_upgrades": [
+        "@BoosterDraw"
+      ],      
+      "icon": "@BoosterShotIcon"
+    },
+    {
+      "id": "BoosterShotResolve",
+      "bonus_hp": 6
+    }
+  ],
+   "room_modifiers": [
+    {
+      "id": "BoosterDraw",
+      
+        "name": "RoomStateHandSizeModifier",
+        "param_int": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "BoosterShotResolveTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonushp][health].<br>"
+      },
+      "trigger": "post_combat",
+      "effects": ["@BoosterShotResolveEffect"]
     }
   ],
   "game_objects": [
     {
-      "id": "BasicEquipmentCardArt",
+      "id": "BoosterShotCardArt",
       "type": "card_art",
       "extensions": {
         "card_art": {
-          "sprite": "@BasicEquipmentCardSprite"
+          "sprite": "@BoosterShotCardSprite"
         }
       }
     }
   ],
   "sprites": [
     {
-      "id": "BasicEquipmentCardSprite",
-      "path": "textures/card_art/BasicEquipment.png"
+      "id": "BoosterShotCardSprite",
+      "path": "textures/card_art/BoosterSpell.png"
     },
     {
-      "id": "BasicEquipmentIcon",
-      "path": "textures/icons/BasicEquipmentIcon.png"
+      "id": "BoosterShotIcon",
+      "path": "textures/icons/BoosterShotIcon.png"
     }
   ]
 }
