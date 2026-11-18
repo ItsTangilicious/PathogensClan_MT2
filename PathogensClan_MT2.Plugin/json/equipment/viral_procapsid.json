@@ -1,0 +1,105 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "ViralProcapsidCard",
+      "cost": 2,
+      "card_type": "equipment",
+      "names": {
+        "english": "Viral Procapsid",
+        "chinese": "示例装备"
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@ViralProcapsidCardArt",
+      "effects": [
+        "@ViralProcapsidEquip"
+      ],
+      "pools": [
+        "MegaPool",
+        "EquipmentPool",
+        "RoomAndEquipmentDraftPool",
+        "RoomAndEquipmentMerchant_EquipmentPool",
+        "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
+        "EquipmentPoolNonEnemy",
+        "FreeEquipmentMutatorPool",
+        "RedCrownEquipmentPool",
+        "RandomGraftedEquipmentForEvent_NoVoidArms_EquipmentPool"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Example equipment. Equipment is available to acquire in events (Red Crown, Plague Doctor) and Truffles (FreeEquipmentMutatorPool). RoomAndEquipmentMerchant_EquipmentPool is required. EquipmentPoolNonEnemy is for Swordmaiden.",
+          "chinese": "这个装备也可以在事件中获得。RoomAndEquipmentMerchant_EquipmentPool是必选的。FreeEquipmentMutatorPool对应松露犬，EquipmentPoolNonEnemy对应持剑侍女。"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ViralProcapsidEquip",
+      "name": "CardEffectAttachEquipment",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@ViralProcapsidUpgrade"
+    },
+    {
+      "id": "ViralProcapsidResolveEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+            "status": "damage shield",
+            "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ViralProcapsidUpgrade",
+      "status_effect_upgrades": [
+        {
+            "status": "endless",
+            "count": 1
+        }
+      ],
+      "bonus_damage": 0,
+      "bonus_hp": 15,
+      "trigger_upgrades": ["@ViralProcapsidResolveTrigger"],
+      "icon": "@ViralProcapsidIcon"
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ViralProcapsidResolveTrigger",
+      "descriptions": {
+        "english": "Gain [damageshield] [effect0.status0.power]."
+      },
+      "trigger": "post_combat",
+      "effects": ["@ViralProcapsidResolveEffect"]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ViralProcapsidCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ViralProcapsidCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ViralProcapsidCardSprite",
+      "path": "textures/card_art/ProlongedLifeSpell.png"
+    },
+    {
+      "id": "ViralProcapsidIcon",
+      "path": "textures/icons/ViralProcapsidIcon.png"
+    }
+  ]
+}

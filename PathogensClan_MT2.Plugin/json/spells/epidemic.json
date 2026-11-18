@@ -1,0 +1,105 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "EpidemicSpellCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Epidemic",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to enemy units. Each enemy unit takes damage equal to [trait0.power]x the[debuff] stacks it.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@EpidemicSpellCardArt",
+      "effects": [
+        "@EpidemicSpellApplyContagion",
+        "@EpidemicSpellDealDamage"
+      ],
+      "traits": [
+        "@EpidemicScaling"
+      ],
+      "triggers":[
+        "@EpidemicSlay"
+      ],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "EpidemicScaling",
+      "name": "CardTraitAddDamagePerStatusEffect",
+      "param_int": 2,
+      "param_int_2": 2,
+      "status_effect_tooltips_suppressed": true
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "EpidemicSlay",
+      "descriptions": {
+        "english": "Gain [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]."
+      },
+      "trigger": "on_kill",
+      "effects": [
+        "@EpidemicToxicityGain"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "EpidemicSpellDealDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes"
+    },
+    {
+      "id": "EpidemicSpellApplyContagion",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 25        }
+      ]
+    },
+    {
+      "id": "EpidemicToxicityGain",      
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "room",
+      "param_int": 2,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "EpidemicSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@EpidemicSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "EpidemicSpellCardSprite",
+      "path": "textures/card_art/PandemicSpell.png"
+    }
+  ]
+}

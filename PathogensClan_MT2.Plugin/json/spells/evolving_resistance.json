@@ -1,0 +1,145 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "EvolvingResistanceSpellCard",
+      "cost": 0,
+      "card_type": "spell",
+      "names": {
+        "english": "Evolving Resistance",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Give a friendly unit +[trait1.power][attack], +[trait0.power][health], and [lifesteal] [trait2.statusmultiplier] for each friendly unit spawned during this battle.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": false,
+      "class": "@ClassPathogens",
+      "card_art": "@EvolvingResistanceSpellCardArt",
+      "effects": [
+        "@EvolvingResistanceBuffs", "@EvolvingLifesteal", "@EvolvingRage", "@EvolvingSpikes"
+      ],
+      "traits": ["@EvolvingResistanceScalingRage", "@EvolvingResistanceScalingSpikes","@EvolvingResistanceScalingLifesteal"],
+      "pools": ["MegaPool"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "EvolvingLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters"
+    },
+    {
+      "id": "EvolvingRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters"
+    },
+    {
+      "id": "EvolvingSpikes",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters"
+    },
+    {
+      "id": "EvolvingResistanceBuffs",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+            "status": "buff",
+            "count": 0
+        },
+        {
+            "status": "buff",
+            "count": 0
+        },
+        {
+            "status": "buff",
+            "count": 0
+        },
+        {
+            "status": "spikes",
+            "count": 0
+        },
+        {
+          "status": "lifesteal",
+          "count": 0
+        }
+        ]
+    }
+  ],
+  "traits": [
+    {
+        "id": "EvolvingResistanceScalingLifesteal",
+        "name": "CardTraitScalingAddStatusEffect",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 1,
+        "param_bool": true,
+        "param_status_effects": [
+            {
+                "status": "lifesteal",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "id": "EvolvingResistanceScalingRage",
+        "name": "CardTraitScalingAddStatusEffect",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 2,
+        "param_bool": true,
+        "param_status_effects": [
+            {
+                "status": "buff",
+                "count": 2
+            }
+        ]
+    },
+    {
+        "id": "EvolvingResistanceScalingSpikes",
+        "name": "CardTraitScalingAddStatusEffect",
+        "param_tracked_value": "any_monster_spawned",
+        "param_entry_duration": "this_battle",
+        "param_int": 3,
+        "param_bool": true,
+        "param_status_effects": [
+            {
+                "status": "spikes",
+                "count": 3
+            }
+        ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "EvolvingResistanceSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@EvolvingResistanceSpellCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "EvolvingResistanceSpellCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
+
+

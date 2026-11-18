@@ -47,6 +47,8 @@ namespace PathogensClan_MT2.Plugin
                         // Spell Cards
                         "json/spells/BacterialGrowth.json",
                         "json/spells/DestructiveTesting.json",
+                        "json/spells/epidemic.json",
+                        "json/spells/evolving_resistance.json",
                         "json/spells/fervent_scratching.json",
                         "json/spells/feverish_response.json",
                         "json/spells/hurried_exit.json",
@@ -87,6 +89,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/units/RecombinantVirus.json",
                         // Equipment
                         "json/equipment/basic_equipment.json",
+                        "json/equipment/viral_procapsid.json",
                         // Rooms
                         "json/rooms/basic_room.json",
                         // Shop Upgrades (Enhancer)
