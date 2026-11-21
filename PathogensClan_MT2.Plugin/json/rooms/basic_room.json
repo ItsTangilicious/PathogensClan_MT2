@@ -2,11 +2,11 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "cards": [
     {
-      "id": "BasicRoomCard",
+      "id": "CyanoBloomCard",
       "cost": 2,
       "card_type": "room",
       "names": {
-        "english": "Basic Room",
+        "english": "Cyano Bloom",
         "chinese": "示例房间"
       },
       "descriptions": {
@@ -17,12 +17,13 @@
       "targets_room": true,
       "targetless": true,
       "class": "@ClassPathogens",
-      "card_art": "@BasicRoomCardArt",
-      "effects": [ "@BasicRoomAttach" ],
+      "card_art": "@CyanoBloomCardArt",
+      "effects": [ "@CyanoBloomAttach" ],
       "pools": [
         "MegaPool",
         "RoomAndEquipmentMerchant_RoomPool",
         "RoomAndEquipmentDraftPool",
+        "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
         "TrainRoomPool"
       ],
       "lore_tooltips": [
@@ -35,48 +36,66 @@
   ],
   "effects": [
     {
-      "id": "BasicRoomAttach",
+      "id": "CyanoBloomAttach",
       "name": "CardEffectAttachTrainRoomAttachment",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_upgrade": "@BasicRoomUpgrade"
+      "param_upgrade": "@CyanoBloomUpgrade"
+    },
+    {
+      "id": "CyanoBloomGrow",
+      "name": "CardEffectAdjustRoomCapacity",
+      "param_int": 1
+    },
+    {
+      "id": "CyanoBloomSpawn",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
     }
   ],
   "upgrades": [
     {
-      "id": "BasicRoomUpgrade",
-      "bonus_damage": 10,
-      "bonus_hp": 10,
-      "icon": "@BasicRoomIcon",
-      "room_modifier_upgrades": [ "@BasicRoomAdjustCapacity" ]
+      "id": "CyanoBloomUpgrade",
+      "room_modifier_upgrades": [
+      "@CyanoBloomResolve"
+      ]
+      "icon": "@CyanoBloomIcon",
+      "room_modifier_upgrades": [ "@CyanoBloomAdjustCapacity" ]
     }
   ],
   "room_modifiers": [
     {
-      "id": "BasicRoomAdjustCapacity",
-      "name": "RoomStateCapacityModifier",
-      "param_int": 2
+      "id": "CyanoBloomResolve",
+      "name": "RoomStateAddEffectPostCombatModifier"
+      "param_effects": [
+      "@CyanoBloomGrow", "@CyanoBloomSpawn"
+      ]
     }
   ],
   "game_objects": [
     {
-      "id": "BasicRoomCardArt",
+      "id": "CyanoBloomCardArt",
       "type": "card_art",
       "extensions": {
         "card_art": {
-          "sprite": "@BasicRoomCardSprite"
+          "sprite": "@CyanoBloomCardSprite"
         }
       }
     }
   ],
   "sprites": [
     {
-      "id": "BasicRoomCardSprite",
-      "path": "textures/card_art/BasicRoom.png"
+      "id": "CyanoBloomCardSprite",
+      "path": "textures/card_art/RoomForGrowthSpell.png"
     },
     {
-      "id": "BasicRoomIcon",
-      "path": "textures/icons/BasicRoomIcon.png"
+      "id": "CyanoBloomIcon",
+      "path": "textures/icons/CyanoBloomIcon.png"
     }
   ]
 }
