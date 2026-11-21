@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health].<br>Gain [effect1.power][PathogensClan_MT2.Plugin_Toxicity].",
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health]. Apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to a random enemy on any floor.",
         "chinese": ""
       },
       "rarity": "common",
@@ -20,7 +20,7 @@
       "card_art": "@FleaSpellCardArt",
       "effects": [        
         "@FleaSpellApplyContagion",
-        "@FleaGainToxicity"
+        "@FleaContagionTrain"
       ],
       "pools": ["StarterCardsOnly"],
       "lore_tooltips": [
@@ -45,10 +45,16 @@
       ]
     },
     {
-    "id": "FleaGainToxicity",
-      "name": "@CardEffectRewardToxicity",
-      "target_mode": "room",
-      "param_int": 1
+    "id": "FleaContagionTrain",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "random_from_any_room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 4
+        }
+      ]
     }
   ],
   "game_objects": [
