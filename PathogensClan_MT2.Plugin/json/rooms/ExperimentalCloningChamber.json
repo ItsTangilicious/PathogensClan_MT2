@@ -1,1 +1,101 @@
-
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "ExperimentalCloningChamberCard",
+      "cost": 2,
+      "card_type": "room",
+      "names": {
+        "english": "Experimental Cloning Chamber",
+        "chinese": "示例房间"
+      },
+      "descriptions": {
+        "english": "",
+        "chinese": "示例房间"
+      },
+      "rarity": "uncommon",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@ExperimentalCloningChamberCardArt",
+      "effects": [ "@ExperimentalCloningChamberAttach" ],
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_RoomPool",
+        "RoomAndEquipmentDraftPool",
+        "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
+        "TrainRoomPool"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Example room. RoomAndEquipmentMerchant_RoomPool is required if adding to an event/mutator pool. TrainRoomPool is the pool for the It's Free Real Estate Mutator.",
+          "chinese": "RoomAndEquipmentMerchant_RoomPool对应事件/转变器，TrainRoomPool对应“免费房地产”转变器。"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ExperimentalCloningChamberAttach",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_upgrade": "@ExperimentalCloningChamberUpgrade"
+    },
+    {
+      "id": "ExperimentalCloningChamberGrow",
+      "name": "CardEffectAdjustRoomCapacity",
+      "param_int": 1
+    },
+    {
+      "id": "ExperimentalCloningChamberSpawn",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ExperimentalCloningChamberUpgrade",
+      "room_modifier_upgrades": [
+      "@ExperimentalCloningChamberResolve"
+      ]
+      "icon": "@ExperimentalCloningChamberIcon",
+      "room_modifier_upgrades": [ "@ExperimentalCloningChamberAdjustCapacity" ]
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "ExperimentalCloningChamberResolve",
+      "name": "RoomStateAddEffectPostCombatModifier"
+      "param_effects": [
+      "@ExperimentalCloningChamberGrow", "@ExperimentalCloningChamberSpawn"
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ExperimentalCloningChamberCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ExperimentalCloningChamberCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ExperimentalCloningChamberCardSprite",
+      "path": "textures/card_art/ColiformCard.png"
+    },
+    {
+      "id": "ExperimentalCloningChamberIcon",
+      "path": "textures/icons/ExperimentalCloningChamberIcon.png"
+    }
+  ]
+}
