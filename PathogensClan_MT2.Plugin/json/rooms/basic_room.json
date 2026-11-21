@@ -10,7 +10,7 @@
         "chinese": "示例房间"
       },
       "descriptions": {
-        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. Grant friendly units +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]",
+        "english": "Gain +[effect0.upgrade.roommodifier0.effect0.power][capacity] and summon 1 Recombinant Virus at the end of combat.",
         "chinese": "示例房间"
       },
       "rarity": "uncommon",
@@ -61,11 +61,8 @@
   "upgrades": [
     {
       "id": "CyanoBloomUpgrade",
-      "room_modifier_upgrades": [
-      "@CyanoBloomResolve"
-      ]
       "icon": "@CyanoBloomIcon",
-      "room_modifier_upgrades": [ "@CyanoBloomAdjustCapacity" ]
+      "room_modifier_upgrades": [ "@CyanoBloomResolve" ]
     }
   ],
   "room_modifiers": [
