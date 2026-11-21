@@ -92,6 +92,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/equipment/viral_procapsid.json",
                         // Rooms
                         "json/rooms/basic_room.json",
+                        "json/rooms/ExperimentalCloningChamber.json",
                         // Shop Upgrades (Enhancer)
                         "json/enhancers/basic_enhancer.json",
                         // Artifacts
