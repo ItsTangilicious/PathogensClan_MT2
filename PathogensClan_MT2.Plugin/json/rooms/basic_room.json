@@ -68,7 +68,7 @@
   "room_modifiers": [
     {
       "id": "CyanoBloomResolve",
-      "name": "RoomStateAddEffectPostCombatModifier"
+      "name": "RoomStateAddEffectPostCombatModifier",
       "param_effects": [
       "@CyanoBloomGrow", "@CyanoBloomSpawn"
       ]

@@ -47,7 +47,7 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
-      "target_mode_status_effect_filter": "multistrike",
+      "target_mode_status_effects_excluded_filter": ["multistrike"],
       "param_status_effects": [
         {
           "status": "multistrike",
@@ -65,8 +65,8 @@
   ],
   "room_modifiers": [
     {
-      "id": "ExperimentalCloningPreCombat",
-      "name": "RoomStateAddEffectPreCombatModifier"
+      "id": "ExperimentalCloningChamberPreCombat",
+      "name": "RoomStateAddEffectPreCombatModifier",
       "param_effects": [
       "@ExperimentalCloningChamberClone"
       ]
