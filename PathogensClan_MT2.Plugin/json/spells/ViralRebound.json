@@ -6,11 +6,11 @@
       "cost": 2,
       "card_type": "spell",
       "names": {
-        "english": "Viral Rebound",
+        "english": "Abnormal Cross-Reactivity",
         "chinese": ""
       },
       "descriptions": {
-        "english": "Gain [effect0.power][PathogensClan_MT2.Plugin_Toxicity] then gain an additional [PathogensClan_MT2.Plugin_Toxicity] for each time you have drawn this card this combat.",
+        "english": "Apply [conduit] to a friendly unit equal to [effect0.status1.power]x [PathogensClan_MT2.Plugin_contagion] on this floor.",
         "chinese": ""
       },
       "rarity": "common",
@@ -18,8 +18,7 @@
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@ViralReboundSpellCardArt",
-      "effects": [ "@ViralReboundGainToxicity" ],
-      "traits": ["@ViralReboundScalingToxicity"],
+      "effects": [ "@ViralReboundGainConduit" ],
       "pools": ["MegaPool"],
       "lore_tooltips": [
         {
@@ -31,21 +30,24 @@
   ],
   "effects": [
     {
-      "id": "ViralReboundGainToxicity",
-      "name": "@CardEffectRewardToxicity",
-      "target_mode": "room",
-      "param_int": 1
+      "id": "ViralReboundGainConduit",
+      "name": "CardEffectAddStatusEffectPerOtherEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_bool": false,
+      "param_status_effects": [
+        {
+          "status": "conduit",
+          "count": 1
+        },
+        {
+          "status": "@contagion",
+          "count": 1
+        }
+      ],
+      "param_int": 1,
     }
-  ],
-  "traits": [
-    {
-        "id": "ViralReboundScalingToxicity",
-        "name": "@CardEffectRewardToxicity",
-        "param_tracked_value": "times_drawn",
-        "param_entry_duration": "this_battle",
-        "param_int": 1
-    }
-  ],
+  ]
   "game_objects": [
     {
       "id": "ViralReboundSpellCardArt",
