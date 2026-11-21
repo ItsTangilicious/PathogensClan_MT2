@@ -15,7 +15,7 @@
       },
       "rarity": "common",
       "targets_room": true,
-      "targetless": true,
+      "targetless": false,
       "class": "@ClassPathogens",
       "card_art": "@ViralReboundSpellCardArt",
       "effects": [ "@ViralReboundGainConduit" ],
@@ -45,9 +45,9 @@
           "count": 1
         }
       ],
-      "param_int": 1,
+      "param_int": 1
     }
-  ]
+  ],
   "game_objects": [
     {
       "id": "ViralReboundSpellCardArt",

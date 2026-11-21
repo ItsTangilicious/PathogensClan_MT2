@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health]. Apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to a random enemy on any floor.",
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] to the enemy with the lowest [health].<br>Apply [PathogensClan_MT2.Plugin_contagion] [effect1.status0.power] to a random enemy on any floor.",
         "chinese": ""
       },
       "rarity": "common",
