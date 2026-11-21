@@ -22,12 +22,27 @@
         "@IntestinalRuptureSpellDealDamage",
         "@IntestinalRuptureSpellApplyContagion"
       ],
+      "triggers":[
+        "@IntestinalSlay"
+      ],
       "pools": ["MegaPool"],
       "lore_tooltips": [
         {
           "english": ".",
           "chinese": ""
         }
+      ]
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "IntestinalSlay",
+      "descriptions": {
+        "english": "Gain [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]."
+      },
+      "trigger": "on_kill",
+      "effects": [
+        "@IntestinalToxicityGain"
       ]
     }
   ],
@@ -49,6 +64,14 @@
           "status": "@contagion",
           "count": 12        }
       ]
+    },
+    {
+      "id": "IntestinalToxicityGain",      
+      "name": "@CardEffectRewardToxicity",
+      "target_mode": "room",
+      "param_int": 1,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false
     }
   ],
   "game_objects": [
