@@ -3,14 +3,14 @@
   "cards": [
     {
       "id": "ExperimentalCloningChamberCard",
-      "cost": 2,
+      "cost": 4,
       "card_type": "room",
       "names": {
         "english": "Experimental Cloning Chamber",
         "chinese": "示例房间"
       },
       "descriptions": {
-        "english": "",
+        "english": "Apply [multistrike] [effect0.upgrade.roommodifier0.effect0.status0.power] to firendly units without [multistrike] at the start of combat.",
         "chinese": "示例房间"
       },
       "rarity": "uncommon",
@@ -43,37 +43,32 @@
       "param_upgrade": "@ExperimentalCloningChamberUpgrade"
     },
     {
-      "id": "ExperimentalCloningChamberGrow",
-      "name": "CardEffectAdjustRoomCapacity",
-      "param_int": 1
-    },
-    {
-      "id": "ExperimentalCloningChamberSpawn",
-      "name": "CardEffectSpawnMonster",
+      "id": "ExperimentalCloningChamberClone",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
-      "target_team": "monsters",      
-      "param_bool": true,
-      "param_character_pool": [
-        "@RecombinantVirusUnitCharacter"
+      "target_team": "monsters",
+      "target_mode_status_effect_filter": "multistrike",
+      "param_status_effects": [
+        {
+          "status": "multistrike",
+          "count": 1
+        }
       ]
     }
   ],
   "upgrades": [
     {
       "id": "ExperimentalCloningChamberUpgrade",
-      "room_modifier_upgrades": [
-      "@ExperimentalCloningChamberResolve"
-      ]
       "icon": "@ExperimentalCloningChamberIcon",
-      "room_modifier_upgrades": [ "@ExperimentalCloningChamberAdjustCapacity" ]
+      "room_modifier_upgrades": [ "@ExperimentalCloningChamberPreCombat" ]
     }
   ],
   "room_modifiers": [
     {
-      "id": "ExperimentalCloningChamberResolve",
-      "name": "RoomStateAddEffectPostCombatModifier"
+      "id": "ExperimentalCloningPreCombat",
+      "name": "RoomStateAddEffectPreCombatModifier"
       "param_effects": [
-      "@ExperimentalCloningChamberGrow", "@ExperimentalCloningChamberSpawn"
+      "@ExperimentalCloningChamberClone"
       ]
     }
   ],
