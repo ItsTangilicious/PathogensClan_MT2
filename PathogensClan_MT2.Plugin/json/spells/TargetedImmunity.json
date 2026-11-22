@@ -1,0 +1,113 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "TargetedImmunityCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Targeted Immunity",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [armor] [effect0.status0.power] to friendly units.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@TargetedImmunityCardArt",
+      "pools": [ ],
+      "effects": [
+        "@TargetedImmunityArmor"
+      ],
+      "triggers": ["@TargetedImmunityReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "TargetedImmunityArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "TargetedImmunityAOELifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "TargetedImmunityAOERage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "rage",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "TargetedImmunityAOEArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 5
+        }     
+      ] 
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "TargetedImmunityReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power], [rage] [effect1.status0.power], and [lifeteasl] [effect2.status0.power] to the front friendly unit."
+        },
+        "effects": [
+            "@TargetedImmunityAOEArmor", "@TargetedImmunityAOERage", "@TargetedImmunityAOELifesteal"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "TargetedImmunityCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@TargetedImmunityCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "TargetedImmunityCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
