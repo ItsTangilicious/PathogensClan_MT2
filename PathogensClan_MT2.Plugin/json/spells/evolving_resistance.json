@@ -2,27 +2,28 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "cards": [
     {
-      "id": "EvolvingResistanceSpellCard",
-      "cost": 0,
+      "id": "EvolvingResistanceCard",
+      "cost": 3,
       "card_type": "spell",
       "names": {
         "english": "Evolving Resistance",
         "chinese": ""
       },
       "descriptions": {
-        "english": "Give a friendly unit +[trait1.power][attack], +[trait0.power][health], and [lifesteal] [trait2.statusmultiplier] for each friendly unit spawned during this battle.",
+        "english": "Apply [armor] [effect0.status0.power] to friendly units. Add a <b>Herd Resistance</b> to your discard.",
         "chinese": ""
       },
       "rarity": "rare",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "class": "@ClassPathogens",
-      "card_art": "@EvolvingResistanceSpellCardArt",
+      "card_art": "@EvolvingResistanceCardArt",
+      "pools": [ "MegaPool" ],
       "effects": [
-        "@EvolvingResistanceBuffs", "@EvolvingLifesteal", "@EvolvingRage", "@EvolvingSpikes"
+        "@EvolvingResistanceArmor", "@EvolvingResistanceUpgrade"
       ],
-      "traits": ["@EvolvingResistanceScalingRage", "@EvolvingResistanceScalingSpikes","@EvolvingResistanceScalingLifesteal"],
-      "pools": ["MegaPool"],
+      "triggers": ["@EvolvingResistanceReserve"],
+      "traits": ["@EvolvingResistancePurge"],
       "lore_tooltips": [
         {
           "english": ".",
@@ -31,115 +32,99 @@
       ]
     }
   ],
+  "traits": [
+    {
+      "id": "EvolvingResistancePurge",
+      "name": "CardTraitSelfPurge"
+    }
+    ],
   "effects": [
     {
-      "id": "EvolvingLifesteal",
+      "id": "EvolvingResistanceArmor",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters"
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
     },
     {
-      "id": "EvolvingRage",
+      "id": "EvolvingResistanceAOEArmor",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters"
-    },
-    {
-      "id": "EvolvingSpikes",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters"
-    },
-    {
-      "id": "EvolvingResistanceBuffs",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "drop_target_character",
+      "target_mode": "front_in_room",
       "target_team": "monsters",
       "param_status_effects": [
         {
-            "status": "buff",
-            "count": 0
-        },
-        {
-            "status": "buff",
-            "count": 0
-        },
-        {
-            "status": "buff",
-            "count": 0
-        },
-        {
-            "status": "spikes",
-            "count": 0
-        },
-        {
-          "status": "lifesteal",
-          "count": 0
-        }
-        ]
+          "status": "armor",
+          "count": 5
+        }     
+      ] 
+    },
+    {
+      "id": "EvolvingResistanceConvert",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
+      "param_int": 1,
+      "param_bool": true,
+      "param_card_pool": "@EvolvingResistancePoolReserve"
+    },
+    {
+      "id": "EvolvingResistancePurgeMe",
+      "name": "@CardEffectPurgeMe"
+    },
+    {
+      "id": "EvolvingResistanceUpgrade",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
+      "param_int": 1,
+      "param_bool": true,
+      "param_card_pool": "@EvolvingResistancePoolPlay"
     }
   ],
-  "traits": [
+"card_triggers": [
     {
-        "id": "EvolvingResistanceScalingLifesteal",
-        "name": "CardTraitScalingAddStatusEffect",
-        "param_tracked_value": "any_monster_spawned",
-        "param_entry_duration": "this_battle",
-        "param_int": 1,
-        "param_bool": true,
-        "param_status_effects": [
-            {
-                "status": "lifesteal",
-                "count": 1
-            }
+        "id": "EvolvingResistanceReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power] to the front friendly unit. Add a <b>Targeted Resistance</b> to your discard and <b>Purge</b> this card."
+        },
+        "effects": [
+            "@EvolvingResistanceAOEArmor", "@EvolvingResistanceConvert", "@EvolvingResistancePurgeMe"
         ]
+    }
+],
+  "card_pools": [
+    {
+      "id": "EvolvingResistancePoolPlay",
+      "cards": [
+        "@HerdResistanceCard"
+      ]
     },
     {
-        "id": "EvolvingResistanceScalingRage",
-        "name": "CardTraitScalingAddStatusEffect",
-        "param_tracked_value": "any_monster_spawned",
-        "param_entry_duration": "this_battle",
-        "param_int": 2,
-        "param_bool": true,
-        "param_status_effects": [
-            {
-                "status": "buff",
-                "count": 2
-            }
-        ]
-    },
-    {
-        "id": "EvolvingResistanceScalingSpikes",
-        "name": "CardTraitScalingAddStatusEffect",
-        "param_tracked_value": "any_monster_spawned",
-        "param_entry_duration": "this_battle",
-        "param_int": 3,
-        "param_bool": true,
-        "param_status_effects": [
-            {
-                "status": "spikes",
-                "count": 3
-            }
-        ]
+      "id": "EvolvingResistancePoolReserve",
+      "cards": [
+        "@TargetedResistanceCard"
+      ]
     }
   ],
   "game_objects": [
     {
-      "id": "EvolvingResistanceSpellCardArt",
+      "id": "EvolvingResistanceCardArt",
       "type": "card_art",
       "extensions": {
         "card_art": {
-          "sprite": "@EvolvingResistanceSpellCardSprite"
+          "sprite": "@EvolvingResistanceCardSprite"
         }
       }
     }
   ],
   "sprites": [
     {
-      "id": "EvolvingResistanceSpellCardSprite",
+      "id": "EvolvingResistanceCardSprite",
       "path": "textures/card_art/EvolvingSpell.png"
     }
   ]
 }
-
-
