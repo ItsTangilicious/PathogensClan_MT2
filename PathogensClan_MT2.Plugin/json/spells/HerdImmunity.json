@@ -1,0 +1,113 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "HerdImmunityCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Herd Immunity",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [armor] [effect0.status0.power], [rage] [effect1.status0.power], and [lifesteal] [effect2.status0.power] to friendly units.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@HerdImmunityCardArt",
+      "pools": [ ],
+      "effects": [
+        "@HerdImmunityArmor", "@HerdImmunityRage", "@HerdImmunityLifesteal"
+      ],
+      "triggers": ["@HerdImmunityReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "HerdImmunityArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "HerdImmunityRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "HerdImmunityLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "HerdImmunityAOEArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 5
+        }     
+      ] 
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "HerdImmunityReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power] to the front friendly unit."
+        },
+        "effects": [
+            "@HerdImmunityAOEArmor"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "HerdImmunityCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@HerdImmunityCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HerdImmunityCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
