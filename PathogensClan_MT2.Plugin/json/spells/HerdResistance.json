@@ -23,7 +23,7 @@
         "@HerdResistanceArmor", "@HerdResistanceRage", "@HerdResistanceUpgrade"
       ],
       "triggers": ["@HerdResistanceReserve"],
-      "traits": ["@HerdResistancePurge"]
+      "traits": ["@HerdResistancePurge"],
       "lore_tooltips": [
         {
           "english": ".",
@@ -36,6 +36,8 @@
     {
       "id": "HerdResistancePurge",
       "name": "CardTraitSelfPurge"
+    }
+    ],
   "effects": [
     {
       "id": "HerdResistanceArmor",
@@ -74,7 +76,7 @@
       ] 
     },
     {
-      "id": "HerdResistanceConvert,
+      "id": "HerdResistanceConvert",
       "name": "CardEffectBalatroConvertCard",
       "param_card": "@BroadImmunityCard",
       "param_int": 1

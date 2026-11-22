@@ -46,12 +46,14 @@ namespace PathogensClan_MT2.Plugin
                         "json/champions/basic_champion.json",
                         // Spell Cards
                         "json/spells/BacterialGrowth.json",
+                        "json/spells/BroadImmunity.json",
                         "json/spells/DestructiveTesting.json",
                         "json/spells/epidemic.json",
                         "json/spells/evolving_resistance.json",
                         "json/spells/fervent_scratching.json",
                         "json/spells/feverish_response.json",
                         "json/spells/HerdImmunity.json",
+                        "json/spells/HerdResistance.json",
                         "json/spells/hurried_exit.json",
                         "json/spells/HyperlasicSpike.json",
                         "json/spells/intestinal_rupture.json",
@@ -68,6 +70,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/survival_of_the_prolific.json",
                         "json/spells/swarm_tactics.json",
                         "json/spells/sympathetic_emesis.json",
+                        "json/spells/TargetedImmunity.json",
                         "json/spells/viral_outcropping.json",
                         "json/spells/ViralRebound.json",
                         // Starter (required).
