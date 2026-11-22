@@ -1,0 +1,120 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "HerdResistanceCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Herd Resistance",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [armor] [effect0.status0.power] and [rage] [effect1.status0.power] to friendly units. Add a <b>Herd Immunity</b> to your discard.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@HerdResistanceCardArt",
+      "pools": [ ],
+      "effects": [
+        "@HerdResistanceArmor", "@HerdResistanceRage", "@HerdResistanceUpgrade"
+      ],
+      "triggers": ["@HerdResistanceReserve"],
+      "traits": ["@HerdResistancePurge"]
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "HerdResistancePurge",
+      "name": "CardTraitSelfPurge"
+  "effects": [
+    {
+      "id": "HerdResistanceArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "HerdResistanceRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": "HerdResistanceAOEArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 5
+        }     
+      ] 
+    },
+    {
+      "id": "HerdResistanceConvert,
+      "name": "CardEffectBalatroConvertCard",
+      "param_card": "@BroadImmunityCard",
+      "param_int": 1
+    },
+    {
+      "id": "HerdResistanceUpgrade",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
+      "param_int": 1,
+      "param_bool": true,
+      "param_card_pool": "HerdImmunityPool"
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "HerdResistanceReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power] to the front friendly unit. Convert to <b>Broad Immunity</b>."
+        },
+        "effects": [
+            "@HerdResistanceAOEArmor", "@HerdResistanceConvert"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "HerdResistanceCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@HerdResistanceCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HerdResistanceCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
