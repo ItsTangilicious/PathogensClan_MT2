@@ -81,7 +81,7 @@
       "copy_modifiers_from_source": true,
       "param_int": 1,
       "param_bool": true,
-      "param_card_pool": "@HerdImmunityPoolReserve"
+      "param_card_pool": "@HerdResistancePoolReserve"
     },
     {
       "id": "HerdResistancePurgeMe",
@@ -93,7 +93,7 @@
       "copy_modifiers_from_source": true,
       "param_int": 1,
       "param_bool": true,
-      "param_card_pool": "@HerdImmunityPoolPlay"
+      "param_card_pool": "@HerdResistancePoolPlay"
     }
   ],
 "card_triggers": [
@@ -110,13 +110,13 @@
 ],
   "card_pools": [
     {
-      "id": "HerdImmunityPoolPlay",
+      "id": "HerdResistancePoolPlay",
       "cards": [
         "@HerdImmunityCard"
       ]
     },
     {
-      "id": "HerdImmunityPoolReserve",
+      "id": "HerdResistancePoolReserve",
       "cards": [
         "@BroadImmunityCard"
       ]
