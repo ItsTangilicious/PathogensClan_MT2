@@ -51,6 +51,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/evolving_resistance.json",
                         "json/spells/fervent_scratching.json",
                         "json/spells/feverish_response.json",
+                        "json/spells/HerdImmunity.json",
                         "json/spells/hurried_exit.json",
                         "json/spells/HyperlasicSpike.json",
                         "json/spells/intestinal_rupture.json",
