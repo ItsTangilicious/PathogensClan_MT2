@@ -71,6 +71,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/spells/swarm_tactics.json",
                         "json/spells/sympathetic_emesis.json",
                         "json/spells/TargetedImmunity.json",
+                        "json/spells/TargetedResistance.json",
                         "json/spells/viral_outcropping.json",
                         "json/spells/ViralRebound.json",
                         // Starter (required).

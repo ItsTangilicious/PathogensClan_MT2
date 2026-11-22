@@ -64,7 +64,7 @@
       "param_status_effects": [
         {
           "status": "buff",
-          "count": 2
+          "count": 3
         }
       ]
     },
@@ -76,7 +76,7 @@
       "param_status_effects": [
         {
           "status": "armor",
-          "count": 5
+          "count": 6
         }     
       ] 
     }
@@ -86,7 +86,7 @@
         "id": "TargetedImmunityReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "Apply [armor] [effect0.status0.power], [rage] [effect1.status0.power], and [lifeteasl] [effect2.status0.power] to the front friendly unit."
+            "english": "Apply [armor] [effect0.status0.power], [rage] [effect1.status0.power], and [lifesteal] [effect2.status0.power] to the front friendly unit."
         },
         "effects": [
             "@TargetedImmunityAOEArmor", "@TargetedImmunityAOERage", "@TargetedImmunityAOELifesteal"
