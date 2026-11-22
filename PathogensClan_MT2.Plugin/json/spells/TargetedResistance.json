@@ -1,0 +1,142 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "TargetedResistanceCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Targeted Resistance",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [armor] [effect0.status0.power]. Add a <b>Broad Immunity</b> to your discard.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@TargetedResistanceCardArt",
+      "pools": [ ],
+      "effects": [
+        "@TargetedResistanceArmor", "@TargetedResistanceUpgrade"
+      ],
+      "triggers": ["@TargetedResistanceReserve"],
+      "traits": ["@TargetedResistancePurge"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "TargetedResistancePurge",
+      "name": "CardTraitSelfPurge"
+    }
+    ],
+  "effects": [
+    {
+      "id": "TargetedResistanceArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "TargetedResistanceAOERage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "TargetedResistanceAOEArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 5
+        }     
+      ] 
+    },
+    {
+      "id": "TargetedResistanceConvert",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
+      "param_int": 1,
+      "param_bool": true,
+      "param_card_pool": "@TargetedResistancePoolReserve"
+    },
+    {
+      "id": "TargetedResistancePurgeMe",
+      "name": "@CardEffectPurgeMe"
+    },
+    {
+      "id": "TargetedResistanceUpgrade",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
+      "param_int": 1,
+      "param_bool": true,
+      "param_card_pool": "@TargetedResistancePoolPlay"
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "TargetedResistanceReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power] and [rage] [effect1.status1.power] to the front friendly unit. Add a <b>Broad Immunity</b> to your discard and <b>Purge</b> this card."
+        },
+        "effects": [
+            "@TargetedResistanceAOEArmor", "@TargetedResistanceAOEArmor", "@TargetedResistanceConvert", "@TargetedResistancePurgeMe"
+        ]
+    }
+],
+  "card_pools": [
+    {
+      "id": "TargetedResistancePoolPlay",
+      "cards": [
+        "@BroadImmunityCard"
+      ]
+    },
+    {
+      "id": "TargetedResistancePoolReserve",
+      "cards": [
+        "@TargetedImmunityCard"
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "TargetedResistanceCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@TargetedResistanceCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "TargetedResistanceCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
