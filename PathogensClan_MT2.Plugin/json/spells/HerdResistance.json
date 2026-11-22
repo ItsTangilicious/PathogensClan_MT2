@@ -85,7 +85,7 @@
       "copy_modifiers_from_source": true,
       "param_int": 1,
       "param_bool": true,
-      "param_card_pool": "HerdImmunityPool"
+      "param_card_pool": "@HerdImmunityPool"
     }
   ],
 "card_triggers": [
@@ -100,6 +100,14 @@
         ]
     }
 ],
+  "card_pools": [
+    {
+      "id": "HerdImmunityPool",
+      "cards": [
+        "@HerdImmunityCard"
+      ]
+    }
+  ],
   "game_objects": [
     {
       "id": "HerdResistanceCardArt",
