@@ -18,7 +18,7 @@
       "targetless": true,
       "class": "@ClassPathogens",
       "card_art": "@HerdImmunityCardArt",
-      "pools": [ ],
+      "pools": [ "@HerdImmunityPool" ],
       "effects": [
         "@HerdImmunityArmor", "@HerdImmunityRage", "@HerdImmunityLifesteal"
       ],
