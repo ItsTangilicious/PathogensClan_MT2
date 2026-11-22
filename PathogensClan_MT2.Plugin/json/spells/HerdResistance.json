@@ -77,9 +77,10 @@
     },
     {
       "id": "HerdResistanceConvert",
-      "name": "CardEffectBalatroConvertCard",
+      "name": "@CardEffectBalatroConvertCardKeepUpgrades",
       "param_card": "@BroadImmunityCard",
-      "param_int": 1
+      "param_int": 1,
+      "copy_modifiers_from_source": true
     },
     {
       "id": "HerdResistanceUpgrade",
