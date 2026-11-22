@@ -63,7 +63,7 @@
       "target_team": "monsters",      
       "param_status_effects": [
         {
-          "status": "rage",
+          "status": "buff",
           "count": 3
         }
       ]
