@@ -1,0 +1,113 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "cards": [
+    {
+      "id": "BroadImmunityCard",
+      "cost": 3,
+      "card_type": "spell",
+      "names": {
+        "english": "Broad Immunity",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Apply [armor] [effect0.status0.power] and [rage] [effect1.status0.power] to friendly units.",
+        "chinese": ""
+      },
+      "rarity": "rare",
+      "targets_room": true,
+      "targetless": true,
+      "class": "@ClassPathogens",
+      "card_art": "@BroadImmunityCardArt",
+      "pools": [ ],
+      "effects": [
+        "@BroadImmunityArmor", "@BroadImmunityRage"
+      ],
+      "triggers": ["@BroadImmunityReserve"],
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "BroadImmunityArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "BroadImmunityRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": "BroadImmunityAOERage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",      
+      "param_status_effects": [
+        {
+          "status": "rage",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "BroadImmunityAOEArmor",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 6
+        }     
+      ] 
+    }
+  ],
+"card_triggers": [
+    {
+        "id": "BroadImmunityReserve",
+        "trigger": "on_unplayed_positive",
+        "descriptions": {
+            "english": "Apply [armor] [effect0.status0.power] and [rage] [effect0.status0.power] to the front friendly unit."
+        },
+        "effects": [
+            "@BroadImmunityAOEArmor", "@BroadImmunityAOERage"
+        ]
+    }
+],
+  "game_objects": [
+    {
+      "id": "BroadImmunityCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@BroadImmunityCardSprite"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BroadImmunityCardSprite",
+      "path": "textures/card_art/EvolvingSpell.png"
+    }
+  ]
+}
