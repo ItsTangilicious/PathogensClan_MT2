@@ -86,7 +86,7 @@
         "id": "BroadImmunityReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "Apply [armor] [effect0.status0.power] and [rage] [effect0.status0.power] to the front friendly unit."
+            "english": "Apply [armor] [effect0.status0.power] and [rage] [effect1.status0.power] to the front friendly unit."
         },
         "effects": [
             "@BroadImmunityAOEArmor", "@BroadImmunityAOERage"
