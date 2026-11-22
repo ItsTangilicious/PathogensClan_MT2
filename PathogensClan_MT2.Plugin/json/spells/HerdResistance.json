@@ -77,10 +77,15 @@
     },
     {
       "id": "HerdResistanceConvert",
-      "name": "@CardEffectBalatroConvertCardKeepUpgrades",
-      "param_card": "@BroadImmunityCard",
+      "name": "CardEffectAddRunCard",
+      "copy_modifiers_from_source": true,
       "param_int": 1,
-      "copy_modifiers_from_source": true
+      "param_bool": true,
+      "param_card_pool": "@HerdImmunityPoolReserve"
+    },
+    {
+      "id": "HerdResistancePurgeMe",
+      "name": "@CardEffectPurgeMe"
     },
     {
       "id": "HerdResistanceUpgrade",
@@ -88,7 +93,7 @@
       "copy_modifiers_from_source": true,
       "param_int": 1,
       "param_bool": true,
-      "param_card_pool": "@HerdImmunityPool"
+      "param_card_pool": "@HerdImmunityPoolPlay"
     }
   ],
 "card_triggers": [
@@ -96,18 +101,24 @@
         "id": "HerdResistanceReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "Apply [armor] [effect0.status0.power] to the front friendly unit. Convert to <b>Broad Immunity</b>."
+            "english": "Apply [armor] [effect0.status0.power] to the front friendly unit. Add a <b>Broad Immunity</b> to your discard and <b>Purge</b> this card."
         },
         "effects": [
-            "@HerdResistanceAOEArmor", "@HerdResistanceConvert"
+            "@HerdResistanceAOEArmor", "@HerdResistanceConvert", "@HerdResistancePurgeMe"
         ]
     }
 ],
   "card_pools": [
     {
-      "id": "HerdImmunityPool",
+      "id": "HerdImmunityPoolPlay",
       "cards": [
         "@HerdImmunityCard"
+      ]
+    },
+    {
+      "id": "HerdImmunityPoolReserve",
+      "cards": [
+        "@BroadImmunityCard"
       ]
     }
   ],
