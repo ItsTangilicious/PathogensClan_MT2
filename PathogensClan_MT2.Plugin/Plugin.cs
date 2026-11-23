@@ -91,6 +91,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/units/Virodaemonologist.json",
                         // Non Banner Unit, that is draftable as a Battle Reward.
                         "json/units/basic_draft_unit.json",
+                        "json/units/CryogenicStorage.json",
                         "json/units/RecombinantVirus.json",
                         // Equipment
                         "json/equipment/basic_equipment.json",

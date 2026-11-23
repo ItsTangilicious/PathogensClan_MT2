@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Summon 2 Recombinant Virus. Then, if you have [effect2.powerabs][PathogensClan_MT2.Plugin_Toxicity], spend it to Summon 2 Recombinant Virus.",
+        "english": "Summon 2 Recombinant Virus. Then, if you have [effect4.powerabs][PathogensClan_MT2.Plugin_Toxicity], spend it to Summon 2 Recombinant Virus.",
         "chinese": ""
       },
       "rarity": "common",
@@ -21,7 +21,7 @@
       "card_art": "@ViralOutcroppingCardArt",
       "pools": [ "MegaPool" ],
       "effects": [
-        "@ViralOutcropping1", "@ViralOutcropping2", "@ViralSpend", "@ViralOutcropping3", "@ViralOutcropping4"
+        "@ViralOutcropping1", "@ViralOutcroppingRally1", "@ViralOutcropping2", "@ViralOutcroppingRally2", "@ViralSpend", "@ViralOutcropping3", "@ViralOutcroppingRally3", "@ViralOutcropping4", "@ViralOutcroppingRally4"
       ],
       "lore_tooltips": [
         {
@@ -36,21 +36,41 @@
       "id": "ViralOutcropping1",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "target_team": "monsters",      
+      "target_team": "monsters",  
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true,    
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
     },
+    {
+      "id": "ViralOutcroppingRally1",
+      "name": "CardEffectPlayUnitTrigger",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_trigger": "card_monster_played"
+    },
    {
       "id": "ViralOutcropping2",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "target_team": "monsters",      
+      "target_team": "monsters",    
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true,      
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
+    },
+    {
+      "id": "ViralOutcroppingRally2",
+      "name": "CardEffectPlayUnitTrigger",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_trigger": "card_monster_played"
     },
 
   {
@@ -66,21 +86,41 @@
       "id": "ViralOutcropping3",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "target_team": "monsters",      
+      "target_team": "monsters",     
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true,     
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
     },
     {
+      "id": "ViralOutcroppingRally3",
+      "name": "CardEffectPlayUnitTrigger",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_trigger": "card_monster_played"
+    },
+    {
       "id": "ViralOutcropping4",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "target_team": "monsters",      
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true,    
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
       ]
+    },
+    {
+      "id": "ViralOutcroppingRally4",
+      "name": "CardEffectPlayUnitTrigger",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_trigger": "card_monster_played"
     }
   ],
 

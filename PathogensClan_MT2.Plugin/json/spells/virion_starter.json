@@ -36,7 +36,10 @@
       "id": "VirionStarter",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "target_team": "monsters",      
+      "target_team": "monsters",  
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": false,
+      "should_cancel_subsequent_effects_if_test_fails": true,    
       "param_bool": true,
       "param_character_pool": [
         "@RecombinantVirusUnitCharacter"
