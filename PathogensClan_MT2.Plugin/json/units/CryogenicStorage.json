@@ -93,7 +93,7 @@
     {
       "id": "CryogenicStorageReturnConsume",
       "name": "@CardEffectRecursionPerBlessing",
-      "target_mode": "exhaust_pile".
+      "target_mode": "exhaust_pile",
       "target_card_type": "spell",
       "param_int": 1
     }
