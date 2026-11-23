@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace PathogensClan_MT2.Plugin
 {
-    
+//thanks defrutos for making this effect!    
    public class CardEffectPlayUnitTriggerScaling : CardEffectBase
     {
         public override PropDescriptions CreateEditorInspectorDescriptions()
