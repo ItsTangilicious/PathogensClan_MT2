@@ -65,15 +65,15 @@
       "bonus_hp": 45
     },
     {
-      "id": "ImmuneRally4",
+      "id": "ImmuneUpgrade4",
       "bonus_damage": 4
     },
     {
-      "id": "ImmuneRally8",
+      "id": "ImmuneUpgrade8",
       "bonus_damage": 8
     },
     {
-      "id": "ImmuneRally12",
+      "id": "ImmuneUpgrade12",
       "bonus_damage": 12
     }
   ],
@@ -82,12 +82,10 @@
       "id": "CarrierImmuneTriggerI",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Give all friendly units +[effect0.upgrade.bonusdamage][attack]."
       },
       "effects": [ "@ImmuneRally4" ]
-    }
-  ],
-  "character_triggers": [
+    },
     {
       "id": "CarrierImmuneTriggerII",
       "trigger": "card_monster_played",
@@ -95,9 +93,7 @@
         "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
       },
       "effects": [ "@ImmuneRally8" ]
-    }
-  ],
-  "character_triggers": [
+    },
     {
       "id": "CarrierImmuneTriggerIII",
       "trigger": "card_monster_played",
@@ -118,21 +114,21 @@
       "id": "ImmuneRally4",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
-      "target_team": "monsters"
+      "target_team": "monsters",
       "param_upgrade": "@ImmuneUpgrade4" 
     },
     {
       "id": "ImmuneRally8",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
-      "target_team": "monsters"
+      "target_team": "monsters",
       "param_upgrade": "@ImmuneUpgrade8" 
     },
     {
       "id": "ImmuneRally12",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
-      "target_team": "monsters"
+      "target_team": "monsters",
       "param_upgrade": "@ImmuneUpgrade12" 
     }
   ],
@@ -185,18 +181,6 @@
     {
       "id": "CarrierChampionCharacterSprite",
       "path": "textures/character_art/CarrierChampionCharacter.png"
-    },
-    {
-      "id": "CarrierChampionPortrait",
-      "path": "textures/card_art/CarrierChampionIcon.png"
-    },
-    {
-      "id": "CarrierChampionIcon",
-      "path": "textures/card_art/CarrierChampionIcon.png"
-    },
-    {
-      "id": "CarrierChampionLockedIcon",
-      "path": "textures/card_art/CarrierChampionIcon.png"
     }
   ]
 }
