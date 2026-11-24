@@ -50,7 +50,7 @@
         "id": "BacterialGrowthReserve",
         "trigger": "on_unplayed_positive",
         "descriptions": {
-            "english": "Permanately gain +[effect0.upgrade.donusdamage][magicpower]."
+            "english": "Permanately gain +[effect0.upgrade.bonusdamage][magicpower]."
         },
         "effects": [
             "@BacterialScaling"
