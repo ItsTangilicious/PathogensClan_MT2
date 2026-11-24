@@ -77,7 +77,7 @@ namespace PathogensClan_MT2.Plugin
                         // Starter (required).
                         "json/spells/virion_starter.json",
                         "json/spells/Flea.json",
-                        "json/spells/basic_common.json",
+                       
                         // Units
                         "json/units/AsymptomaticCarrier.json",
                         "json/units/basic_ability_unit.json",
