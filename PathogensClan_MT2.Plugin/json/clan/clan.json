@@ -26,7 +26,7 @@
       },
       "card_draft_icon": "@PathogensCardBack",
       "class_select_character_displays": [
-        "@CarrierChampionCharacter"
+        "@CarrierChampionCharacterDisplay"
       ],
       "card_style": "@BasicClanCardStyle",
       "ui_color": {
@@ -69,9 +69,9 @@
               "@ChampionAUpgradePathIII"
             ]
           ],
-          "icon": "@CarrierChampionCharacter",
-          "locked_icon": "@ChampionALockedIcon",
-          "portrait": "@ChampionAPortrait"
+          "icon": "@CarrierChampionCharacterIcon",
+          "locked_icon": "@CarrierChampionLockedIcon",
+          "portrait": "@CarrierChampionAPortrait"
         }
       ],
       "starter_relics": [
@@ -101,6 +101,18 @@
     {
       "id": "PathogensCardBack",
       "path": "textures/icons/PathogensCardBack.png"
+    },
+    {
+      "id": "CarrierChampionCharacterIcon",
+      "path": "textures/card_art/CarrierChampionIcon.png"
+    },
+    {
+      "id": "CarrierChampionLockedIcon",
+      "path": "textures/card_art/CarrierChampionIcon.png"
+    },
+    {
+      "id": "CarrierChampionAPortrait",
+      "path": "textures/card_art/CarrierChampionIcon.png"
     }
   ]
 }
