@@ -59,14 +59,24 @@
       ],
       "champions": [
         {
-          "id": "BasicChampionA",
-          "card_data": "@ChampionACard",
+          "id": "CarrierChampion",
+          "card_data": "@CarrierChampionCard",
           "starter_card": "@VirionStarterCard",
           "upgrade_tree": [
             [
-              "@ChampionAUpgradePathI",
-              "@ChampionAUpgradePathII",
-              "@ChampionAUpgradePathIII"
+              "@CarrierChampionImmuneI",
+              "@CarrierChampionImmuneII",
+              "@CarrierChampionImmuneIII"
+            ],
+            [
+              "@CarrierChampionZeroI",
+              "@CarrierChampionZeroII",
+              "@CarrierChampionZeroIII"
+            ],
+            [
+              "@CarrierChampionBioI",
+              "@CarrierChampionBioII",
+              "@CarrierChampionBioIII"
             ]
           ],
           "icon": "@CarrierChampionCharacterIcon",
