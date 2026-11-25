@@ -150,7 +150,34 @@
       "ability_upgrade": [ "@ZeroAbility3" ],
       "bonus_damage": 40,
       "bonus_hp": 80
-    }
+    },
+    {
+      "id": "CarrierChampionBioI",
+      "titles": {
+        "english": "Bioengineer"
+      },
+      "trigger_upgrades": [ "@CarrierBioTriggerI" ],
+      "bonus_damage": 25,
+      "bonus_hp": 0
+    },
+    {
+      "id": "CarrierChampionBioII",
+      "titles": {
+        "english": "Bioengineer II"
+      },
+      "trigger_upgrades": [ "@CarrierBioTriggerII" ],
+      "bonus_damage": 60,
+      "bonus_hp": 10
+    },
+    {
+      "id": "CarrierChampionBioIII",
+      "titles": {
+        "english": "BioEngineer III"
+      },
+      "trigger_upgrades": [ "@CarrierBioTriggerIII" ],
+      "bonus_damage": 130,
+      "bonus_hp": 20
+    },
   ],
   "character_triggers": [
     {
@@ -176,6 +203,31 @@
         "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
       },
       "effects": [ "@ImmuneRally12" ]
+    },
+     {
+      "id": "CarrierBioTriggerI",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Draw a unit."
+      },
+      "effects": [ "@BioDraw1" ]
+    },
+    ,
+     {
+      "id": "CarrierBioTriggerII",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Draw two units."
+      },
+      "effects": [ "@BioDraw2" ]
+    },
+     {
+      "id": "CarrierBioTriggerIII",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Draw three units."
+      },
+      "effects": [ "@BioDraw3" ]
     }
   ],
   "effects": [
@@ -229,6 +281,24 @@
       "target_team": "monsters",
       "param_bool": true,
       "param_character_character": "@RecombinantVirusUnitCharacter"
+    },
+    {
+      "id": "@BioDraw1",
+      "name": "CardEffectDrawType",        
+      "target_card_type": "monster",
+      "param_int": 1
+    },
+    {
+      "id": "@BioDraw2",
+      "name": "CardEffectDrawType",        
+      "target_card_type": "monster",
+      "param_int": 2
+    },
+    {
+      "id": "@BioDraw3",
+      "name": "CardEffectDrawType",        
+      "target_card_type": "monster",
+      "param_int": 3
     }
   ],
   "game_objects": [
