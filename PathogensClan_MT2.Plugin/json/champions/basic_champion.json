@@ -21,6 +21,54 @@
           "chinese": "示例剧情文本。"
         }
       ]
+    },
+    {
+      "id": "ZeroAbility1",
+      "names": {
+        "english": "Vectorborne"
+      },
+    "descriptions": {
+      "english": "Summon 1 Recombinant Virus."
+      },
+    "is_an_ability": true,
+    "cooldown": 1,
+    "initial_cooldown": 0,
+    "targetless": false,
+    "targets_room": true,
+    "card_type": "spell",
+    "effects": [ "@ZeroVirus1"] 
+    },
+    {
+      "id": "ZeroAbility2",
+      "names": {
+        "english": "Vectorborne II"
+      },
+    "descriptions": {
+      "english": "Summon 2 Recombinant Virus."
+      },
+    "is_an_ability": true,
+    "cooldown": 1,
+    "initial_cooldown": 0,
+    "targetless": false,
+    "targets_room": true,
+    "card_type": "spell",
+    "effects": [ "@ZeroVirus1", "@ZeroVirus2"] 
+    },
+    {
+      "id": "ZeroAbility3",
+      "names": {
+        "english": "Vectorborne III"
+      },
+    "descriptions": {
+      "english": "Summon 3 Recombinant Virus."
+      },
+    "is_an_ability": true,
+    "cooldown": 1,
+    "initial_cooldown": 0,
+    "targetless": false,
+    "targets_room": true,
+    "card_type": "spell",
+    "effects": [ "@ZeroVirus1", "@ZeroVirus2", "@ZeroVirus3"] 
     }
   ],
   "characters": [
@@ -75,6 +123,33 @@
     {
       "id": "ImmuneUpgrade12",
       "bonus_damage": 12
+    },
+    {
+      "id": "CarrierChampionZeroI",
+      "titles": {
+        "english": "Patient Zero"
+      },
+      "ability_upgrade": [ "@ZeroAbility1" ],
+      "bonus_damage": 10,
+      "bonus_hp": 15
+    },
+    {
+      "id": "CarrierChampionZeroII",
+      "titles": {
+        "english": "Patient Zero II"
+      },
+      "ability_upgrade": [ "@ZeroAbility2" ],
+      "bonus_damage": 20,
+      "bonus_hp": 35
+    },
+    {
+      "id": "CarrierChampionZeroIII",
+      "titles": {
+        "english": "Patient Zero III"
+      },
+      "ability_upgrade": [ "@ZeroAbility3" ],
+      "bonus_damage": 40,
+      "bonus_hp": 80
     }
   ],
   "character_triggers": [
@@ -130,6 +205,30 @@
       "target_mode": "room",
       "target_team": "monsters",
       "param_upgrade": "@ImmuneUpgrade12" 
+    },
+    {
+      "id": "ZeroVirus2",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_bool": true,
+      "param_character_character": "@RecombinantVirusUnitCharacter"
+    },
+    {
+      "id": "ZeroVirus1",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_bool": true,
+      "param_character_character": "@RecombinantVirusUnitCharacter"
+    },
+    {
+      "id": "ZeroVirus3",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_bool": true,
+      "param_character_character": "@RecombinantVirusUnitCharacter"
     }
   ],
   "game_objects": [
