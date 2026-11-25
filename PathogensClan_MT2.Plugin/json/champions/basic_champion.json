@@ -33,8 +33,8 @@
     "is_an_ability": true,
     "cooldown": 1,
     "initial_cooldown": 0,
-    "targetless": false,
-    "targets_room": true,
+    "targetless": true,
+    "targets_room": false,
     "card_type": "spell",
     "effects": [ "@ZeroVirus1"] 
     },
@@ -49,8 +49,8 @@
     "is_an_ability": true,
     "cooldown": 1,
     "initial_cooldown": 0,
-    "targetless": false,
-    "targets_room": true,
+    "targetless": true,
+    "targets_room": false,
     "card_type": "spell",
     "effects": [ "@ZeroVirus1", "@ZeroVirus2"] 
     },
@@ -65,8 +65,8 @@
     "is_an_ability": true,
     "cooldown": 1,
     "initial_cooldown": 0,
-    "targetless": false,
-    "targets_room": true,
+    "targetless": true,
+    "targets_room": false,
     "card_type": "spell",
     "effects": [ "@ZeroVirus1", "@ZeroVirus2", "@ZeroVirus3"] 
     }
@@ -258,20 +258,24 @@
       "param_upgrade": "@ImmuneUpgrade12" 
     },
     {
-      "id": "ZeroVirus2",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_bool": true,
-      "param_character_character": "@RecombinantVirusUnitCharacter"
-    },
-    {
       "id": "ZeroVirus1",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
       "target_team": "monsters",
       "param_bool": true,
-      "param_character_character": "@RecombinantVirusUnitCharacter"
+       "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
+    },
+    {
+      "id": "ZeroVirus2",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_bool": true,
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
     },
     {
       "id": "ZeroVirus3",
@@ -279,22 +283,24 @@
       "target_mode": "room",
       "target_team": "monsters",
       "param_bool": true,
-      "param_character_character": "@RecombinantVirusUnitCharacter"
+      "param_character_pool": [
+        "@RecombinantVirusUnitCharacter"
+      ]
     },
     {
-      "id": "@BioDraw1",
+      "id": "BioDraw1",
       "name": "CardEffectDrawType",        
       "target_card_type": "monster",
       "param_int": 1
     },
     {
-      "id": "@BioDraw2",
+      "id": "BioDraw2",
       "name": "CardEffectDrawType",        
       "target_card_type": "monster",
       "param_int": 2
     },
     {
-      "id": "@BioDraw3",
+      "id": "BioDraw3",
       "name": "CardEffectDrawType",        
       "target_card_type": "monster",
       "param_int": 3
