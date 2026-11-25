@@ -129,7 +129,7 @@
       "titles": {
         "english": "Patient Zero"
       },
-      "ability_upgrade": [ "@ZeroAbility1" ],
+      "ability_upgrade": "@ZeroAbility1",
       "bonus_damage": 10,
       "bonus_hp": 15
     },
@@ -138,7 +138,7 @@
       "titles": {
         "english": "Patient Zero II"
       },
-      "ability_upgrade": [ "@ZeroAbility2" ],
+      "ability_upgrade": "@ZeroAbility2",
       "bonus_damage": 20,
       "bonus_hp": 35
     },
@@ -147,7 +147,7 @@
       "titles": {
         "english": "Patient Zero III"
       },
-      "ability_upgrade": [ "@ZeroAbility3" ],
+      "ability_upgrade": "@ZeroAbility3",
       "bonus_damage": 40,
       "bonus_hp": 80
     },
@@ -177,7 +177,7 @@
       "trigger_upgrades": [ "@CarrierBioTriggerIII" ],
       "bonus_damage": 130,
       "bonus_hp": 20
-    },
+    }
   ],
   "character_triggers": [
     {
@@ -212,7 +212,6 @@
       },
       "effects": [ "@BioDraw1" ]
     },
-    ,
      {
       "id": "CarrierBioTriggerII",
       "trigger": "on_spawn",
