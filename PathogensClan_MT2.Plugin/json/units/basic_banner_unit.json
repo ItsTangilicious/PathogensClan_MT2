@@ -51,7 +51,7 @@
       "character_art": "@BasicBannerUnitCharacterArt",
       "size": 2,
       "health": 30,
-      "attack_damage": 15,
+      "attack_damage": 10,
       "ability": "@AntigenMimicEat",
       "subtypes": [ "SubtypesData_BannerUnit", "@PathogenSub_Pathogen" ],
       "triggers": [ "@AntigenMimicUnitRally" ]

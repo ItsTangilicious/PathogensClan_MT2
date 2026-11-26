@@ -34,7 +34,7 @@
       "character_art": "@AsymptomaticCarrierUnitCharacterArt",
       "size": 3,
       "health": 40,
-      "attack_damage": 15,
+      "attack_damage": 10,
       "subtypes": [ "SubtypesData_BannerUnit", "@PathogenSub_Host" ],
       "triggers": [ "@AsymptomaticCarrierRally" ]
     }

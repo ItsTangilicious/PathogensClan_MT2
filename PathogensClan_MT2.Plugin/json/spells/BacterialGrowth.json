@@ -61,7 +61,7 @@
 "upgrades":[
    {
      "id": "BacterialUpgrade",
-    "bonus_damage": 4
+    "bonus_damage": 5
    }
 ],
   "game_objects": [

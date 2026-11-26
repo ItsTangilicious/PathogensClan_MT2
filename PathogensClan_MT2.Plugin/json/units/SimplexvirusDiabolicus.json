@@ -34,7 +34,7 @@
       "character_art": "@SimplexVirusUnitCharacterArt",
       "size": 3,
       "health": 35,
-      "attack_damage": 10,
+      "attack_damage": 5,
       "subtypes": [ "SubtypesData_BannerUnit", "@PathogenSub_Pathogen" ],
       "triggers": [ "@SimplexVirusResolve" ]
     }

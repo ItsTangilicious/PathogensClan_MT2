@@ -3,7 +3,7 @@
   "cards": [
     {
       "id": "ViralReboundSpellCard",
-      "cost": 2,
+      "cost": 3,
       "card_type": "spell",
       "names": {
         "english": "Abnormal Cross-Reactivity",

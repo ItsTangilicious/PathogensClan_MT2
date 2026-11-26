@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Give a friendly unit +[trait1.power][attack], +[trait0.power][health], and [lifesteal] [trait2.statusmultiplier] for each friendly unit spawned during this battle.",
+        "english": "Give a friendly unit +[trait0.power][attack] and [lifesteal] [trait1.statusmultiplier] for each friendly unit spawned during this battle.",
         "chinese": ""
       },
       "rarity": "rare",
@@ -19,9 +19,9 @@
       "class": "@ClassPathogens",
       "card_art": "@SurvivalOfTheProlificSpellCardArt",
       "effects": [
-        "@SurvivalOfTheProlificScaledHealth", "@SurvivalOfTheProlificScaledAttack", "@SurvivalOfTheProlificScaledLifesteal", "@SurvivalLifesteal"
+         "@SurvivalOfTheProlificScaledAttack", "@SurvivalOfTheProlificScaledLifesteal", "@SurvivalLifesteal"
       ],
-      "traits": ["@SurvivalOfTheProlificScalingHealth", "@SurvivalOfTheProlificScalingAttack","@SurvivalOfTheProlificScalingLifesteal", "@Consume"],
+      "traits": ["@SurvivalOfTheProlificScalingAttack","@SurvivalOfTheProlificScalingLifesteal", "@Consume"],
       "pools": ["MegaPool"],
       "lore_tooltips": [
         {
@@ -38,14 +38,6 @@
       "target_mode": "drop_target_character",
       "target_team": "monsters",
       "param_upgrade": "@SurvivalOfTheProlificOne",
-      "param_int_3": 0
-    },
-{
-      "id": "SurvivalOfTheProlificScaledHealth",
-      "name": "CardEffectAddCardUpgradeToUnits",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters",
-      "param_upgrade": "@SurvivalOfTheProlificTwo",
       "param_int_3": 0
     },
     {
@@ -74,13 +66,6 @@
         "param_entry_duration": "this_battle",
         "param_int": 1
     },
-     {
-        "id": "SurvivalOfTheProlificScalingHealth",
-        "name": "CardTraitScalingUpgradeUnitHealth",
-        "param_tracked_value": "any_monster_spawned",
-        "param_entry_duration": "this_battle",
-        "param_int": 2
-    },
     {
         "id": "SurvivalOfTheProlificScalingLifesteal",
         "name": "CardTraitScalingAddStatusEffect",
@@ -100,11 +85,6 @@
   "upgrades": [
     {
       "id": "SurvivalOfTheProlificOne",
-      "bonus_damage": 0,
-      "upgrade_will_be_scaled_by_non_magic_power_trait": true
-    },
-    {
-      "id": "SurvivalOfTheProlificTwo",
       "bonus_damage": 0,
       "upgrade_will_be_scaled_by_non_magic_power_trait": true
     }
