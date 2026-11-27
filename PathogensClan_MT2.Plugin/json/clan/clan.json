@@ -82,6 +82,31 @@
           "icon": "@CarrierChampionCharacterIcon",
           "locked_icon": "@CarrierChampionLockedIcon",
           "portrait": "@CarrierChampionAPortrait"
+        },
+        {
+          "id": "SuperVirusChampion",
+          "card_data": "@SuperVirusChampionCard",
+          "starter_card": "@FleaSpellCard",
+          "upgrade_tree": [
+            [
+              "@SuperVirusChampionHemoI",
+              "@SuperVirusChampionHemoII",
+              "@SuperVirusChampionHemoIII"
+            ],
+            [
+              "@SuperVirusChampionIceI",
+              "@SuperVirusChampionIceII",
+              "@SuperVirusChampionIceIII"
+            ],
+            [
+              "@SuperVirusChampionSpreadI",
+              "@SuperVirusChampionSpreadII",
+              "@SuperVirusChampionSpreadIII"
+            ]
+          ],
+          "icon": "@CarrierChampionCharacterIconB",
+          "locked_icon": "@CarrierChampionLockedIconB",
+          "portrait": "@CarrierChampionAPortraitB"
         }
       ],
       "starter_relics": [
@@ -122,6 +147,18 @@
     },
     {
       "id": "CarrierChampionAPortrait",
+      "path": "textures/card_art/CarrierChampionIcon.png"
+    },
+    {
+      "id": "CarrierChampionCharacterIconB",
+      "path": "textures/card_art/CarrierChampionIcon.png"
+    },
+    {
+      "id": "CarrierChampionLockedIconB",
+      "path": "textures/card_art/CarrierChampionIcon.png"
+    },
+    {
+      "id": "CarrierChampionAPortraitB",
       "path": "textures/card_art/CarrierChampionIcon.png"
     }
   ]
