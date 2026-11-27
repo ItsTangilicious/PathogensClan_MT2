@@ -256,7 +256,23 @@
       "descriptions": {
         "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] permanently. Give friendly units on all floors +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health]"
       },
-      "effects": ["@IceReserveSelf2", "@IceReserveTower2]
+      "effects": ["@IceReserveSelf2", "@IceReserveTower2"]
+    },
+    {
+      "id": "SuperVirusIceTriggerII",
+      "trigger": "on_unplayed_positive",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] permanently. Give friendly units on all floors +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health]"
+      },
+      "effects": ["@IceReserveSelf4", "@IceReserveTower4"]
+    },
+    {
+      "id": "SuperVirusIceTriggerIII",
+      "trigger": "on_unplayed_positive",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] permanently. Give friendly units on all floors +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health]"
+      },
+      "effects": ["@IceReserveSelf6", "@IceReserveTower6"]
     }
   ],
   "effects": [
