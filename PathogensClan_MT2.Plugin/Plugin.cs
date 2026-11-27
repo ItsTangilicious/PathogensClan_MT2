@@ -44,6 +44,7 @@ namespace PathogensClan_MT2.Plugin
                         "json/clan/hud.json",
                         // Required: A Clan Champion with one Upgrade Path.
                         "json/champions/basic_champion.json",
+                        "json/champions/SuperVirus_Champion.json",
                         // Spell Cards
                         "json/spells/BacterialGrowth.json",
                         "json/spells/BroadImmunity.json",

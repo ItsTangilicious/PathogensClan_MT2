@@ -4,6 +4,10 @@
     {
       "id": "Consume",
       "name": "CardTraitExhaustState"
+    },
+    {
+    "id": "IceIsFrozen",
+    "name": "CardTraitPermafrost"
     }
   ]
 }

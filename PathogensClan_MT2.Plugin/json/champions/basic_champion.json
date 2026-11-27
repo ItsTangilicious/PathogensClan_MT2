@@ -208,7 +208,7 @@
       "id": "CarrierImmuneTriggerII",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Give all friendly units +[effect0.upgrade.bonusdamage][attack]."
       },
       "effects": [ "@ImmuneRally8" ]
     },
@@ -216,7 +216,7 @@
       "id": "CarrierImmuneTriggerIII",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Give all friendly units +[effect0.upgrade.bonusdamage][attack]."
       },
       "effects": [ "@ImmuneRally12" ]
     },

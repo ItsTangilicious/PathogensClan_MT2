@@ -10,7 +10,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]. If you do, apply [multistrike][effect1.status0.power].",
+        "english": "Spend [effect0.powerabs][PathogensClan_MT2.Plugin_Toxicity]. If you do, apply [multistrike] [effect1.status0.power].",
         "chinese": ""
       },
       "rarity": "rare",
