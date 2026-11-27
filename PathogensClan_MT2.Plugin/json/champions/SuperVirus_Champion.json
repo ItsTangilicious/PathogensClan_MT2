@@ -121,7 +121,7 @@
       "titles": {
         "english": "Super Spreader"
       },
-      "trigger_upgrades": [ "@SuperVirusSpreadTriggerI" ],
+      "trigger_upgrades": [ "@SuperVirusSpreadTriggerI", "@SuperVirusRevengeTriggerI" ],
       "bonus_damage": 0,
       "bonus_hp": 35
     },
@@ -130,7 +130,7 @@
       "titles": {
         "english": "Super Spreader II"
       },
-      "trigger_upgrades": [ "@SuperVirusSpreadTriggerII" ],
+      "trigger_upgrades": [ "@SuperVirusSpreadTriggerII", "@SuperVirusRevengeTriggerII" ],
       "bonus_damage": 0,
       "bonus_hp": 75
     },
@@ -139,25 +139,9 @@
       "titles": {
         "english": "Super Spreader III"
       },
-      "trigger_upgrades": [ "@SuperVirusSpreadTriggerIII" ],
+      "trigger_upgrades": [ "@SuperVirusSpreadTriggerIII", "@SuperVirusRevengeTriggerIII" ],
       "bonus_damage": 0,
       "bonus_hp": 155
-    },
-    {
-      "id": "SpreadScaling1",
-      "bonus_damage": 8,
-      "bonus_hp": 4
-    },
-    {
-      "id": "SpreadScaling2",
-      "bonus_damage": 16,
-      "bonus_hp": 8
-    },
-    {
-      "id": "SpreadScaling3",
-      "bonus_damage": 24,
-      "bonus_hp": 12,
-      "bonus_size": -1
     }
   ],
   "character_triggers": [
@@ -183,31 +167,55 @@
       "descriptions": {
         "english": "Gain [stygianblessing] [effect0.status0.power]. Then gain +[effect1.upgrade.bonusdamage][attack] for each [stygianblessing]."
       },
-      "effects": [ "@HemoShard2", "@HemoRally3" ]
+      "effects": [ "@HemoShard3,", "@HemoRally3" ]
     },
      {
       "id": "SuperVirusSpreadTriggerI",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "Draw a unit and apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to all units in hand."
+        "english": "Gain [stygianblessing] [effect0.status0.power]."
       },
-      "effects": [ "@SpreadDraw1", "@SpreadAttack1" ]
+      "effects": [ "@SpreadShard1"]
     },
      {
       "id": "SuperVirusSpreadTriggerII",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "Draw two units and apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to all units in hand."
+        "english": "Gain [stygianblessing] [effect0.status0.power]."
       },
-      "effects": [ "@SpreadDraw2", "@SpreadAttack2" ]
+      "effects": [ "@SpreadShard2"]
     },
      {
       "id": "SuperVirusSpreadTriggerIII",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "Draw three units and apply +[effect1.upgrade.bonusdamage][attack], +[effect1.upgrade.bonushp][health], and [effect1.upgrade.bonussize][capacity] to all units in hand."
+        "english": "Gain [stygianblessing] [effect0.status0.power]."
       },
-      "effects": [ "@SpreadDraw3", "@SpreadAttack3"]
+      "effects": [ "@SpreadShard3"]
+    },
+    {
+      "id": "SuperVirusRevengeTriggerI",
+      "trigger": "on_hit",
+      "descriptions": {
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] per [stygianblessing] to enemy units."
+      },
+      "effects": ["@SpreadRevengeContagion1"]
+    },
+      {
+      "id": "SuperVirusRevengeTriggerII",
+      "trigger": "on_hit",
+      "descriptions": {
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] per [stygianblessing] to enemy units."
+      },
+      "effects": ["@SpreadRevengeContagion2"]
+    },
+      {
+      "id": "SuperVirusRevengeTriggerIII",
+      "trigger": "on_hit",
+      "descriptions": {
+        "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] per [stygianblessing] to enemy units."
+      },
+      "effects": ["@SpreadRevengeContagion3"]
     }
   ],
   "effects": [
@@ -229,7 +237,6 @@
         }
       ]
     },
-    ,
     {
       "id": "HemoShard2",
       "name": "CardEffectAddStatusEffect",
@@ -241,25 +248,36 @@
           "count": 2
         }
       ]
-    }
+    },
+      "id": "HemoShard3",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 2
+        }
+      ]
+    },
     {
       "id": "HemoRally1",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
+      "name": "@CardEffectScaleOnShard",
+      "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@HemoUpgrade1" 
     },
     {
       "id": "HemoRally2",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
+      "name": "@CardEffectScaleOnShard",
+      "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@HemoUpgrade2" 
     },
     {
       "id": "HemoRally3",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
+      "name": "@CardEffectScaleOnShard",
+      "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@HemoUpgrade3" 
     },
@@ -294,37 +312,85 @@
       ]
     },
     {
-      "id": "SpreadDraw1",
-      "name": "CardEffectDrawType",        
-      "target_card_type": "monster",
-      "param_int": 1
+      "id": "SpreadShard1",
+     "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 1
+        }
+      ]
     },
     {
-      "id": "SpreadDraw2",
-      "name": "CardEffectDrawType",        
-      "target_card_type": "monster",
-      "param_int": 2
+      "id": "SpreadShard2",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 1
+        }
+      ]
     },
     {
-      "id": "SpreadDraw3",
-      "name": "CardEffectDrawType",        
-      "target_card_type": "monster",
-      "param_int": 3
+      "id": "SpreadShard3",
+     "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 1
+        }
+      ]
     },
     {
-      "id": "SpreadAttack1",
-      "name": "CardEffectAddTempCardUpgradeToCardsInHand",      
-      "param_upgrade": "@SpreadScaling1"
+      "id": "SpreadRevengeContagion1",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 100,
+      "use_status_effect_multiplier": true,
+      "status_effect_multiplier": "stygian_blessing",
+      "param_status_effects": [
+        {
+        "status": "@contagion",
+        "count": 4
+        }
+      ]
     },
     {
-      "id": "SpreadAttack2",
-      "name": "CardEffectAddTempCardUpgradeToCardsInHand",      
-      "param_upgrade": "@SpreadScaling2"
+      "id": "SpreadRevengeContagion2",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 100,
+      "use_status_effect_multiplier": true,
+      "status_effect_multiplier": "stygian_blessing",
+      "param_status_effects": [
+        {
+        "status": "@contagion",
+        "count": 8
+        }
+      ]
     },
     {
-      "id": "SpreadAttack3",
-      "name": "CardEffectAddTempCardUpgradeToCardsInHand",      
-      "param_upgrade": "@SpreadScaling3"
+      "id": "SpreadRevengeContagion3",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 100,
+      "use_status_effect_multiplier": true,
+      "status_effect_multiplier": "stygian_blessing",
+      "param_status_effects": [
+        {
+        "status": "@contagion",
+        "count": 12
+        }
+      ]
     }
   ],
   "game_objects": [
