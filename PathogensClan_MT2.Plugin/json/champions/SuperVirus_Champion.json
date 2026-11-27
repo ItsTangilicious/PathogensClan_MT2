@@ -93,6 +93,7 @@
       "bonus_damage": 0,
       "bonus_hp": 0,
       "bonus_size": -1,
+      "trigger_upgrades": [ "@SuperVirusIceTriggerI" ],
       "trait_upgrades": [
         {
           "id": "IceIsFrozen",
@@ -106,7 +107,8 @@
         "english": "Frozen in Ice II"
       },
       "bonus_damage": 0,
-      "bonus_hp": 0
+      "bonus_hp": 0,
+      "trigger_upgrades": [ "@SuperVirusIceTriggerII" ],
     },
     {
       "id": "SuperVirusChampionIceIII",
@@ -114,7 +116,38 @@
         "english": "Frozen in Ice III"
       },
       "bonus_damage": 0,
-      "bonus_hp": 0
+      "bonus_hp": 0,
+      "trigger_upgrades": [ "@SuperVirusIceTriggerIII" ],
+    },
+    {
+      "id": "IceUpgradeSelf2",
+      "bonus_damage": 2,
+      "bonus_hp": 2
+    }, 
+    {
+      "id": "IceUpgradeSelf4",
+      "bonus_damage": 4,
+      "bonus_hp": 4
+    },
+     {
+      "id": "IceUpgradeSelf6",
+      "bonus_damage": 6,
+      "bonus_hp": 6
+    },
+    {
+      "id": "IceReserveTower2",
+      "bonus_damage": 2,
+      "bonus_hp": 2
+    },
+    {
+      "id": "IceReserveTower4",
+      "bonus_damage": 4,
+      "bonus_hp": 4
+    },
+    {
+      "id": "IceReserveTower6",
+      "bonus_damage": 6,
+      "bonus_hp": 6
     },
     {
       "id": "SuperVirusChampionSpreadI",
@@ -216,6 +249,14 @@
         "english": "Apply [PathogensClan_MT2.Plugin_contagion] [effect0.status0.power] per [stygianblessing] to enemy units."
       },
       "effects": ["@SpreadRevengeContagion3"]
+    },
+    {
+      "id": "SuperVirusIceTriggerI",
+      "trigger": "on_unplayed_positive",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] permanently. Give friendly units on all floors +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health]"
+      },
+      "effects": ["@IceReserveSelf2", "@IceReserveTower2]
     }
   ],
   "effects": [
@@ -249,6 +290,7 @@
         }
       ]
     },
+    {
       "id": "HemoShard3",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
@@ -282,34 +324,46 @@
       "param_upgrade": "@HemoUpgrade3" 
     },
     {
-      "id": "IceVirus1",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_bool": true,
-       "param_character_pool": [
-        "@RecombinantVirusUnitCharacter"
-      ]
+      "id": "IceReserveSelf2",
+      "name": "CardEffectAddUpgradeToCurrentCard",
+      "target_mode": "self",
+      "param_bool": false,
+      "param_upgrade": "@IceUpgradeSelf2"
+    },
+     {
+      "id": "IceReserveSelf4",
+      "name": "CardEffectAddUpgradeToCurrentCard",
+      "target_mode": "self",
+      "param_bool": false,
+      "param_upgrade": "@IceUpgradeSelf4"
+    },
+     {
+      "id": "IceReserveSelf6",
+      "name": "CardEffectAddUpgradeToCurrentCard",
+      "target_mode": "self",
+      "param_bool": false,
+      "param_upgrade": "@IceUpgradeSelf6"
     },
     {
-      "id": "IceVirus2",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
+      "id": "IceReserveTower2",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "tower",
       "target_team": "monsters",
-      "param_bool": true,
-      "param_character_pool": [
-        "@RecombinantVirusUnitCharacter"
-      ]
+      "param_upgrade": "@IceReserveTower2" 
     },
     {
-      "id": "IceVirus3",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
+      "id": "IceReserveTower4",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "tower",
       "target_team": "monsters",
-      "param_bool": true,
-      "param_character_pool": [
-        "@RecombinantVirusUnitCharacter"
-      ]
+      "param_upgrade": "@IceReserveTower4" 
+    },
+    {
+      "id": "IceReserveTower6",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "tower",
+      "target_team": "monsters",
+      "param_upgrade": "@IceReserveTower6" 
     },
     {
       "id": "SpreadShard1",
