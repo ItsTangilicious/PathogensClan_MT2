@@ -36,6 +36,9 @@
       "subtypes": [ "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34" ]
     }
   ],
+  "traits": [
+    "@IceIsFrozen"
+  ],
   "upgrades": [
     {
       "id": "SuperVirusChampionHemoI",
@@ -52,6 +55,12 @@
         "english": "Hemorrhagic II"
       },
       "trigger_upgrades": [ "@SuperVirusHemoTriggerII" ],
+      "statusEffectUpgrades": [
+            {
+              "statusId": "trample",
+              "count": 1
+            }
+          ],
       "bonus_damage": 10,
       "bonus_hp": 45
     },
@@ -84,6 +93,12 @@
       "bonus_damage": 0,
       "bonus_hp": 0,
       "bonus_size": -1,
+      "trait_upgrades": [
+        {
+          "id": "IceIsFrozen",
+          "name": "CardTraitPermafrost"
+        }
+      ]
     },
     {
       "id": "SuperVirusChampionIceII",
@@ -150,25 +165,25 @@
       "id": "SuperVirusHemoTriggerI",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendly units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Gain [stygianblessing] [effect0.status0.power]. Then gain +[effect1.upgrade.bonusdamage][attack] for each [stygianblessing]."
       },
-      "effects": [ "@HemoRally4" ]
+      "effects": [ "@HemoShard1", "@HemoRally1" ]
     },
     {
       "id": "SuperVirusHemoTriggerII",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Gain [stygianblessing] [effect0.status0.power]. Then gain +[effect1.upgrade.bonusdamage][attack] for each [stygianblessing]."
       },
-      "effects": [ "@HemoRally8" ]
+      "effects": [ "@HemoShard2", "@HemoRally2" ]
     },
     {
       "id": "SuperVirusHemoTriggerIII",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Give all friendlt units +[effect0.upgrade.bonusdamage][attack]."
+        "english": "Gain [stygianblessing] [effect0.status0.power]. Then gain +[effect1.upgrade.bonusdamage][attack] for each [stygianblessing]."
       },
-      "effects": [ "@HemoRally12" ]
+      "effects": [ "@HemoShard2", "@HemoRally3" ]
     },
      {
       "id": "SuperVirusSpreadTriggerI",
@@ -203,21 +218,46 @@
       "param_character": "@SuperVirusChampionCharacter"
     },
     {
-      "id": "HemoRally4",
+      "id": "HemoShard1",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 1
+        }
+      ]
+    },
+    ,
+    {
+      "id": "HemoShard2",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stygian_blessing",
+          "count": 2
+        }
+      ]
+    }
+    {
+      "id": "HemoRally1",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
       "target_team": "monsters",
       "param_upgrade": "@HemoUpgrade1" 
     },
     {
-      "id": "HemoRally8",
+      "id": "HemoRally2",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
       "target_team": "monsters",
       "param_upgrade": "@HemoUpgrade2" 
     },
     {
-      "id": "HemoRally12",
+      "id": "HemoRally3",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "room",
       "target_team": "monsters",
