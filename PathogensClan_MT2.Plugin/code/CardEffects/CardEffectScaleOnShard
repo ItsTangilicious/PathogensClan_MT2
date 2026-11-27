@@ -8,7 +8,7 @@ using UnityEngine;
 namespace PathogensClan_MT2.Plugin
 {
 //thanks to defrutos!
-public sealed class CardEffectPathogensScaleOnShard : CardEffectAddCardUpgradeToUnits
+public sealed class CardEffectScaleOnShard : CardEffectAddCardUpgradeToUnits
 {
     public override IEnumerator ApplyEffect(CardEffectState state, CardEffectParams parameters,
         ICoreGameManagers core, ISystemManagers system)
