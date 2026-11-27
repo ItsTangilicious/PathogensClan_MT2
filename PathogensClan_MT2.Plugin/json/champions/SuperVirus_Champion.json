@@ -507,11 +507,11 @@
   "sprites": [
     {
       "id": "SuperVirusChampionCardSprite",
-      "path": "textures/card_art/SuperVirusChampionCard.png"
+      "path": "textures/card_art/SupervirusCard.png"
     },
     {
       "id": "SuperVirusChampionCharacterSprite",
-      "path": "textures/character_art/SuperVirusChampionCharacter.png"
+      "path": "textures/character_art/SupervirusCharacter.png"
     }
   ]
 }
