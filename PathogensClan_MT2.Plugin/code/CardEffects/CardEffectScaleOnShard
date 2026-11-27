@@ -1,0 +1,24 @@
+using System.Collections;
+using TrainworksReloaded.Base;
+using TrainworksReloaded.Base.Extensions;
+using TrainworksReloaded.Core;
+using TrainworksReloaded.Core.Interfaces;
+using UnityEngine;
+
+namespace PathogensClan_MT2.Plugin
+{
+//thanks to defrutos!
+public sealed class CardEffectPathogensScaleOnShard : CardEffectAddCardUpgradeToUnits
+{
+    public override IEnumerator ApplyEffect(CardEffectState state, CardEffectParams parameters,
+        ICoreGameManagers core, ISystemManagers system)
+    {
+        var target = parameters.selfTarget;
+        if (target == null || target.IsDestroyed) yield break;
+
+        int shards = target.GetStatusEffectStacks("stygian_blessing");
+        for (int i = 0; i < shards; i++)
+            yield return base.ApplyEffect(state, parameters, core, system);
+    }
+}
+}
