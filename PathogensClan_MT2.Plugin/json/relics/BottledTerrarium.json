@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "BottledTerrarium",
+      "type": "collectable",
+      "names": {
+        "english": "Bottled Terrarium",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Every 2 units you play this battle, all cards gain +[effect0.power] [magicpower] for the rest of this battle.",
+        "chinese": ""
+      },
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@TerrariumMagic" ],
+      "icon": "@BottledTerrariumArtifactIcon",
+      "icon_small": "@BottledTerrariumArtifactSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassPathogens",
+            "pools": ["MegaRelicPool" ],
+            "rarity": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "TerrariumMagic",
+      "name": "RelicEffectModifyCardMagicPowerOnCardPlayed",
+      "conditions": ["@TerrariumConditions"],
+      "param_int": 1
+    }
+  ],
+  "relic_effect_conditions": [
+    {
+      "id": "TerrariumConditions",
+      "param_card_type": "monster",
+      "param_tracked_value": "any_card_played",
+      "param_entry_duration": "this_battle",
+      "param_comparator": [
+        "greater_than",
+        "equal"
+      ],
+      "param_int": 2,
+      "allow_multiple_triggers_per_duration": true
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BottledTerrariumArtifactIcon",
+      "path": "textures/relic_art/GrowthChamberArtifact.png"
+    },
+    {
+      "id": "BottledTerrariumArtifactSmallIcon",
+      "path": "textures/relic_art/GrowthChamberHUD.png"
+    }
+  ]
+}
