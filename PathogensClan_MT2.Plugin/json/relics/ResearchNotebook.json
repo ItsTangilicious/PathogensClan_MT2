@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "ResearchNotebook",
+      "type": "collectable",
+      "names": {
+        "english": "Research Notebook",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "When you summon your second unit each turn, draw 1 card and gain +1[ember].",
+        "chinese": ""
+      },
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@NotebookCardEmber" ],
+      "icon": "@ResearchNotebookArtifactIcon",
+      "icon_small": "@ResearchNotebookArtifactSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassPathogens",
+            "pools": ["MegaRelicPool" ],
+            "rarity": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "NotebookCardEmber",
+      "name": "RelicEffectAddBattleCardToHand",
+      "param_source_team": "monsters",
+      "param_int": 1,
+      "conditions": ["@NotebookConditions"],
+    }
+  ],
+  "relic_effect_conditions": [
+    {
+      "id": "NotebookConditions",
+      "param_tracked_value": "any_monster_spawned",
+      "param_entry_duration": "this_turn",
+      "param_comparator": [
+        "greater_than",
+        "equal"
+      ],
+      "param_int": 2,
+      "allow_multiple_triggers_per_duration": false
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ResearchNotebookArtifactIcon",
+      "path": "textures/relic_art/ResearchNotebookArtifact.png"
+    },
+    {
+      "id": "ResearchNotebookArtifactSmallIcon",
+      "path": "textures/relic_art/ResearchNotebookHUD.png"
+    }
+  ]
+}
