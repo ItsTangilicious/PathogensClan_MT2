@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "BallOfPhlegm",
+      "type": "collectable",
+      "names": {
+        "english": "Pathogens Starter",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": ""When a unit gains [PathogensClan_MT2.Plugin_contagion], it gains +[effect0.status0.power] stacks.",
+        "chinese": ""
+      },
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@PhlegmContagion" ],
+      "icon": "@BallOfPhlegmArtifactIcon",
+      "icon_small": "@BallOfPhlegmArtifactSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassPathogens",
+            "pools": ["MegaRelicPool" ],
+            "rarity": "common",
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "PhlegmContagion",
+      "name": "RelicEffectAddStatusEffectOnStatusApplied",
+      "param_status_effects": [
+        {
+          "status": "@contagion",
+          "count": 4
+        }
+      ],
+      "param_int": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BallOfPhlegmArtifactIcon",
+      "path": "textures/relic_art/BallOfPhlegmArtifact.png"
+    },
+    {
+      "id": "BallOfPhlegmArtifactSmallIcon",
+      "path": "textures/BallOfPhlegmHUD.png"
+    }
+  ]
+}
