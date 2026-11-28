@@ -8,6 +8,18 @@
     {
     "id": "IceIsFrozen",
     "name": "CardTraitPermafrost"
+    },
+    {
+      "id": "PathogensEphemeral",
+      "name": "CardTraitEphemeral"
+    }
+  ],
+  "card_pools": [
+    {
+      "id": "VirionPool",
+      "cards": [
+        "@VirionStarterCard"
+      ]
     }
   ]
 }
