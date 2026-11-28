@@ -39,10 +39,11 @@
       "name": "RelicEffectAddTempUpgrade",
       "source_team": "monsters",
       "param_upgrade": "@AnvilTrampleUpgrade"
+    }
   ],
   "upgrades": [
     {
-      "id:": "AnvilTrampleUpgrade",
+      "id": "AnvilTrampleUpgrade",
       "is_unique": true,
        "status_effect_upgrades": [
         {
@@ -57,7 +58,7 @@
     {
       "id": "AnvilSize",
       "card_type": "monster",
-      
+      "excluded_sizes": [0, 1, 2]
     }
   ],
   "sprites": [

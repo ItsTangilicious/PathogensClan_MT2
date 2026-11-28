@@ -11,7 +11,7 @@
         "english": "Friendly units gain [effect0.power][coin] on [summon]."
       },
        "relic_activated_texts": {
-        "english": "+2[coin]",
+        "english": "+2[coin]"
       },
       "lore_style": "herzal",
       "relic_effects": [ "@GrantGold" ],

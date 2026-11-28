@@ -38,9 +38,8 @@
       "id": "MitoticCard",
       "name": "RelicEffectAddBattleCardToHand",
       "param_card_pool": "@VirionPool",
-      "param_upgrade": "MitoticUpgrades",
-      
-      "conditions": ["@MitoticConditions"],
+      "param_upgrade": "@MitoticUpgrades",      
+      "conditions": ["@MitoticConditions"]
     }
   ],
   "relic_effect_conditions": [

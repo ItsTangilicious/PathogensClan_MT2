@@ -39,7 +39,7 @@
       "name": "RelicEffectAddBattleCardToHand",
       "param_source_team": "monsters",
       "param_int": 1,
-      "conditions": ["@NotebookConditions"],
+      "conditions": ["@NotebookConditions"]
     }
   ],
   "relic_effect_conditions": [
