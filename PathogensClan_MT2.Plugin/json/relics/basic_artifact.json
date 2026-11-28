@@ -2,40 +2,42 @@
   "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
   "relics": [
     {
-      "id": "BasicArtifact",
+      "id": "StarterPathogens",
       "type": "collectable",
       "names": {
-        "english": "Basic Artifact",
-        "chinese": "示例神器"
+        "english": "Pathogens Starter",
+        "chinese": ""
       },
       "descriptions": {
-        "english": "<b>Basic</b> units get [multistrike] [effect0.upgrade.status0.power].",
-        "chinese": "示例单位获得[multistrike] [effect0.upgrade.status0.power]。"
+        "english": ".",
+        "chinese": ""
       },
       "lore_tooltips": [
         {
-          "english": "Basic artifact.",
-          "chinese": "示例剧情文本。"
+          "english": ."",
+          "chinese": ""
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@AddMultistrikeToBasicUnits" ],
-      "icon": "@BasicArtifactIcon",
-      "icon_small": "@BasicArtifactSmallIcon",
+      "relic_effects": [ "@ToxicityForAttack" ],
+      "icon": "@StarterPathogensArtifactIcon",
+      "icon_small": "@StarterPathogensArtifactSmallIcon",
       "extensions": [
         {
           "collectable": {
             "class": "@ClassPathogens",
-            "pools": [ "MegaRelicPool" ],
-            "rarity": "uncommon"
+            "pools": [ ],
+            "rarity": "starter",
+            "ignore_for_no_relic_achievement": true
           }
         }
-      ]
+      ],
+      "is_hidden": true
     }
   ],
   "relic_effects": [
     {
-      "id": "AddMultistrikeToBasicUnits",
+      "id": "ToxicityForAttack",
       "name": "@RelicEffectAdjustAttackByToxicity",
       "param_card_type": "monster",
       "param_int": 1,
@@ -44,12 +46,12 @@
   ],
   "sprites": [
     {
-      "id": "BasicArtifactIcon",
-      "path": "textures/relic_art/BasicArtifactIcon.png"
+      "id": "StarterPathogensArtifactIcon",
+      "path": "textures/ToxicityHUDIcon.png"
     },
     {
-      "id": "BasicArtifactSmallIcon",
-      "path": "textures/relic_art/BasicArtifactSmallIcon.png"
+      "id": "StarterPathogensArtifactSmallIcon",
+      "path": "textures/ToxicityHUDIcon.png"
     }
   ]
 }
