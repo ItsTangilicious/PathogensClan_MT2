@@ -36,7 +36,7 @@
   "relic_effects": [
     {
       "id": "NotebookCardEmber",
-      "name": "RelicEffectAddBattleCardToHand",
+      "name": "RelicEffectEnergyAndCardDrawOnUnitSpawned",
       "param_source_team": "monsters",
       "param_int": 1,
       "conditions": ["@NotebookConditions"]
