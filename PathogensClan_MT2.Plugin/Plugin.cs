@@ -102,6 +102,12 @@ namespace PathogensClan_MT2.Plugin
                         "json/enhancers/basic_enhancer.json",
                         // Artifacts
                         "json/relics/BallofPhlegm.json",
+                        "json/relics/BottledTerrarium.json",
+                        "json/relics/FibroticLungs.json",
+                        "json/relics/GrantReapplication.json",
+                        "json/relics/HerzalsAnvil.json",
+                        "json/relics/MitoticDivision.json",
+                        "json/relics/ResearchNotebook.json",
                         "json/relics/basic_artifact.json",
                         // TrackedValues
                         "json/tracked_values/toxicity.json",
