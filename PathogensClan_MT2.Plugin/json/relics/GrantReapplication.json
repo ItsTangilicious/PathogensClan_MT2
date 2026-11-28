@@ -1,0 +1,50 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "GrantReapplication",
+      "type": "collectable",
+      "names": {
+        "english": "Grant Reapplication"
+      },
+      "descriptions": {
+        "english": "Friendly units gain [effect0.power][coin] on [summon]."
+      },
+       "relic_activated_texts": {
+        "english": "+2[coin]",
+      },
+      "lore_style": "herzal",
+      "relic_effects": [ "@GrantGold" ],
+      "icon": "@GrantReapplicationIcon",
+      "icon_small": "@GrantReapplicationSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "pools": [ "MegaRelicPool" ],
+            "rarity": "uncommon",
+            "class": "@ClassPathogens"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "GrantGold",
+      "name": "RelicEffectGoldOnTrigger",
+      "param_source_team": "monsters",
+      "param_trigger": "on_spawn",
+      "param_int": 2
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GrantReapplicationIcon",
+      "path": "textures/relic_art/GrantReapplicationArtifact.png"
+    },
+    {
+      "id": "GrantReapplicationSmallIcon",
+      "path": "textures/relic_art/GrantReapplicationHUD.png"
+    }
+  ]
+}
