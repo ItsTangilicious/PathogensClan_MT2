@@ -101,6 +101,7 @@ namespace PathogensClan_MT2.Plugin
                         // Shop Upgrades (Enhancer)
                         "json/enhancers/basic_enhancer.json",
                         // Artifacts
+                        "json/relics/BallofPhlegm.json",
                         "json/relics/basic_artifact.json",
                         // TrackedValues
                         "json/tracked_values/toxicity.json",

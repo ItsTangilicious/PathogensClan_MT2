@@ -5,11 +5,11 @@
       "id": "BallOfPhlegm",
       "type": "collectable",
       "names": {
-        "english": "Pathogens Starter",
+        "english": "Ball Of Phlegm",
         "chinese": ""
       },
       "descriptions": {
-        "english": ""When a unit gains [PathogensClan_MT2.Plugin_contagion], it gains +[effect0.status0.power] stacks.",
+        "english": "When a unit gains [PathogensClan_MT2.Plugin_contagion], it gains +[effect0.status0.power] stacks.",
         "chinese": ""
       },
       "lore_tooltips": [
@@ -27,7 +27,7 @@
           "collectable": {
             "class": "@ClassPathogens",
             "pools": ["MegaRelicPool" ],
-            "rarity": "common",
+            "rarity": "common"
           }
         }
       ]
@@ -53,7 +53,7 @@
     },
     {
       "id": "BallOfPhlegmArtifactSmallIcon",
-      "path": "textures/BallOfPhlegmHUD.png"
+      "path": "textures/relic_art/BallOfPhlegmHUD.png"
     }
   ]
 }
