@@ -223,7 +223,7 @@
       "descriptions": {
         "english": "Gain [stygianblessing] [effect0.status0.power]. Then gain +[effect1.upgrade.bonusdamage][attack] for each [stygianblessing]."
       },
-      "effects": [ "@HemoShard3,", "@HemoRally3" ]
+      "effects": [ "@HemoShard3", "@HemoRally3" ]
     },
      {
       "id": "SuperVirusSpreadTriggerI",
