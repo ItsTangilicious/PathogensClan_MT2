@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "FibroticLungs",
+      "type": "collectable",
+      "names": {
+        "english": "Fibrotic Lungs",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Enemy units enter with [sap] [effect0.status0.power].",
+        "chinese": ""
+      },
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@LungsSap" ],
+      "icon": "@FibroticLungsArtifactIcon",
+      "icon_small": "@FibroticLungsArtifactSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassPathogens",
+            "pools": ["MegaRelicPool" ],
+            "rarity": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "LungsSap",
+       "name": "RelicEffectAddStatusEffectOnSpawn",
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 3
+        }
+      ],
+      "param_source_team": "heroes"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FibroticLungsArtifactIcon",
+      "path": "textures/relic_art/FibroticLungsArtifact.png"
+    },
+    {
+      "id": "FibroticLungsArtifactSmallIcon",
+      "path": "textures/relic_art/FibroticLungsHUD.png"
+    }
+  ]
+}
