@@ -45,9 +45,8 @@
   ],
   "relic_effect_conditions": [
     {
-      "id": "MitoticConditions",
-      "param_card_type": "monster",
-      "param_tracked_value": "any_card_played",
+      "id": "MitoticConditions",     
+      "param_tracked_value": "any_monster_spawned",
       "param_entry_duration": "this_turn",
       "param_comparator": [
         "greater_than",
