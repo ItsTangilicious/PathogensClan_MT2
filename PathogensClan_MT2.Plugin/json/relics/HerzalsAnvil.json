@@ -9,7 +9,7 @@
         "chinese": ""
       },
       "descriptions": {
-        "english": "Units that start with 3 or more [size] gain <b>Trample</b>.",
+        "english": "At the start of combat, units in your deck with 3 or more [size] gain <b>Trample</b>.",
         "chinese": ""
       },
       "lore_tooltips": [
