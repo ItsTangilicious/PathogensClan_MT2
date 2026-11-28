@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "relics": [
+    {
+      "id": "HerzalsAnvil",
+      "type": "collectable",
+      "names": {
+        "english": "Herzal's Anvil",
+        "chinese": ""
+      },
+      "descriptions": {
+        "english": "Units that start with 3 or more [size] gain <b>Trample</b>.",
+        "chinese": ""
+      },
+      "lore_tooltips": [
+        {
+          "english": ".",
+          "chinese": ""
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@AnvilTrample" ],
+      "icon": "@HerzalsAnvilArtifactIcon",
+      "icon_small": "@HerzalsAnvilArtifactSmallIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassPathogens",
+            "pools": ["MegaRelicPool" ],
+            "rarity": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "AnvilTrample",
+      "name": "RelicEffectAddTempUpgrade",
+      "source_team": "monsters",
+      "param_upgrade": "@AnvilTrampleUpgrade"
+  ],
+  "upgrades": [
+    {
+      "id:": "AnvilTrampleUpgrade",
+      "is_unique": true,
+       "status_effect_upgrades": [
+        {
+          "status": "trample",
+          "count": 1
+        }
+      ],
+      "filters": [ "@AnvilSize" ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "AnvilSize",
+      "card_type": "monster",
+      
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HerzalsAnvilArtifactIcon",
+      "path": "textures/relic_art/HerzalsAnvilArtifact.png"
+    },
+    {
+      "id": "HerzalsAnvilArtifactSmallIcon",
+      "path": "textures/relic_art/HerzalsAnvilHUD.png"
+    }
+  ]
+}
